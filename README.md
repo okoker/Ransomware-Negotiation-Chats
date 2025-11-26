@@ -4,6 +4,10 @@ Converts JSON chat logs (like those from ransomware negotiations) into polished,
 
 Originally developed to process the [Casualtek/Ransomchats](https://github.com/Casualtek/Ransomchats) repository containing real-world ransomware negotiations normalized as JSON files.
 
+For the chats jump to:
+https://okoker.github.io/Ransomware-Negotiation-Chats/ransomware_chats/
+
+
 ## Features
 
 - 🎨 **Clean, professional design** - White background, easy-to-read layout
