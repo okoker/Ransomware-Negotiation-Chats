@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20201121</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20201121 | Date: November 21, 2020</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 6</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 2</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 4</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 21, 2020 at 11/21/2020, 10:03:56 AM</span>
+                </div>
+                <div class="message-content">[redacted]: hello</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 21, 2020 at 11/21/2020, 10:04:41 AM</span>
+                </div>
+                <div class="message-content">[redacted]: how money</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">November 21, 2020 at 11/21/2020, 10:17:36 AM</span>
+                </div>
+                <div class="message-content">Support: The price for full decryption and safe data removal from our servers will be $14000000 (750 BTC). This initial offer was based on the details about your revenue and internal financial documents we currently have access to. If you want to make sure we can decrypt all of your data - you can send us the two files of your choice and we will decrypt them free of charge.
+Besides the encryption process we've downloaded a large pack of your internal documents, databases content and files. In case the negotiations fail - the data will be published on our news site. If we reach mutual agreement none of your internal data will be published, all the backdoors will be removed and you will be provided with security tips on how to avoid further breaches.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">November 21, 2020 at 11/26/2020, 9:48:12 PM</span>
+                </div>
+                <div class="message-content">Support: If we don't hear any reply from your side, than the press release will some part of your internal documents will be posted tomorrow on our news site.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">November 21, 2020 at 11/27/2020, 2:50:48 PM</span>
+                </div>
+                <div class="message-content">Support: You can check out the press release on our news site : https://continews.best/[redacted]
+If you are not going to get in touch with us - we will continue publishing all the data we have.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">November 21, 2020 at 12/11/2020, 11:02:48 AM</span>
+                </div>
+                <div class="message-content">Support: We are going to release the database content on Monday. If you want to stop it - just let me know.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - Chat: *************E06EBD</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: Chat: *************E06EBD | Date: Chat: *************E06EBD</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 27</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 12</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 15</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 09:54:30 UTC</span>
+                </div>
+                <div class="message-content">[Chat started]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 10:03:45 UTC</span>
+                </div>
+                <div class="message-content">Hallo, I would like to decrypt a file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 10:08:50 UTC</span>
+                </div>
+                <div class="message-content">We would like to get back our files etc. Our personal ID is 0384F759C4124EF970C8201B0AE06EBD. What are you're instructions to get our data back ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 10:57:55 UTC</span>
+                </div>
+                <div class="message-content">Hello, the price for your whole network is 100k USD.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 11:02:05 UTC</span>
+                </div>
+                <div class="message-content">We have steal, malbox.edb and all your users files, If you don t pay we will public them, take in consideration we don t have what to do with them..</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:22:28 UTC</span>
+                </div>
+                <div class="message-content">The file you tried to decrypted is too big, try with a smaller file. I recomand a .jpg</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:44:02 UTC</span>
+                </div>
+                <div class="message-content">Hello, I consulted this number and this is not a realistic offer. We have backup and are able to restore, this is going to take some time and money. We are willing to pay 5k.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:45:31 UTC</span>
+                </div>
+                <div class="message-content">If you have backup, why are u here? I deleted ur nas myself, ur altaro saved locally not cloud</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:46:06 UTC</span>
+                </div>
+                <div class="message-content">We have older backup files on external devices</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:46:54 UTC</span>
+                </div>
+                <div class="message-content">Come with a better offer than 5k</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:46:55 UTC</span>
+                </div>
+                <div class="message-content">So we are here because it's going to take time to restore those and enter the missing data</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:48:22 UTC</span>
+                </div>
+                <div class="message-content">Come with a better offer. 5k i will not accept it.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:49:21 UTC</span>
+                </div>
+                <div class="message-content">I have to consult but I think they won't accept anything higher</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:49:43 UTC</span>
+                </div>
+                <div class="message-content">You are from the it company ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:52:43 UTC</span>
+                </div>
+                <div class="message-content">They hired you to speak with us? or what ?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:53:30 UTC</span>
+                </div>
+                <div class="message-content">yes we are</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:56:04 UTC</span>
+                </div>
+                <div class="message-content">I consulted with the customer and they can pay 6k, this is maximum, they cant pay more.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:57:19 UTC</span>
+                </div>
+                <div class="message-content">As we said, no midleman.. because in the past they fuckedup our negotians.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:58:12 UTC</span>
+                </div>
+                <div class="message-content">6 k not gonna happen.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 12:59:20 UTC</span>
+                </div>
+                <div class="message-content">give us a normal number than</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 13:00:19 UTC</span>
+                </div>
+                <div class="message-content">Normal ? 95k usd</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 13:05:03 UTC</span>
+                </div>
+                <div class="message-content">Final offer: 10k or we will begin restoring the backup that is offsite. You can respond till 15:30 CEST</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 13:08:03 UTC</span>
+                </div>
+                <div class="message-content">The lowest we can go, 60k, have a good day.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 13:09:46 UTC</span>
+                </div>
+                <div class="message-content">good luck men</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 13:11:35 UTC</span>
+                </div>
+                <div class="message-content">ty</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 12.09.2022 18:43:13 UTC</span>
+                </div>
+                <div class="message-content">We accept 15k euro! last and final price.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************E06EBD at 14.09.2022 11:10:54 UTC</span>
+                </div>
+                <div class="message-content">10k"</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

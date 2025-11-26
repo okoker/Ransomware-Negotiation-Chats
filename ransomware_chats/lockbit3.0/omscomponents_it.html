@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - Chat: *************6061AC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: Chat: *************6061AC | Date: Chat: *************6061AC</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 66</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 28</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 38</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 10:28:36 UTC</span>
+                </div>
+                <div class="message-content">[Chat started]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 10:29:25 UTC</span>
+                </div>
+                <div class="message-content">Hi tell me how much!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 11:07:08 UTC</span>
+                </div>
+                <div class="message-content">Hello. Thanks for fast answer. I think you already understood what happened. All your infrastructure was encrypted, also we extracted all your sensitive information about company/employees/billings and etc. After inspecting your docs we setted up our price - 500.000$. This price include few things: 1. Decryption tool; 2. Proofs of deletion files; 3. Full attack chain to fix your vulnerabilities in network.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 11:09:47 UTC</span>
+                </div>
+                <div class="message-content">We accept just cryptocurrencies, you can choice, usual Bitcoin or more confidential for both - Monero.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 11:12:41 UTC</span>
+                </div>
+                <div class="message-content">You can google our name and im sure you will not find incidents where we didn't complete our promise. Because we care about our reputation. So you can be calm.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 11:14:48 UTC</span>
+                </div>
+                <div class="message-content">Otherwise everyone will can to download all your data from our blog, and you will need to restore your network from 0.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 13:46:13 UTC</span>
+                </div>
+                <div class="message-content">guys...I try to decrypt one  single file and it fails....mhmmmmm</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 13:46:21 UTC</span>
+                </div>
+                <div class="message-content">File: [Immagine 2023-02-28 145352.png]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 13:54:13 UTC</span>
+                </div>
+                <div class="message-content">What file you trying?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 14:44:38 UTC</span>
+                </div>
+                <div class="message-content">File: [index.php.lockbit]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 14:45:11 UTC</span>
+                </div>
+                <div class="message-content">50kb is a ridicolous size</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.02.2023 15:28:39 UTC</span>
+                </div>
+                <div class="message-content">I'll find out what the problem is, wait please. You will get answer soon as possible.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 01.03.2023 09:53:50 UTC</span>
+                </div>
+                <div class="message-content">I'm waiting....</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 01.03.2023 12:56:43 UTC</span>
+                </div>
+                <div class="message-content">Yeah, it's our fault, there's problem with trial decrypt's and we trying to repair this. While you are waiting you can view at listing of stolen files. For your calm you can choice any few files and i will send it here. Im so sorry for this problem, we doing all to fix this asap.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 01.03.2023 13:04:13 UTC</span>
+                </div>
+                <div class="message-content">https://file.io/uMrIbA0ktsDx  Password: !_OSM_!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 03.03.2023 17:56:50 UTC</span>
+                </div>
+                <div class="message-content">Hello, have you read the list of stolen files?   As for the test decrypt, send us 10-20 small encrypted files and we'll see what's wrong.   If you have contacted recovery specialists, it's a waste of time, they usually only make the overall situation worse and make it harder to communicate.  We are waiting for the files.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 06.03.2023 21:59:34 UTC</span>
+                </div>
+                <div class="message-content">Hello. We still have not received an archive of files from you to check. We are running out of time, we are ready to help if you cooperate. We also want to let you know that in 24 hours all the stolen information will be uploaded to the servers, and in another 48 hours,  it will be published on our blog. We need 20-30 files up to 50kb for verification, please prepare an archive and give it to us if you plan to solve the problem.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 07.03.2023 08:28:33 UTC</span>
+                </div>
+                <div class="message-content">Hello, anyone speaks in Italian? It would be much easier for us.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 07.03.2023 08:28:55 UTC</span>
+                </div>
+                <div class="message-content">We are trying to find 20-30 little files up to 50 kb but all the file are bigger. Can you help us on finding such little file?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 07.03.2023 08:29:19 UTC</span>
+                </div>
+                <div class="message-content">We are trying to find 20-30 little files up to 50 kb but all files are bigger. Can you help us on finding such little file?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 07.03.2023 10:35:01 UTC</span>
+                </div>
+                <div class="message-content">Ciao. Puoi prendere meno di 30 file, abbiamo bisogno di alcuni file fino a 50kb, anche se sono meno di quelli richiesti. Questi possono essere assolutamente qualsiasi file.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 07.03.2023 12:03:46 UTC</span>
+                </div>
+                <div class="message-content">In italiano va molto meglio grazie. Ho cercato file piccoli ma non ne trovo, anzi vedo solo file molto grandi  che corrispondono alle macchine virtuali criptate. Ti mando uno di quelli?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 07.03.2023 13:39:19 UTC</span>
+                </div>
+                <div class="message-content">Osservare attentamente. Potrebbero esserci file di icone, file di configurazione, script, file ausiliari. Cercateli, è nel vostro interesse.  Non è necessario inviare una macchina virtuale). Avete provato a ripristinare i file? Siate consapevoli che potreste romperli se li mettete nel decriptatore di qualcun altro.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 07.03.2023 13:42:26 UTC</span>
+                </div>
+                <div class="message-content">Accedere al NAS utilizzando SFTP e cercare lì, saranno anche adatti per i test.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 07.03.2023 14:48:09 UTC</span>
+                </div>
+                <div class="message-content">Se non riuscite a trovare nulla, potete inviare i file di log delle macchine virtuali, anche se pesano un po' di più - comprimeteli in un archivio e inviateli a noi.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 08.03.2023 11:05:30 UTC</span>
+                </div>
+                <div class="message-content">File: [Screenshot_nas1.png]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 08.03.2023 11:06:34 UTC</span>
+                </div>
+                <div class="message-content">negli screenshot del nas puoi vedere che non ci sono file fino a 50kb</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 08.03.2023 11:07:34 UTC</span>
+                </div>
+                <div class="message-content">File: [Screenshot_nas2.png]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 08.03.2023 11:09:46 UTC</span>
+                </div>
+                <div class="message-content">File: [Screenshot_nas3.png]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 08.03.2023 11:13:03 UTC</span>
+                </div>
+                <div class="message-content">File: [Screenshot_nas4.png]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 08.03.2023 14:00:02 UTC</span>
+                </div>
+                <div class="message-content">"BACKUP STORICO OMSSBS1.vbm" - 9.99kb Si può provare a decifrarlo con un test, se non funziona, inviatemelo</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 09.03.2023 21:36:03 UTC</span>
+                </div>
+                <div class="message-content">File: [BACKUP STORICO OMSSBS1.vbm.lockbit]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 10.03.2023 13:56:14 UTC</span>
+                </div>
+                <div class="message-content">potete decriptare il file? da errore se lo carico nella finestra del trial decrypt</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 10.03.2023 14:17:06 UTC</span>
+                </div>
+                <div class="message-content">OK darò un'occhiata, allora facciamo in un altro modo. Mettere questi file in un archivio: Tutti i file della cartella "VeeamConfigBackup> VEEAM-SRV", che hanno una dimensione di ~5MB e sono chiamati "VEEAM_SRV_2023-02-24_10-00-14.bco.lockbit". Anche il file "BACKUP STORICO OMSSBS1.vbm.lockbit", e il file "BACKUP DATACENTER.vbm.lockbit". Caricateli qui ( http://lockbitfile2tcudkcqqt2ve6btssyvqwlizbpv5vz337lslmhff2uad.onion/ )e datemi il link</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 10.03.2023 14:56:05 UTC</span>
+                </div>
+                <div class="message-content">ok file caricati, psw: 0z&mVMq(FClne(MI&R%4uRpWX</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 10.03.2023 15:01:03 UTC</span>
+                </div>
+                <div class="message-content">Download Link: http://lockbitfile2tcudkcqqt2ve6btssyvqwlizbpv5vz337lslmhff2uad.onion/r/AS3PCL2tDt#99rokOeWix3P08t/W0tbSSMGM66XhTj+6qZ18e2kTbs=</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 10.03.2023 15:03:18 UTC</span>
+                </div>
+                <div class="message-content">la psw è questa: 0z&mVMq(FClne(MI&R%4uRpWX non quella mandata in precedenza</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 10.03.2023 15:42:58 UTC</span>
+                </div>
+                <div class="message-content">Avete inviato password identiche. Entrambi non si adattano</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 10.03.2023 15:43:59 UTC</span>
+                </div>
+                <div class="message-content">Questà è la psw Ab5obO%#eaMpymVnyT%vfV*bX</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 10.03.2023 16:08:08 UTC</span>
+                </div>
+                <div class="message-content">Ok. Vedrò qual è il problema e riferirò in merito</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 12.03.2023 13:25:44 UTC</span>
+                </div>
+                <div class="message-content">give me please uname -a command in cmd</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 14.03.2023 14:31:49 UTC</span>
+                </div>
+                <div class="message-content">Salve. Abbiamo bisogno della sua risposta e della sua collaborazione, perché ci sta mettendo così tanto a rispondere?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 14.03.2023 14:36:34 UTC</span>
+                </div>
+                <div class="message-content">Non vogliamo farvi pressione, chiamarvi e ricattarvi, non è professionale.  Se volete risolvere il problema, siete pregati di collaborare con noi, altrimenti potete lasciare la chat e farvi gli affari vostri, mentre noi ci occupiamo dei nostri: pubblicare e distribuire informazioni rubate.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 14.03.2023 15:47:47 UTC</span>
+                </div>
+                <div class="message-content">[~] # uname -a Linux NAS-SRV 3.4.6 #1 Tue Oct 6 10:10:48 CST 2020 armv5tel unknown</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 14.03.2023 15:49:03 UTC</span>
+                </div>
+                <div class="message-content">Abbiamo bisogno di sapere con certezza che potete decriptare i file. Siamo pronti per disporre il pagamento. Forniteci la prova del decrypt rapidamente per piacere!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 14.03.2023 18:26:28 UTC</span>
+                </div>
+                <div class="message-content">Wait please</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 15.03.2023 19:30:38 UTC</span>
+                </div>
+                <div class="message-content">Salve. Abbiamo controllato i vostri file, la decriptazione è completamente possibile. Abbiamo esaminato tutti i file forniti e siamo certi che tutto funziona. Il nostro capo fornirà i file decriptati a breve, si prega di attendere.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 16.03.2023 21:32:59 UTC</span>
+                </div>
+                <div class="message-content">http://lockbitfile2tcudkcqqt2ve6btssyvqwlizbpv5vz337lslmhff2uad.onion/r/8KpBTcau0o#XrIRVvoamGTfr2ahKA8dkAenJLqhLOi5LCaA0CU2u88=</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 16.03.2023 21:33:02 UTC</span>
+                </div>
+                <div class="message-content">Decrypt done</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 17.03.2023 15:50:40 UTC</span>
+                </div>
+                <div class="message-content">Ciao. Abbiamo soddisfatto la vostra richiesta e mostrato la possibilità di decriptare i file, come potete vedere qui sopra.  Attendiamo la sua risposta.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 19.03.2023 21:40:51 UTC</span>
+                </div>
+                <div class="message-content">ma ci state prendendo in giro???? inviate un file protetto da password senza la password? Forse non avete capito che per noi è fondamentale avere la prova che potete decriptare i file!! Ad oggi non avete fornito alcuna prova convincente.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 19.03.2023 22:04:30 UTC</span>
+                </div>
+                <div class="message-content">password 8Zo6#^4@GOn@JpKC*ghH</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 19.03.2023 22:08:13 UTC</span>
+                </div>
+                <div class="message-content">Mantenere la calma. Non è un errore, non abbiamo volutamente dato subito la password per testare il vostro interesse per l'archivio e per vedere quando lo visualizzerete.  Noi siamo online e vediamo tutto e siamo pronti ad aiutarvi non appena ne avrete bisogno. La password è qui sopra, controllate i vostri file.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 19.03.2023 23:00:45 UTC</span>
+                </div>
+                <div class="message-content">Siete riusciti a controllare i vostri file?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 20.03.2023 18:44:40 UTC</span>
+                </div>
+                <div class="message-content">aspettiamo di sentirvi in questo momento.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 21.03.2023 15:31:31 UTC</span>
+                </div>
+                <div class="message-content">La vostra scelta di rimanere in silenzio è sbagliata. Stiamo iniziando a preparare le informazioni rubate per la pubblicazione sul blog, avete sempre meno tempo per risolvere i vostri problemi.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 21.03.2023 21:19:09 UTC</span>
+                </div>
+                <div class="message-content">abbiamo letto il file ma non troviamo modo per essere sicuri che sia un documento aziendale, ne possiamo avere la certezza che il file inviatoci sia effettivamente quello criptato. Vi chiediamo di fare la prova su un documento come un disegno o altro che sia effettivamente patrimonio aziendale. Abbiamo bisogno di essere sicuri, prima di pagare, che potete veramente decriptare i nostri file.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 21.03.2023 22:54:51 UTC</span>
+                </div>
+                <div class="message-content">Il nostro capo ha accettato di eseguire un altro recupero di prova. Vi preghiamo di fornire al più presto alcuni piccoli file.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 22.03.2023 17:49:05 UTC</span>
+                </div>
+                <div class="message-content">non troviamo file piccoli rappresentativi di disegni o documenti riconoscibili. Ci potete aiutare?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 22.03.2023 21:10:17 UTC</span>
+                </div>
+                <div class="message-content">Abbiamo già decifrato i vostri file VBM, sono unici e non possono essere presi da un altro sistema. ( https://helpcenter.veeam.com/docs/agentforwindows/userguide/backup_files.html?ver=60 )  Abbiamo crittografato NAS ed ESXI. Tutto ciò che potete fare in aggiunta è cercare di trovare alcuni file di registro della macchina virtuale o del NAS unici e inviarceli.  In ogni caso avete 36 ore di tempo per pensarci, poi inizieremo a pubblicare i dati della vostra azienda sul nostro blog.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 24.03.2023 16:18:05 UTC</span>
+                </div>
+                <div class="message-content">Il tempo sta per scadere, avete un'offerta da farci?  Sappiate che temporeggiare nella speranza di ottenere un prezzo inferiore non funzionerà. Se non collaborate con noi, rimuoveremo il decrittore e pubblicheremo gratuitamente i vostri dati sul nostro blog.  Abbiamo bisogno di una risposta forte da parte vostra, affrettatevi.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.03.2023 12:45:24 UTC</span>
+                </div>
+                <div class="message-content">Ci chiedete un’offerta ma noi non abbiamo alcuna certezza sia che voi abbiate il decrypt dei nostri dati sia che abbiate  nostri dati da pubblicare. Avete dato un timeout di 36 che non avete rispettato a riprova che non siete professionali come dite. Abbiamo salvato la chat in cui riconoscete di avere problemi con il decrypt dei nostri dati e quella in cui ci avete date un timeout che non avete rispettato. Possiamo decidere se pubblicare queste informazioni in tutti i siti specializzati e farvi perdere credibilità oppure tenere questa informazione riservata. A voi la scelta: ci date il decrypt e i dati che dite di aver esfiltrato e noi manteniamo la riservatezza, oppure non lo fate e noi pubblichiamo tutto e nessuno crederà mai più alle vostre promesse di decriptare. A voi la scelta. Avete 24 ore.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 28.03.2023 13:14:35 UTC</span>
+                </div>
+                <div class="message-content">"Don't mistake my kindness for weakness. I am kind to everyone, but when someone is unkind to me, weak is not what you are going to remember about me."  Nice, cheeky try, that's how companies die.  Okay, let's play this game together. Be prepared to embarrass yourself in front of the whole world, be sure to include the First and Last Name of your system administrator, everyone will be interested to know who could not tell the difference between decrypted file or not, after that he is waiting for a brilliant career advancement.  Before you embarrass yourself, you should study who we are. And think about whether you can shake our reputation, or will you have to find a new job?  Good luck. Keep an eye on the blog.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 02.04.2023 12:42:09 UTC</span>
+                </div>
+                <div class="message-content">You'll see your company on our blog soon.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 04.04.2023 17:33:32 UTC</span>
+                </div>
+                <div class="message-content">Benvenuti a LockBit</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************6061AC at 04.04.2023 17:33:51 UTC</span>
+                </div>
+                <div class="message-content">http://lockbitapt34kvrip6xojylohhxrwsvpzdffgs5z4pbbsywnzsbdguqd.onion/post/m4XcsEUi7pPQBn7k642c604d8d970</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

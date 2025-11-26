@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID:  | Date: </div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 50</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 19</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 31</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 19:17</span>
+                </div>
+                <div class="message-content">okay</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 14:58</span>
+                </div>
+                <div class="message-content">you have 110GB of our data? what data is it?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 15:49</span>
+                </div>
+                <div class="message-content">Wait please, we'll send you the list of your taken data.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 16:01</span>
+                </div>
+                <div class="message-content">Download file: [redacted].rar</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 16:02</span>
+                </div>
+                <div class="message-content">You can choose any 5 file names from this list and we will send them to you, like a proof.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 14:04</span>
+                </div>
+                <div class="message-content">ok thank you we will take a look</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 14:05</span>
+                </div>
+                <div class="message-content">okay</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:00</span>
+                </div>
+                <div class="message-content">does this list represent all of the data you took?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 15:08</span>
+                </div>
+                <div class="message-content">Yes, this is full list.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 14:14</span>
+                </div>
+                <div class="message-content">Here are the files that leadership has requested: Paperless\EMAILS 2020-2022\[redacted].msg
+Vol4\[redacted].docx
+Vol4\[redacted].pdf
+Vol4\[redacted].pdf
+Vol4\USER\[redacted].doc</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 14:15</span>
+                </div>
+                <div class="message-content">Wait please.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 14:27</span>
+                </div>
+                <div class="message-content">Download file: [redacted].rar</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 14:27</span>
+                </div>
+                <div class="message-content">These are requested files.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 13:41</span>
+                </div>
+                <div class="message-content">Ok.  We are having internet issues.  Everyone is working from different locations.  I will give these to leadership to review.  No one will be back until Monday.  I will write you then</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 13:43</span>
+                </div>
+                <div class="message-content">Understood. Wait you on Monday.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 13:18</span>
+                </div>
+                <div class="message-content">How do we know that your decryptor will work for our systems?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 14:14</span>
+                </div>
+                <div class="message-content">You can send some encrypted files, we decrypt them and send back to you. But these files must be unimportant.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:37</span>
+                </div>
+                <div class="message-content">Ok, I will have leadership choose some files.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 16:53</span>
+                </div>
+                <div class="message-content">okay</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 14:17</span>
+                </div>
+                <div class="message-content">Download file: [redacted].jpg</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 14:17</span>
+                </div>
+                <div class="message-content">Download file: [redacted].doc</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 14:18</span>
+                </div>
+                <div class="message-content">Here are two files that leadership chose.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 14:21</span>
+                </div>
+                <div class="message-content">Wait please.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 14:31</span>
+                </div>
+                <div class="message-content">Download file: [redacted].jpg</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 14:31</span>
+                </div>
+                <div class="message-content">Download file: [redacted].doc</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 14:55</span>
+                </div>
+                <div class="message-content">Ok, I will show these to leadership and will be back in touch with you</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 14:56</span>
+                </div>
+                <div class="message-content">We'll in touch.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 13:46</span>
+                </div>
+                <div class="message-content">My leadership has a meeting scheduled with the board on Monday afternoon.  Before that meeting, is there any cost breaks that you could provide us?  This event has had a significant impact on our company.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 15:09</span>
+                </div>
+                <div class="message-content">10% discount for you and we close the deal.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 13:53</span>
+                </div>
+                <div class="message-content">Ok, I will provide this to my leaders and I will be back in touch on Monday afternoon.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 15:39</span>
+                </div>
+                <div class="message-content">Okay, we'll be in touch.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 20:33</span>
+                </div>
+                <div class="message-content">Our leadership wants this to come to an end for both of us so we can get back to normality.  They would like to offer $39,250 with all fees included.  This would include the decryptor with any assistance we may need with it, proof that all our data has been removed from your systems and deleted with the promise not to ask for any additional money for anything after payment is received, a detailed explanation on how you got into our systems, and the promise to never attack us again.  Please accept this offer so we can move on.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 20:36</span>
+                </div>
+                <div class="message-content">Are you seriously? This is an unacceptable offer. We will not even turn our heads in your direction for such a meager amount. Increase it.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 16:36</span>
+                </div>
+                <div class="message-content">We also want to remind you that you have a lot of critical data, a lot of personal data of your employees and customers, copies of passports and driver's license ([redacted], [redacted], [redacted], [redacted], [redacted] and many others), their SSN, DOB, addresses and phone numbers, your NDA, confidential agreements, financial documents and other documents can be used for bad purposes, loans, etc. Darknet users know how to do this. Therefore, we suggest you to think better and make the worthy offer.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 17:18</span>
+                </div>
+                <div class="message-content">What is meager to you, is not to us.  Since this event we are struggling to get operational and have experienced tremendous losses.  Leadership is prepared to offer $44,990 with all fees included.  This would include the decryptor with any assistance we may need with it, proof that all our data has been removed from your systems and deleted with the promise not to ask for any additional money for anything after payment is received, a detailed explanation on how you got into our systems, and the promise to never attack us again.  Please consider this offer as we are trying to get our business back operational.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 17:43</span>
+                </div>
+                <div class="message-content">We are ready to help restore all your systems and files to their original state very quickly, but the minimum amount we can accept is $150k. Less payment is not possible. Therefore, tell your manager if he wants to make a deal, then he look for this amount. If not, then further negotiations are pointless.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 13:27</span>
+                </div>
+                <div class="message-content">Leadership is prepared to accept your offer of $150,000 with all fees included.  This would include a working decryptor with any assistance we may need with it, proof and assurance that all our data has been removed from your systems, deleted, not copied or transferred elsewhere, and with the promise not to ask for any additional money for anything after payment is received, a detailed explanation of why we were targeted and how you got into our systems, and the promise to never attack us again.  Please send us your bitcoin wallet ID so we can proceed with payment.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 14:06</span>
+                </div>
+                <div class="message-content">Okay. We confirm all points. Our BTC wallet is [redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 18:49</span>
+                </div>
+                <div class="message-content">Ok. This may take some time, but please confirm when you receive payment.  I will write you when it is sent.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 19:04</span>
+                </div>
+                <div class="message-content">Okay.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 16:58</span>
+                </div>
+                <div class="message-content">Any updates?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 18:51</span>
+                </div>
+                <div class="message-content">payment was made.  Can you confirm please</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 18:54</span>
+                </div>
+                <div class="message-content">Yes, we see the transaction, but it hasn't been confirmed yet. Please wait.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 19:06</span>
+                </div>
+                <div class="message-content">Payment received.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 19:06</span>
+                </div>
+                <div class="message-content">Your data is wiping.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 19:07</span>
+                </div>
+                <div class="message-content">Thank you.  I will stand by for all the agreed upon deliverables.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 19:40</span>
+                </div>
+                <div class="message-content">This is log of deletion ALL your taken data
+Download: https://qaz.im/load/[redacted]
+Delete: https://qaz.im/index.php?a=delete&q=[redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 23:44</span>
+                </div>
+                <div class="message-content">Download file: [redacted].ex</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 23:44</span>
+                </div>
+                <div class="message-content">How to decrypt windows?
+1. Drop executable to any folder.
+2. Start new terminal session with administrator rights. (run cmd.exe or powershell.exe with admin rights)
+3.1. In cmd.exe type full path to the executable file and press Enter.
+3.2. In powershell.exe type: "& c:\full\path\to\executable.exe" without quotes and press Enter.
+OR
+1. Drop file.
+2. Click right mouse button on the file and press run as admin.
+(!) IMPORTANT, READ ALL BEFORE DECRYPTION PROCESS
+1. Yoy can decrypt only 1 folder (test decrypt for example)
+decrypt.exe -forcepath c:\users\1\Desktop\folder
+2. DO NOT CLOSE decryptor yourself
+3. MAKE BACKUPS of important files what you will decrypt, then you can rerun decryptor if something happens
+4. You can decrypt partially encrypted files:
+4.1. Make backup
+4.2. Add encrypted extension (random for every company, you can ask in chat) to file
+4.3. Run decryptor to folder what contains file
+4.4. Now you can test file
+5. Every decryption process saves file in same location with name of decrypted file with extension .kbckp. In this file you can find individual chacha keys for better recovery experience.
+6. You can ask in chat about ECC keys (used to encrypt chacha keys) for your company.
+7. Make sure you have at least 10 gb of free space on each disk.
+8. To choose folder on linux decrypt.linux -forcepath /path</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Black Basta</span>
+                    <span class="timestamp"> at 03:02</span>
+                </div>
+                <div class="message-content">Security report and recommendation:
+Your network has been compromised by mailing of messages to the emails with malicious attachments. 
+One of the users launched malware.
+To avoid this in the future, give you recommendations of network protection: 
+1. Use sandbox to analyze the contents of letters and their attachments.
+2. Use the password security policies  
+3. Make protection from attack like a Pass-the-Hash  and Pass-the-ticket attack
+4. Update all OS and software to the latest versions, especially Microsoft Defender Antivirus. 
+5. Implement the hardware firewalls with filtering policies, modern DLP and IDS, SIEM systems.
+6. Block kerberoasting attacks 
+7. Conduct full penetrations tests and audit 
+8. Use and update Anti-virus/anti-malware and malicious traffic detection software 
+9. Configure group policies, disable the default administrators accounts, create new accounts. 
+10. Backups. You must have offline backups, does not have access to the network.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20201015</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20201015 | Date: October 15, 2020</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 36</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 19</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 17</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 15 Oct, 16:27</span>
+                </div>
+                <div class="message-content">Hello, you heed help?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 16 Oct, 16:04</span>
+                </div>
+                <div class="message-content">how much</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 16 Oct, 16:05</span>
+                </div>
+                <div class="message-content">how much</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 16 Oct, 16:06</span>
+                </div>
+                <div class="message-content">Hi, please wait 5 min.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 16 Oct, 16:06</span>
+                </div>
+                <div class="message-content">hello ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 16 Oct, 16:06</span>
+                </div>
+                <div class="message-content">Hello.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 16 Oct, 16:09</span>
+                </div>
+                <div class="message-content">Price for your case is $7,000. If you can pay this amount we send you all instructions</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 16 Oct, 16:33</span>
+                </div>
+                <div class="message-content">Hello?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 17 Oct, 03:29</span>
+                </div>
+                <div class="message-content">Your note says all of our sensitive 
+data was downloaded to your servers. Does that mean you took our data? 
+We read an article that says you like to take data. We want our data 
+decrypted. So, if we pay we get a decryptor and all of our files back? 
+Is that how this works?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 17 Oct, 03:33</span>
+                </div>
+                <div class="message-content">Yes.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 17 Oct, 21:48</span>
+                </div>
+                <div class="message-content">Ok. We are going to have a meeting to discuss this situation. Can you send us a file or two from the data you took?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 19 Oct, 14:35</span>
+                </div>
+                <div class="message-content">Ok. We had our meeting and agree that we need the decryption program. Can you fix a file to prove your ability to decrypt?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 19 Oct, 16:05</span>
+                </div>
+                <div class="message-content">yes, upload file on https://ufile.io < 3mb</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 19 Oct, 16:24</span>
+                </div>
+                <div class="message-content">Here is the link it gave me. https://ufile.io/[redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 19 Oct, 17:40</span>
+                </div>
+                <div class="message-content">Hello, can you send me teamviewer access on your infected server?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 19 Oct, 19:29</span>
+                </div>
+                <div class="message-content">We can't provide you access, but if 
+you tell us what you need to look at, we can provide information to you.
+ Do you need more sample files, or something else?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 19 Oct, 19:31</span>
+                </div>
+                <div class="message-content">Yes, more sample files (from any 
+servers and in share folders and local folders). Also tell me this 
+information: Your OS, how to you shutdown our ransomware, and how much 
+share folders in your local network. Thanks.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 20 Oct, 02:41</span>
+                </div>
+                <div class="message-content">Win Server 2008 R2 The Anti Virus caught the malware We only have 1 server.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 20 Oct, 02:42</span>
+                </div>
+                <div class="message-content">https://ufile.io/[redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 20 Oct, 21:25</span>
+                </div>
+                <div class="message-content">Any update on our encrypted file?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 21 Oct, 14:00</span>
+                </div>
+                <div class="message-content">Hello. Have you decrypted our file?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 21 Oct, 14:23</span>
+                </div>
+                <div class="message-content">Hello</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 21 Oct, 14:24</span>
+                </div>
+                <div class="message-content">We have another messages from recovery company</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 21 Oct, 15:57</span>
+                </div>
+                <div class="message-content">What do you mean?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 21 Oct, 22:10</span>
+                </div>
+                <div class="message-content">In the beginning we asked another 
+recovery company to help us. Do you know the name of the recovery 
+company that is communicating with you still? Their website said they 
+could decrypt our files, but it was a lie and I think they contacted you
+ instead. Did they pay you? Please ignore them and communicate here with
+ us and we will get this sorted out.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 21 Oct, 22:13</span>
+                </div>
+                <div class="message-content">All recovery company is scam and just write us for buy decrypt.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 22 Oct, 15:58</span>
+                </div>
+                <div class="message-content">Have you made any progress on decrypting our test file?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 22 Oct, 16:05</span>
+                </div>
+                <div class="message-content">Hello yes we have progress but we dont
+ understand which version our software you are encrypted, can you send 
+me time when you encrypted?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 22 Oct, 18:26</span>
+                </div>
+                <div class="message-content">It looks like it happened on 10/11/2020.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 22 Oct, 19:52</span>
+                </div>
+                <div class="message-content">So, your files encrypted tested 
+version our software and we must scan all your system for find keys for 
+decrypt, and also my boss up price for you so final amount is 30,000$</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 22 Oct, 22:08</span>
+                </div>
+                <div class="message-content">Can you give us the scan tool?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 22 Oct, 22:10</span>
+                </div>
+                <div class="message-content">Scan with private global decryption 
+key and when scanned collect all keys and decrypted it in real time, we 
+can connect to teamviewer and scan it or send it you after payment</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 23 Oct, 01:49</span>
+                </div>
+                <div class="message-content">There is no way we are letting you 
+back into the server. We also can't afford anywhere close to the amount 
+you are asking at $30,000. We could barely even afford $7,000. We are 
+just a few person company. If you can't prove you can decrypt, we can't 
+pay you anything. The price needs to go back to $7,000 because I don't 
+know if we can even afford that. How can you decrypt the data without 
+getting into our server?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 23 Oct, 01:53</span>
+                </div>
+                <div class="message-content">In any case need teamviewer.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 15, 2020 at 23 Oct, 14:02</span>
+                </div>
+                <div class="message-content">Why can’t we just run whatever key 
+find program you need us to run for you? We will not give you Teamviewer
+ access, especially not if you want a price that we can’t possibly 
+afford. Can you send us the program that you need to run to find the 
+keys, then decrypt a sample file, then we can pay $7000 for decryption?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Ranzy</span>
+                    <span class="timestamp">October 15, 2020 at 23 Oct, 14:03</span>
+                </div>
+                <div class="message-content">Im already repeat you - your network 
+encrypted with tested versions our software so for finding keys need 
+scan your system, our scanner with private key and we do not provide it 
+just like "download this and run". If you cant provide teamviewer and 
+pay $30,000 - goodbye</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID:  | Date: </div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 24</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 14</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 10</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:59 18.05.2021</span>
+                </div>
+                <div class="message-content">привет</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:10 18.05.2021</span>
+                </div>
+                <div class="message-content">Hello! Chat in English.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:11 18.05.2021</span>
+                </div>
+                <div class="message-content">hi</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:11 18.05.2021</span>
+                </div>
+                <div class="message-content">how can i change my avatar?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:12 18.05.2021</span>
+                </div>
+                <div class="message-content">how much?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:16 18.05.2021</span>
+                </div>
+                <div class="message-content">Where are you from?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:17 18.05.2021</span>
+                </div>
+                <div class="message-content">Kazakhstan</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:17 18.05.2021</span>
+                </div>
+                <div class="message-content">we don't have so big money you asking</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:29 18.05.2021</span>
+                </div>
+                <div class="message-content">Wait a bit, we'll get back to you soon.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:43 18.05.2021</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 05:27 19.05.2021</span>
+                </div>
+                <div class="message-content">tell me what kind of company are you?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 05:28 19.05.2021</span>
+                </div>
+                <div class="message-content">what do you do? do you have your own website? We do not work in the CIS countries and if we make sure that you are a company located in the CIS, then we will decrypt you for free.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 07:26 19.05.2021</span>
+                </div>
+                <div class="message-content">we are small wellding company who has  finance problems at the moment.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 08:13 19.05.2021</span>
+                </div>
+                <div class="message-content">Hey! We need proof of your identity. If you provide us with a photo of your documents and face, we will give you a decryptor free of charge.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 08:13 19.05.2021</span>
+                </div>
+                <div class="message-content">Make a photo of your passport against your face. Then make a photo of the passport on the background of the monitor with encrypted files, you can open the properties of the file. Send us a photo through the service https://www.sendspace.com/</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 09:12 19.05.2021</span>
+                </div>
+                <div class="message-content">ok. Thanks.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 09:12 19.05.2021</span>
+                </div>
+                <div class="message-content">https://www.sendspace.com/file/[redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 09:13 19.05.2021</span>
+                </div>
+                <div class="message-content">here is a link to photos</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 09:20 19.05.2021</span>
+                </div>
+                <div class="message-content">We apologize for this situation, this is an accident. We do not work in the CIS countries.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 09:21 19.05.2021</span>
+                </div>
+                <div class="message-content">You can download the decryptor on your payment page, update it. Run the decryptor according to the instructions.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 09:49 19.05.2021</span>
+                </div>
+                <div class="message-content">thanks.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 09:50 19.05.2021</span>
+                </div>
+                <div class="message-content">i wonder how you getting access?))))</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 10:02 19.05.2021</span>
+                </div>
+                <div class="message-content">About vulnerabilities in your network. These are weak passwords and old operating systems, the operating systems that you used have vulnerabilities, with the help of them an attack was carried out on your network. Use strong passwords and hide them as best as possible and update all your OS to the latest versions.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 13:49 19.05.2021</span>
+                </div>
+                <div class="message-content">thanks a lot!!</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

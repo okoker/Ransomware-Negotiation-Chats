@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20210517</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20210517 | Date: May 17, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 69</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 29</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 40</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 19:05:39</span>
+                </div>
+                <div class="message-content">we received your ransom note.  Can you provide the proof pack you mentioned</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 21:35:39</span>
+                </div>
+                <div class="message-content">Welcome! [redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 21:37:06</span>
+                </div>
+                <div class="message-content">Hello!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 21:37:07</span>
+                </div>
+                <div class="message-content">You need pay for decrypt your files. Your price is 1.500.000$</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 21:37:20</span>
+                </div>
+                <div class="message-content">can you send us a proof pack</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 21:37:29</span>
+                </div>
+                <div class="message-content">You need to pay this amount and we will give you decryptor for all your network, file tree on what we have downloaded from your network and wiping log of that information.
+You can choose not to pay and then your data will be published in the media with subsequent sale.
+If you will spend 3 days in silence we will start publushing the information.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 21:40:55</span>
+                </div>
+                <div class="message-content">can you let us know the amount of information that you have taken</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 21:46:54</span>
+                </div>
+                <div class="message-content">We have your accounting, legal documents, finance,  contracts and personal correspondence, DB, that's all I can say. It's about 200 Gigabate. You will receive a complete list of files after payment as well as a log of their removal from our server.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 21:49:21</span>
+                </div>
+                <div class="message-content">[redacted]_proof.7z [ 2.1MB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 21:49:38</span>
+                </div>
+                <div class="message-content">Proof Pack. Pass: 123123</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 21:50:39</span>
+                </div>
+                <div class="message-content">If you delay the negotiations, on Monday we will release information about the fact of hacking your network. Further, if you do not understand this, we will publish part of the data to find a buyer for them.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 17/05/2021, 22:26:56</span>
+                </div>
+                <div class="message-content">We will also try to find a buyer for your data and access to your network if you refuse to pay.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 18/05/2021, 20:53:35</span>
+                </div>
+                <div class="message-content">Thanks for providing the data.  We are struggling with the claim that you have 200GB of data.  Can you provide further examples of the information as the random samples are not moving management.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 18/05/2021, 22:35:11</span>
+                </div>
+                <div class="message-content">We will send you 30% of the file tree, you will select any 3 pcs of non-sensitive information and we will provide them to you as evidence.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 18/05/2021, 23:07:56</span>
+                </div>
+                <div class="message-content">Ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 19/05/2021, 17:31:19</span>
+                </div>
+                <div class="message-content">Checking in</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 20/05/2021, 00:03:59</span>
+                </div>
+                <div class="message-content">Wait.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 20/05/2021, 00:11:40</span>
+                </div>
+                <div class="message-content">30%_DATA_[redacted].txt.7z [ 794kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 20/05/2021, 00:11:55</span>
+                </div>
+                <div class="message-content">Pass: 123123</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 20/05/2021, 22:04:04</span>
+                </div>
+                <div class="message-content">Let's not delay the negotiations. This has a negative effect on the fact of publishing you. Be more active.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 20/05/2021, 23:48:37</span>
+                </div>
+                <div class="message-content">We should have an offer to you shortly as management has been discussing.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 21/05/2021, 00:17:36</span>
+                </div>
+                <div class="message-content">Make a reasonable offer based on our offer.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 21/05/2021, 03:24:01</span>
+                </div>
+                <div class="message-content">Can you provide the following three files</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 21/05/2021, 03:24:09</span>
+                </div>
+                <div class="message-content">1../SRV[redacted]/E/[redacted]/SALES/Contractor/[redacted]/[redacted]/[redacted]\ Miscellaneous\ Control\ Equipment/5\ -\ Submittals/[redacted]/[redacted]\ Hydro\ Testing.pdf
+2../SRV[redacted]/E/[redacted]/SALES/Contractor/[redacted]/1\ ARCHIVE\ -\ OLD\ PROJECTS/2006-2010\ Fiscal\ Years/[redacted]\ -\ [redacted]/[redacted]/Proposal/Complete\ Proposal_RFQ\ [redacted]_[redacted]_122106.pdf
+3../SRV[redacted]/E/[redacted]/SALES/Contractor/[redacted]\ [redacted]/[redacted]\ Generating\ [redacted]\ Steam\ Bypass\ [redacted]/FW\ [redacted]\ Generating\ [redacted\ -\ Request\ for\ Proposal\ -\ Steam\ Bypass\ [redacted].msg</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 21/05/2021, 13:51:11</span>
+                </div>
+                <div class="message-content">[redacted]_proof1.7z [ 1.6MB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 21/05/2021, 13:52:00</span>
+                </div>
+                <div class="message-content">Pass: 123123</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 21/05/2021, 13:56:08</span>
+                </div>
+                <div class="message-content">Let's not delay the negotiations. This has a negative effect on the fact of publishing you. Be more active.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 21/05/2021, 20:43:10</span>
+                </div>
+                <div class="message-content">Management is requesting more time to formulate an offer.  Thank you for your patience</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 21/05/2021, 20:51:38</span>
+                </div>
+                <div class="message-content">How long do you need? You wanted to agree quickly, but you yourself are delaying the negotiations.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 22/05/2021, 15:08:38</span>
+                </div>
+                <div class="message-content">After many discussions with management, they have settled at $150K for the amount.  This is based on the valuation of the information provided and other risk factors in the environment.  Management hopes to settle quickly, can we agree</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 22/05/2021, 15:49:04</span>
+                </div>
+                <div class="message-content">Your offer has been rejected. Make a more reasonable offer based on our offer.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 22/05/2021, 15:51:00</span>
+                </div>
+                <div class="message-content">150.000 and 1.500.000 why do you think we should agree to 1\10? Your proposal is not even close to what you can talk about and think about.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 22/05/2021, 22:29:40</span>
+                </div>
+                <div class="message-content">We are willing to negotiate to a fair settlement.  What number can you offer?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 23/05/2021, 19:53:19</span>
+                </div>
+                <div class="message-content">Well, we see constructive dialogue and make a discount. Your new price is $1.350.000</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 24/05/2021, 00:40:33</span>
+                </div>
+                <div class="message-content">We will discuss as a management team and get back in touch shortly.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 24/05/2021, 15:32:39</span>
+                </div>
+                <div class="message-content">Management has informed me that $200K is what we can offer.  Hopefully we can get this to closure.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 24/05/2021, 21:10:43</span>
+                </div>
+                <div class="message-content">Well, we see constructive dialogue and make a discount. Your new price is $1.300.000</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 25/05/2021, 17:22:22</span>
+                </div>
+                <div class="message-content">do you delay negotiations, do you have constructive proposals?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 26/05/2021, 17:49:21</span>
+                </div>
+                <div class="message-content">Based on the valuation of the data, we are at $200K.  We hope you will be able to accept your offer</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 27/05/2021, 17:02:06</span>
+                </div>
+                <div class="message-content">Well, we see constructive dialogue and make a discount. Your new price is $900.000. Your next step.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 27/05/2021, 17:03:22</span>
+                </div>
+                <div class="message-content">Evaluate our steps. You can negotiate with us. But offering funny amounts is not the best way for you. It leads to publication.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 27/05/2021, 20:53:26</span>
+                </div>
+                <div class="message-content">Let me talk with my bosses</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 29/05/2021, 22:27:15</span>
+                </div>
+                <div class="message-content">do you delay negotiations, do you have constructive proposals?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 01/06/2021, 17:39:48</span>
+                </div>
+                <div class="message-content">My bosses have told me $225K is all we can do.  Hopefully we can agree on this one.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 01/06/2021, 22:25:36</span>
+                </div>
+                <div class="message-content">Well, we see constructive dialogue and make a discount. Your new price is $875.000. Your next step.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 03/06/2021, 16:11:52</span>
+                </div>
+                <div class="message-content">Management has informed me that $250K is the highest we can go to settle our affairs.  They also have informed me that while the decryption key would be nice, they do not need it.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 03/06/2021, 20:16:00</span>
+                </div>
+                <div class="message-content">Offer $250,000 rejected. Make the best offer. Your new price is $850.000. Your next step.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 05/06/2021, 00:25:11</span>
+                </div>
+                <div class="message-content">$250K is all we can offer.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 05/06/2021, 00:44:50</span>
+                </div>
+                <div class="message-content">Offer $250,000 rejected. Make the best offer. Your new price is $850.000. Your next step.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 07/06/2021, 01:12:34</span>
+                </div>
+                <div class="message-content">Do not delay the negotiations, this will negatively affect the publication.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 07/06/2021, 16:06:17</span>
+                </div>
+                <div class="message-content">My bosses have told me $250K is all we can do.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 07/06/2021, 20:54:56</span>
+                </div>
+                <div class="message-content">Offer $250,000 rejected. Make the best offer. Your new price is $850.000. Your next step.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 07/06/2021, 20:55:03</span>
+                </div>
+                <div class="message-content">Do not delay the negotiations, this will negatively affect the publication.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 07/06/2021, 21:06:17</span>
+                </div>
+                <div class="message-content">I have given you the best offer I can.  I wish I could do more.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 12/06/2021, 01:30:38</span>
+                </div>
+                <div class="message-content">If we don't agree by Tuesday, publications will begin Wednesday. All deadlines are out. Your tactics will lead to a deplorable result for you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 12/06/2021, 01:30:50</span>
+                </div>
+                <div class="message-content">Offer $250,000 rejected. Make the best offer. Your new price is $850.000. Your next step.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 14/06/2021, 20:31:41</span>
+                </div>
+                <div class="message-content">Publications will begin Wednesday. All deadlines are out. Your tactics will lead to a deplorable result for you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 15/06/2021, 06:24:09</span>
+                </div>
+                <div class="message-content">$250K is the best offer.  Hopefully we can agree to settle our affairs.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 15/06/2021, 12:00:44</span>
+                </div>
+                <div class="message-content">Publications will begin Wednesday. All deadlines are out. Your tactics will lead to a deplorable result for you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 16/06/2021, 20:03:41</span>
+                </div>
+                <div class="message-content">Look, we discussed everything and decided. The minimum we can agree to in your case is $350,000. Either we make a deal or we publish you. There's no time to pull conversations.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 16/06/2021, 21:24:38</span>
+                </div>
+                <div class="message-content">Let me talk with my boss</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 17/06/2021, 18:13:54</span>
+                </div>
+                <div class="message-content">Can you send us the wallet</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 17/06/2021, 23:15:30</span>
+                </div>
+                <div class="message-content">to confirm, we will receive the decryptor, the data (file tree), shred log, not to be posted, and a security report.  We are waiting on the wallet upon your confirmation</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 18/06/2021, 04:16:51</span>
+                </div>
+                <div class="message-content">we are ready to move forward once confirmed</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 18/06/2021, 10:08:54</span>
+                </div>
+                <div class="message-content">Correct. The wallet for the payment is:
+[redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 19/06/2021, 07:14:37</span>
+                </div>
+                <div class="message-content">The wallet has been funded</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">May 17, 2021 at 19/06/2021, 07:14:46</span>
+                </div>
+                <div class="message-content">https://bitref.com/[redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 19/06/2021, 09:24:55</span>
+                </div>
+                <div class="message-content">[redacted]_decryptor.exe [ 103kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">May 17, 2021 at 19/06/2021, 09:25:07</span>
+                </div>
+                <div class="message-content">Decryptor:
+1) Launch the decryptor under Administrative rights
+2) Wait till the decryptor window is closed
+3) if any of the files haven't changed the extension back to the original - repeat 1 and 2</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

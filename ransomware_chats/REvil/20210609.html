@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID:  | Date: </div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 58</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 27</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 31</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 9 days ago</span>
+                </div>
+                <div class="message-content">Hello,
+We are REvil Group.
+We want to inform that your company local network have been hacked and encrypted. We have all your local network data. The Price to unlock is $300,000. Now we're keeping it a secret, but if you do not reply us within 3 days it will be posted on our news-site. Think about the financial damage to your stock price from this publication. In case of successful negotiations we guarantee that you will get decryptors for all your machines, non recoverable removal of downloaded data and security report on how you were hacked to fix your vulnerabilities. We hope that you can correctly assess the risks for your company.
+You can find more information about REvil group in Google.
+Posting on our blog and further publications in the media will lead to significant losses for your company: court and government fines, data recovery, loss of reputation, abandonment of clients, drop in limits.
+But don't panic! We are in business, not in war.
+We can unblock your data and keep everything secret. All we need is a ransom.
+In this case, you also get: a security report, a complete tree of compromised data files, permanently deleting downloaded data, support with tips on unlocking and protecting.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Hi, 
+Our business has been seriously affected by the current Covid Pandemic since early last year. Our country (Singapore) is in lock down mode currently. Everybody is suffering and life is very tough here. Our company is no exception. Our company is small local family company and not a Listed Company. Our Company finance has become very tight right now. We really cannot afford your asking price. We could only fork up to US$20,000.
+We have already finalised our recovery plan and with the offline back up data, we are in the process of rebuilding some data and files now. We do not have P&C data with Government, Customers or Vendors. However, we wish to save our business recovery time and cost. Hence, we sincerely come to you and hope to reach a mutual agreement and settle this amicably.
+Hope to hear from you soon.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Hello!
+We took note of your communication and concluded:
+1) If you could cope without our help, you would not contact us.
+2) And yet, we are ready to make concessions to you, and throw the price down to $75,000.
+We await your decision.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Hi
+Appreciate your reply. 
+We wish to pay $75,000 and settle amicably. However, it is still very tough for us. We are willing to double our initial offer to $40,000.
+We have only one condition (just to safeguard our side here), that is we pay 50% first and in return, you give us the decryption tool for our files in two (2) hosts :
+1) Host name 'SAP-VEEAM' (file extension .[redacted]), and
+2) Host name 'apps-fs' (file extension .[redacted], .[redacted], [redacted])
+Once we successfully decrypt the above-mentioned files, we shall immediately settle the balance 50% without delay in return for all the balance decryption.
+(Please be reassured that once we achieve agreement to pay, we shall honor our word)
+For payment to you in XMR (currently trad around US$ 287 now), our local Crypto platform do not support this transfer network. Can we pay you in Bitcoin/Ethereum instead?
+Hope to see your favorable reply soon.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Let my boss think, next couple of hours.
+In any case, we are not ready for a down payment of 50%. So we don't work.
+You can send us some not very important files so that we can confirm the functionality of our build. To do this, skip the file and note this extension.
+I'll tell you in advance if the boss does not agrees to 40.000, try to offer a little more.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">i talked with my boss so the last price is 50.000$ It is the minimal price we can offer to you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">you can pay in btc</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Hi,
+Ultimately, how do we be sure that after we pay 100% in advance you would give us 100% decryption? 
+we may not get anything at all after we make payment.
+Therefore, please reconsider our suggestion that we pay you 50% and you decrypt our files as mentioned earlier on.
+We assured you that once we reach an agreement with you, we will definitely honor our payment.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">We have a long reputation, you can read reviews about us.
+In addition, you ask to decrypt the server with backups.
+We have already done everything possible for our cooperation in the form of a proposed discount.
+You will receive a utility that will run on all extensions at once on your network.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Hi,
+Can you provide the links for the review about you?
+How many Bitcoin do we have to pay? Bitcoin price now is $38,650. Can you provide Bitcoin Transfer address/details?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">1.36 btc</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Can you provide the links for the review about you?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Use google "REvil"</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Hi,
+Can you decrypt below 3 files to show you have the tools/keys? Thanks.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">wait</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">APPS-SAP Backup.vbm.[redacted]
+Choose another file for test decryption</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Regional - Employee Master Data (Latest).xls</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Do you really take us for fools?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">send another test file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">The Employee file is critical actually. Pls decrypt for us.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">no</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">The Employee file is NOT critical actually.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">send another file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">try this please</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">this is the 3rd file please</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Can I have last 2 more files to show my boss? Please.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Only 3 file test</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">If you need more , pay</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Now the BTC is $38,820 x 1.287 = $50,000, 
+Can we agree with 1.287 BTC coins?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">1.295</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">we pay you 1.295 BTC coins, you send us the decryption tools/keys for all files. Do we have a deal?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">yes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">We need to remit money to our Cryto Platform to buy BTC, it may be late tomorrow to transfer the coins to you. Please bear with us.
+can you also send me the BTC transfer details?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">You can find btc ID on main page</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">I only saw XMR address?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">click "Bitcoin + 10%"</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">in the Recipient Address, I put this correct?
+[redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">What should I put in Recipient Full Name?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Please confirm</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">[redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">Yes, this wallet.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">3. Wait for 3 confirmations by blockchain
+What does the above means?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 6 days ago</span>
+                </div>
+                <div class="message-content">This is a confirmation of the transaction in the blockchain network. The usual procedure for transferring cryptocurrencies.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">Ok 
+what should I put the full name for the recipient?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">nothing. Wallet Only</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">Ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">Hi, we finally gathered enough BTC 1.295. But it is coming from 2 sources due to time constraint.
+We shall transfer BTC 0.42546345 from our local Crypto Platform first.
+Once you receive it, please let us know before we transfer the balance BTC to you from another Crypto Platform
+Is that okay with you?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">Please let us know quickly
+We want to transfer now but need you to confirm okay first.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">Hi, 
+We managed to transfer BTC 1.295 to your below address. Pls check and confirm.
+[redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">Please see attached jpg image for the successful transfer of BTC 1.295.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">waiting till 3 conformations,after that you can download decryption program</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">Where do we find these 3 confirmations?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">We have done email confirmation and phone confirm for our BTC transfer just now.
+is it related to the above 3 confirmations?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">wait please</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp"> at 5 days ago</span>
+                </div>
+                <div class="message-content">To use a decryptor run it as administrator and turn off antivirus before.
+You can use a decryptor as gui application or through cmd.
+CMD commands:
+UniversalDecryptor.exe -full
+UniversalDecryptor.exe -path "C:\folder"
+UniversalDecryptor.exe -file "C:\folder\file.txt.random_ext"
+* decryptor with -full option will decrypt all with default params.
+If you use it as gui application, mI recommend you choose "create backups" option. If you use decryptor without this option, you should not interrupt decryption process, otherwise some files will be irreversibly damaged.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

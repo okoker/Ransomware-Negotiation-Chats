@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20210219</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20210219 | Date: February 19, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 12</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 3</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 9</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">February 19, 2021 at 2/19/2021, 11:59:49 AM</span>
+                </div>
+                <div class="message-content">Hello, are you ready to negotiate?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">February 19, 2021 at 2/22/2021, 8:16:33 AM</span>
+                </div>
+                <div class="message-content">Hi. We're still struggling here. How much data did you take from us?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">February 19, 2021 at 2/22/2021, 10:43:32 AM</span>
+                </div>
+                <div class="message-content">I will provide the data pack example later today.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">February 19, 2021 at 2/22/2021, 10:51:20 AM</span>
+                </div>
+                <div class="message-content">The whole amount of data is about 250gb</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">February 19, 2021 at 2/22/2021, 2:42:43 PM</span>
+                </div>
+                <div class="message-content">All right. We'll be waiting for the data pack example.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">February 19, 2021 at 2/22/2021, 2:46:19 PM</span>
+                </div>
+                <div class="message-content">It is currently unpacking, but as soon as it's ready you will be provided with the file listing that will contain 30% of all the data and some files examples. You will be able to choose two random files from the listing and we will upload them as a proof.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">February 19, 2021 at 2/23/2021, 7:05:48 AM</span>
+                </div>
+                <div class="message-content">Ok</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">February 19, 2021 at 2/23/2021, 9:44:07 AM</span>
+                </div>
+                <div class="message-content">30%listing.txt [ 3.8MB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">February 19, 2021 at 2/23/2021, 10:12:40 AM</span>
+                </div>
+                <div class="message-content">datapack.zip [ 480kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">February 19, 2021 at 3/4/2021, 1:55:21 AM</span>
+                </div>
+                <div class="message-content">The preview of the press-release : https://continews.pro</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">February 19, 2021 at 3/31/2021, 2:04:21 PM</span>
+                </div>
+                <div class="message-content">We have finally gathered all the necessary documents and files regarding your COMPANYs DATA. At the moment we are transmitting your information to our partners in MASS MEDIA SOURCES around the Europe.
+But you can still avoid your data being disclosed and finally stop it. You know what to do. You have been provided with the instructions already. 
+Just to let you know - we dont care who PAYS for the DATA. Your company or our Partners. The only thing you should care is YOUR REPUTATION being at HIGH RISK at the moment. Once your data is transmitted in full - you wont be able to abort this operation. You will have to deal with consequences of your disregard.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">February 19, 2021 at 4/1/2021, 3:49:58 PM</span>
+                </div>
+                <div class="message-content">The payment amount is 1 500 000 $ and if you pay by tomorrow evening (European Time) lets arrange April 2nd by midnight - you will get extra discount of 30% - SO the total amount will be 1 050 000$ It is quite generous from our side.  After successful transfer - we forget about this small incident and disappear with all data shredded !!!</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

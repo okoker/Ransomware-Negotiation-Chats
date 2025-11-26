@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20230815</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20230815 | Date: August 15, 2023</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 84</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 41</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 43</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Hello</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Hello. You've reached Akira support chat. Currently, we are preparing the list of data we took from your network. For now you have to know that dealing with us is the best possible way to settle this quick and cheap. Keep in touch and be patient with us. We will reach out to you soon. Do you have a permission to conduct a negotiation on behalf of your organization?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> yes i do have permission</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Ok, thank you. I will get back shortly with more information.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> ok, We are here waiting.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We have to inform you that we are experiencing technical issues at the moment. All the details will be provided on Monday the latest. Our deepest apologies. Meanwhile, to prove that we can properly decrypt your data you can upload 2-3 encrypted files to our chat and we will upload decrypted copies back. We offer: 1) full decryption assistance;
+2) evidence of data removal;
+3) security report on vulnerabilities we found;
+4) guarantees not to publish or sell your data;
+5) guarantees not to attack you in the future. Let me know whether you're interested in a whole deal or in parts. This will affect the final price.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> ok , will get those files for you. what is the amount you are asking?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> List.txt // 9.56 MB</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> This is the list of files of [redacted] company. We are working on transporting files of the rest companies and will provide you with the lists for them soon. We're willing to set a $2,000,000 price for all the services we offer.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> ok, thank you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> hi, when can we expect to receive the additional lists?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> In a few hours.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> [redacted]_full_listing.rar // 1.46 MB</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> This is everything we hold.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Given the fact that we hold data of two more companies, we've reconsidered the price for the full deal - $2,400,000. Let us know whether you are interested in a test decryption or files for proof. In case of quick payment we can make a discount.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> pulling down the listings now. appreciate your patience.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Let us know if you are interested in a test decryption and proof files. Waiting for your answer tomorrow.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> ok, we are working on your requests. Please allow us sometime to review the file listing and send requested files.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Please keep in mind that tight cooperation with us often leads to a more positive end of a deal.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We are waiting for your decision today.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We are looking through all the file listings you gave us. We will get you some files soon. appreciate your patience.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Do not forget about files for the test decryption, if you need it.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Definitely apprecaite your patience. My team is highly stressed due to the incident, and are working to get you the files as soon as possible.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Speed things up on your part and nothing bad will happen.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> ok noted, will make sure pass this information along to my boss.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> If we don't get your decision within next 24 hours, we will be forced to announce your corporate data leak on our blog.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> [redacted].edi.[redacted] // 793 Bytes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> [redacted].edi.[redacted] // 1.42 KB</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> [redacted].edi.[redacted] // 23.4 KB</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> [redacted].csv.[redacted] // 74.8 KB</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> [redacted].csv.[redacted] // 1.1 KB</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Definitely appreciate your patience and working with us. We have almost completed going through the file listing and will provide you files soon. While we finish that, can you please decrypt these files.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Yes, I've passed the files to my tech dept. Please wait.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> files.zip // 14.8 KB</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Here they are. Please check.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> thanks, pulling these down for review. will provide an update when we can.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We have to close the deal this week. Are you in time?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We are working as fast as we can. we really appreciate your patience with us during all of this. After reviewing the file listings can you provide the following files please.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Backlog detail 2021.xlsx, [redacted] Rate 10.24-10.28.22.xlsx, Keywords.xlsx, [redacted] Inspection Log 2023.xlsx, img20230508_[redacted].pdf, [redacted] Tax Codes.pdf, Interest Payment [redacted].pdf, Sales Service Agreement.docx, Annual Refiling Survey [redacted].pdf, [redacted] - Aug Insurance Exp [redacted].xls, [redacted] - Accrue Deprec for [redacted].xls, [redacted] - Clear Obsolete Inventory [redacted].xls, [redacted] - Loss on Sale & Liquidation of Assets [redacted].xls, [redacted].xls, [redacted].PDF, [redacted] Tests.xlsx, [redacted].PDF, [redacted].PDF</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Too many files but ok. We will provide shortly. Meanwhile, how's it going with fund gathering?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> [redacted].rar // 3.12 MB</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> You can review the files.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> When reviewing the decrypted files you sent back, we noticed that 2 of them are not what we expected to see as they came back with some empty fields. Can you please decrypt the attached files again and send it back to us so we are able to confirm the decryptability. Appreciate you working with us.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> [redacted].csv.[redacted] // 74.8 KB</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> [redacted].csv.[redacted] // 1.1 KB</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We will check but we actually have some doubts that they are corrupted. If it is an attempt to win more time, nothing good will happen. Please wait.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> The files are ok. In 24 hours we will announce your corporate data leak on your blog. Early next week your data will be published. Thank you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We are not stalling for time, we are wanting to make sure that the decryption process brings back the data in its entirety. The 2 files we are asking about it appears that it dropped fields off at the end of the files.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> I'll ask to double check but bear in mind that we are posting you in our blog tomorrow if there is no payment decision from you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We had very good backups and only about 1/4 of our data is encrypted now. We have approval to pay you $800k tomorrow for decryptors, proof of data deletion, and security audit report. Leaking our name will make our ability to pay much harder. Please accept so we can put this behind us.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We appreciate this offer but all we can do is to give you 20% discount in such circumstances.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> I have very good news. I was talking to the upper management and they are willing to accept $1,4M today for all the outlined options. On Monday we will have to return to our previous demand. Do we have a deal now?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> So, I passed your request regarding those files to the tech department. After decryption these same files were increased in size and then re-encrypted. After decryption, the files remained the same size, which means that our decryptor absolutely works correctly. It also means that you tried to play unfairly and gain more time. We also doubt your stories about "good backups". 
+Based on all of the above, our offer of $1.4 million when paid today still stands, but we will not accept anything below $2 million on Monday. If you refuse and break the deal, we will simply publish your stuff and forget about you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Thank you so much for working with us. In good faith we are going to reveal to you that we only have $1,000,000 to work with. We can pay you all of that today. To get any more will be very hard and take many more days. Please accept $1 million and we will get that to you today</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Please wait.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Ok, the leadership has approved that number. Here is a BTC wallet ID for payment: [redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> How soon are you able to make a transfer?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We are wiring the money to a broker now. They say a couple hours</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Ok, standing by.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> To confirm we pay you $1,000,000, and you will deliver whole network decryptors for linux, and windows, promise to not publish or sell our data, provide proof of deletion, and a security audit report?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We do confirm the terms.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> and guarantees not to attack us in the future</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Sure.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> thank you. sending bitcoin shortly</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Standing by.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We just sent a test transaction. Please verify and we will send the rest</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Test transaction confirmed on blockchain. Please verify</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Hello?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We will be back in east coast usa morning to send you the rest</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Hello. We have received 0.0001 BTC.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Thank you. Are you ready to receive the rest?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> sending the rest</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Coin sent. Txid: [redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We have received, thank you. Please wait for the decryptor first.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> We will provide everything within 24 hours. Thank you for your patience.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Thank you for update. We will continue to nervously wait</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Just checking. Please provide what you promised soon</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> decrypt.zip // 479 KB</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> decrypt.exe
+Name:
+        decrypt
+Usage:
+        cli args
+Flags:
+        --path    : Start path
+        --secret  : Private key
+        --logs    : Print logs. Valid values for: trace, debug, error, info, warn. Default: off
+        -h, --help        : Show help
+-----------------------------------------------------------
+Build information:
+Version: 2023.9.5
+SECRET KEY: "[redacted]"
+-----------------------------------------------------------
+decrypt.exe --path  --secret  : Private key --logs 
+----
+decrypt.exe --path C:\ --secret [redacted] --logs trace
+decrypt.exe --secret [redacted] --logs trace</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> thank you we are working on this now. can you provide a security report or how you got in and what we need to do better?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Initial access to your network was purchased on the dark web. Then kerberoasting was carried out and we got passwords hashes. Then we just bruted these and got domain admin password. Spending weeks inside of your network we've managed to detect some fails we highly recommend to eliminate:
+1. None of your employees should open suspicious emails, suspicious links or download any files, much less run them on their computer.
+2. Use strong passwords, change them as often as possible (1-2 times per month at least). Passwords should not match or be repeated on different resources.
+3. Install 2FA wherever possible.
+4. Use the latest versions of operating systems, as they are less vulnerable to attacks.
+5. Update all software versions.
+6. Use antivirus solutions and traffic monitoring tools.
+7. Create a jump host for your VPN. Use unique credentials on it that differ from domain one.
+8. Use backup software with cloud storage which supports a token key.
+9. Instruct your employees as often as possible about online safety precautions. The most vulnerable point is the human factor and the irresponsibility of your employees, system administrators, etc.
+We wish you safety, calmness and lots of benefits in the future. Thank you for working with us and your careful attitude to your security. The evidence of data removal will be provided soon.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> Thank you. We wait for proof of deletion.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> [redacted] dellogs.rar // 524 KB</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Akira</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">> There are three files in the archive.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

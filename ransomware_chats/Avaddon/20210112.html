@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID:  | Date: </div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 25</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 11</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 14</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:25 12.01.2021</span>
+                </div>
+                <div class="message-content">Hello, will you take the decryption or not?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 12:49 20.02.2021</span>
+                </div>
+                <div class="message-content">Hello There! I need help my test decryption not working</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 12:50 20.02.2021</span>
+                </div>
+                <div class="message-content">u still there? Ready to pay!</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 12:51 20.02.2021</span>
+                </div>
+                <div class="message-content">by now Github Decrypted my files, thanks!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 13:16 20.02.2021</span>
+                </div>
+                <div class="message-content">Hi sir</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 13:18 20.02.2021</span>
+                </div>
+                <div class="message-content">What do you mean "by now Github Decrypted my files, thanks!"?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 13:18 20.02.2021</span>
+                </div>
+                <div class="message-content">Only we have a decryptor, no github decryptors will help you!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:34 20.02.2021</span>
+                </div>
+                <div class="message-content">Do not rejoice, you will not be able to 
+unblock all your servers, only we can unblock your servers, you better 
+pay, we even reduced the price for you from $ 1,000,000 to $ 200,000, 
+you now better buy a decryption, and finish this business already</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 19:34 20.02.2021</span>
+                </div>
+                <div class="message-content">Hey You know the guy that publish the free decryptor on githut and You seen it ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 19:47 20.02.2021</span>
+                </div>
+                <div class="message-content">we have already released a patch, so it won't help you another time)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 19:49 20.02.2021</span>
+                </div>
+                <div class="message-content">the more we doubt that you have decrypted 
+files, because the decryptor can decrypt files under very specific 
+conditions</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 19:50 20.02.2021</span>
+                </div>
+                <div class="message-content">Have you seen the release of your important documents on our blog?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 20:08 20.02.2021</span>
+                </div>
+                <div class="message-content">I would like to know if You will come after me again.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 20:12 20.02.2021</span>
+                </div>
+                <div class="message-content">We cannot pay that even though! It is 
+outrageous! We are drowing on debt, no payment will be released to You, 
+We have no assurance of decryption as many customers of yours are 
+complaining of issues decrypting their files after payment as well.;</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 20:13 20.02.2021</span>
+                </div>
+                <div class="message-content">We have no problem starting from scratch, 
+Our only concern is been hit a second time like One customer of Yours 
+did.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 20:19 20.02.2021</span>
+                </div>
+                <div class="message-content">ok, enjoy leaking files on your blog. Our 
+clients have no problems with decrypting files, you need to listen to 
+negotiators less and then you will have no problems</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 20:23 20.02.2021</span>
+                </div>
+                <div class="message-content">We don't want to listen to them That is Why i come in here myself!</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 20:23 20.02.2021</span>
+                </div>
+                <div class="message-content">I am begging You</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 20:36 20.02.2021</span>
+                </div>
+                <div class="message-content">and why are you writing here?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 21:17 20.02.2021</span>
+                </div>
+                <div class="message-content">Cause There is no place else to write. We Want to rear from You</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 22:06 20.02.2021</span>
+                </div>
+                <div class="message-content">It's good that you contacted us yourself. 
+Look, we are a serious organization and every month Avaddon General 
+Decryptor is bought by hundreds of clients and there are no problems 
+with decryption. Those comments that you read can be written by anyone, 
+even people who have never worked with us, in order to lower our 
+reputation. But this is pointless, since thousands of customers who 
+bought our decryptor will refute information about the about poor 
+performance ability of our software.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 22:08 20.02.2021</span>
+                </div>
+                <div class="message-content">If we do not agree on a price for the 
+buyback and you do not pay, then we will wait until you fully restore 
+your entire online infrastructure and we deliver a SECOND IMPACT, and 
+believe me, this blow will be more destructive, you will lose a lot more
+ money and get more problems. as there will be a second wave of data 
+leakage which will be measured by terabytes of data. We are ready to 
+discuss the new price with you and remove your company data from our 
+data breach blog. After payment, we will give you a decryptor that will 
+decrypt absolutely all PCs / servers on your network, delete the files 
+(we will provide proofs that the files have been deleted) and provide 
+you with a list of vulnerabilities, with the help of this list you can 
+eliminate all the vulnerabilities in your network and this situation 
+cannot happen again with you in the future</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 11:26 21.02.2021</span>
+                </div>
+                <div class="message-content">Will You be Our consultant perhaps? Will You
+ tell Us how you got in because We failed to diagnose the entry point, 
+We just found the binary. Vulnerabilities are discovered everyday and 
+yet We failed to fix Ours with your penetration at Our Network. How low 
+can We get on a ransom? We already lost so much, If you hit Us one more 
+time We will no option but declare bankruptcy.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 12:00 21.02.2021</span>
+                </div>
+                <div class="message-content">In what sense will I be your consultant?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 12:00 21.02.2021</span>
+                </div>
+                <div class="message-content">Look, you could write to us right away, we 
+would have settled this issue and you resumed your work a few weeks ago,
+ but for some reason you did not want to do this ... Yes sir, 
+vulnerabilities are found every day, but there were many holes in your 
+network, we are ready to point you to them and tell you what to do so 
+that they are closed, we will help you secure your network and if in the
+ future you keep our advice it will be practically impossible to crack, 
+but You will receive instructions on how to close the holes and secure 
+your network only after payment. We understand that financial losses are
+ possible in your business now and we understand perfectly well what 
+will happen if we deliver the SECOND IMPACT, the second blow will mean 
+an absolute collapse for you. We do not want to do this (we even reduced
+ the price for you from 1kk to 200k), but we will have to if we do not 
+now agree with you on the price for the buyback. Make a meeting with the
+ management or people who are responsible for finances in your company, 
+explain to them the current situation and what awaits you in the future,
+ if we do not agree on the price for the ransom and offer us your price,
+ we are waiting for an answer from you, because time is ticking, and for
+ you, time is money.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

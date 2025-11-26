@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - Chat: *************FFFFFF</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: Chat: *************FFFFFF | Date: Chat: *************FFFFFF</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 70</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 28</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 42</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 27.01.2023 22:48:43 UTC</span>
+                </div>
+                <div class="message-content">[Chat started]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 27.01.2023 22:49:52 UTC</span>
+                </div>
+                <div class="message-content">hi. to decrypt the data and avoid publication you need to pay us. we haven't published your name on our blog yet</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 27.01.2023 22:51:46 UTC</span>
+                </div>
+                <div class="message-content">soon we will send you a tree of stolen data</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 27.01.2023 22:52:33 UTC</span>
+                </div>
+                <div class="message-content">We found your telling us to come here. What is going on?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 27.01.2023 22:53:31 UTC</span>
+                </div>
+                <div class="message-content">need to pay</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 27.01.2023 22:54:42 UTC</span>
+                </div>
+                <div class="message-content">http://lockbitfilzhrvt6eya2lvnp7te4iifzmwybendqclgujqbzu3k4gaid.onion/r/EmcJ0p6nJv#59UjkgcJ3APksKHGhDXjpNhhXTNkiMXxsVAGPmV7DOA=</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 28.01.2023 14:10:03 UTC</span>
+                </div>
+                <div class="message-content">Thank you for the list. You said we need to pay, how much is that?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 28.01.2023 17:13:02 UTC</span>
+                </div>
+                <div class="message-content">250000$</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 28.01.2023 17:13:29 UTC</span>
+                </div>
+                <div class="message-content">after payment, we will delete your data and provide a decryptor</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 29.01.2023 15:32:02 UTC</span>
+                </div>
+                <div class="message-content">The list is with leadership for review. Is this the full list of all data taken?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 29.01.2023 15:35:40 UTC</span>
+                </div>
+                <div class="message-content">yes</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 30.01.2023 12:51:00 UTC</span>
+                </div>
+                <div class="message-content">time to pay now</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 30.01.2023 14:12:26 UTC</span>
+                </div>
+                <div class="message-content">Thank you for answering our questions. The leadership is reviewing the file list. No one was here over the weekend to get this done. Thank you for your patience.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 30.01.2023 14:14:21 UTC</span>
+                </div>
+                <div class="message-content">OK</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 31.01.2023 15:09:59 UTC</span>
+                </div>
+                <div class="message-content">the list is rather large! How much data in all did you take? It seems like alot!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 31.01.2023 17:16:04 UTC</span>
+                </div>
+                <div class="message-content">all the data we took is on this list. when you pay, we will permanently delete it, and decrypt all your systems. the sooner you pay, the sooner it will be over and you will go back to your old life</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 01.02.2023 14:29:52 UTC</span>
+                </div>
+                <div class="message-content">How do we know you have this data?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 01.02.2023 14:31:07 UTC</span>
+                </div>
+                <div class="message-content">select some files from the tree, and we will send them</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 02.02.2023 13:49:01 UTC</span>
+                </div>
+                <div class="message-content">OK. I will get with my leadership so they can choose what files to send.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 02.02.2023 14:20:41 UTC</span>
+                </div>
+                <div class="message-content">hurry</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 03.02.2023 14:03:48 UTC</span>
+                </div>
+                <div class="message-content">It's a long list. How much data is this?! We are hopeful to have the file names for you today or tomorrow morning.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 03.02.2023 14:06:39 UTC</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 04.02.2023 13:34:47 UTC</span>
+                </div>
+                <div class="message-content">Here is the list of files. NEWBRIDGE\2021 DMHAS license\licenses expansion\attachmentsCO - Parsippany.pdf  \  NEWBRIDGE\HR\HR FORMS\Job Posting & Change FormsCHANGE OF STATUS Checklist 1.14.2020.docx  \  NEWBRIDGE\HR\Job Announcements\2022Clinician Sparta-FT internal- 9.2.22.docx  \   NEWBRIDGE\HR\HR FORMS\AccommodationsAccommodation REQUEST - Employee.docx   \   NEWBRIDGE\2021 DMHAS license\continuation letter 1.26.21New Bridge Services  Inc. 1-26-21 Continuation Letter (003).docx</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 04.02.2023 15:01:28 UTC</span>
+                </div>
+                <div class="message-content">ok, wait</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 04.02.2023 15:32:14 UTC</span>
+                </div>
+                <div class="message-content">http://lockbitfile2tcudkcqqt2ve6btssyvqwlizbpv5vz337lslmhff2uad.onion/r/tASrJy1eXM#9fOlbyIxE9fmiNNfZSDfX9PJ19RHcrlhxrJ9/99f7Bg=</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 04.02.2023 15:32:31 UTC</span>
+                </div>
+                <div class="message-content">password qtuhK4vpjG^fgM5ZRm$psn5mO</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 05.02.2023 14:13:15 UTC</span>
+                </div>
+                <div class="message-content">Thank you for the files. I will give them to my leadership to review.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 05.02.2023 14:20:11 UTC</span>
+                </div>
+                <div class="message-content">OK</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 07.02.2023 17:26:34 UTC</span>
+                </div>
+                <div class="message-content">what is the next step in this process?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 07.02.2023 17:27:04 UTC</span>
+                </div>
+                <div class="message-content">You pay</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 08.02.2023 14:17:21 UTC</span>
+                </div>
+                <div class="message-content">How do we know you can fix our systems?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 08.02.2023 14:30:14 UTC</span>
+                </div>
+                <div class="message-content">You have the opportunity to make test decryptions</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 08.02.2023 14:31:15 UTC</span>
+                </div>
+                <div class="message-content">After payment, we will provide you with a decryptor for the entire network, identify vulnerabilities and delete your data</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 09.02.2023 14:23:11 UTC</span>
+                </div>
+                <div class="message-content">How do we make test decryptions?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 09.02.2023 14:27:49 UTC</span>
+                </div>
+                <div class="message-content">There is a mention on your page, upload a small encrypted file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 09.02.2023 14:30:22 UTC</span>
+                </div>
+                <div class="message-content">Please perform the actions faster.Otherwise, we will change the negotiator, and make mentions of your company on the blog.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 09.02.2023 15:54:14 UTC</span>
+                </div>
+                <div class="message-content">I know that your goal is to drag out negotiations as long as possible so that we get nervous and agree to a smaller amount. by asking dumb questions you are playing against yourself and risk getting blogged. the test decryptor window is to the left of the chat.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 09.02.2023 20:34:17 UTC</span>
+                </div>
+                <div class="message-content">We are not trying to drag anything out. We have never dealt with anything like this before and I wanted to be sure. I will get my leadership team to give me some files.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 09.02.2023 20:43:48 UTC</span>
+                </div>
+                <div class="message-content">you can say what you want, but we have a lot of experience and we understand everything. each machine has its own ID. for a successful transcription you need to take the file from your PC, with the ID you are logged into the chat! or go to the chat with the ID of the PC from which you take the file for test decryption</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 10.02.2023 17:10:11 UTC</span>
+                </div>
+                <div class="message-content">The decrypted file that you sent us looks corrupt. Can we send you another one.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 10.02.2023 17:53:46 UTC</span>
+                </div>
+                <div class="message-content">You can follow the link to the chat from any PC, take the file from this PC and use the test decryption</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 10.02.2023 19:44:28 UTC</span>
+                </div>
+                <div class="message-content">We tried to do it on another PC. Your decrypt tester is not letting us upload any more files.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 10.02.2023 19:47:38 UTC</span>
+                </div>
+                <div class="message-content">send the file, we will decrypt it for you. it should not be an important file, a picture or pdf</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 10.02.2023 19:52:30 UTC</span>
+                </div>
+                <div class="message-content">https://anonfiles.com/6cC1jbX1y7/LcfUDlk_dB6AsqMxo</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 10.02.2023 19:53:06 UTC</span>
+                </div>
+                <div class="message-content">We've tried to attach more files in the chat but it wont work. Does this work for you?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 10.02.2023 19:58:37 UTC</span>
+                </div>
+                <div class="message-content">ok, wait</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 11.02.2023 06:09:27 UTC</span>
+                </div>
+                <div class="message-content">File: [inetres.adm.7z]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 13.02.2023 14:49:12 UTC</span>
+                </div>
+                <div class="message-content">Thank you for the file. I gave it to my leadership to review.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 13.02.2023 14:50:08 UTC</span>
+                </div>
+                <div class="message-content">hurry up! very slow</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 14.02.2023 15:26:58 UTC</span>
+                </div>
+                <div class="message-content">My leadership said that they don't know what that file was that you sent and they wanted to send another one.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 14.02.2023 15:32:25 UTC</span>
+                </div>
+                <div class="message-content">You sent us the file yourself. Okay. Send us another file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 14.02.2023 19:23:08 UTC</span>
+                </div>
+                <div class="message-content">You will do the test yourself faster if you perform the action correctly.Your visiting this chat room once a day does not contribute to the solution.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 14.02.2023 20:22:30 UTC</span>
+                </div>
+                <div class="message-content">Ok. We will find one and get back to you ASAP.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 14.02.2023 20:24:09 UTC</span>
+                </div>
+                <div class="message-content">hurry up</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 15.02.2023 19:45:34 UTC</span>
+                </div>
+                <div class="message-content">Since all the names were changed on our files it is taking a long time making the appropriate selection.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 15.02.2023 19:52:45 UTC</span>
+                </div>
+                <div class="message-content">It takes a maximum of 1 hour.We are well aware that you are a representative of the recovery company and want to earn yourself.But in fact you are damaging your clients and yourself as a negotiator</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 16.02.2023 09:27:18 UTC</span>
+                </div>
+                <div class="message-content">http://lockbitapt2d73krlbewgv27tquljgxr33xbwwsp6rkyieto7u4ncead.onion/post/MM3CQtzq3b0kInv663edf735a5c73</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 16.02.2023 09:28:12 UTC</span>
+                </div>
+                <div class="message-content">You have time to think about whether to drag out the negotiations further, or pay up and close the matter quietly.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 16.02.2023 14:25:40 UTC</span>
+                </div>
+                <div class="message-content">I'm not part of a recovery company. We are trying to work with you. Once you publish our data there will be no point in talking with you. I will check with my team on the status of getting more sample files.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 16.02.2023 14:29:44 UTC</span>
+                </div>
+                <div class="message-content">don't care! you won't scare us with this. you've been taking too long, whoever you are. your name will be published first, and then only your details. if you don't pay, others will pay. our patience is over</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 16.02.2023 23:08:52 UTC</span>
+                </div>
+                <div class="message-content">https://anonfiles.com/V2Ad7eYfy1/6X0RFtq_dB6AsqMxo</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 16.02.2023 23:15:45 UTC</span>
+                </div>
+                <div class="message-content">ok, wait</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 18.02.2023 11:23:28 UTC</span>
+                </div>
+                <div class="message-content">File: [Quality Management Coordinator 12.1.2017.pdf.7z]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 20.02.2023 12:26:55 UTC</span>
+                </div>
+                <div class="message-content">when will you pay?!</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 21.02.2023 14:12:04 UTC</span>
+                </div>
+                <div class="message-content">My leadership is going to meet to discuss this.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 21.02.2023 14:13:48 UTC</span>
+                </div>
+                <div class="message-content">Hurry up</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 22.02.2023 16:04:18 UTC</span>
+                </div>
+                <div class="message-content">The leadership meeting has been delayed due to something beyond our control. Thank you for your continued patience with us.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 22.02.2023 16:09:54 UTC</span>
+                </div>
+                <div class="message-content">If you hope that by delaying negotiations you will lower the price, you are mistaken</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 24.02.2023 15:11:12 UTC</span>
+                </div>
+                <div class="message-content">I am not trying to delay negotiations. I have not heard back from the board yet.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">LockBit 3.0</span>
+                    <span class="timestamp">Chat: *************FFFFFF at 27.02.2023 06:23:24 UTC</span>
+                </div>
+                <div class="message-content">it's time to pay</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

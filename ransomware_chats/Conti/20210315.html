@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20210315</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20210315 | Date: March 15, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 49</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 24</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 25</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/15/2021, 4:54:28 PM</span>
+                </div>
+                <div class="message-content">Hello - We are here to discuss the situation as a smaller company we are trying to understand what you are asking in this case to get us our files back?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/15/2021, 5:02:49 PM</span>
+                </div>
+                <div class="message-content">hello
+please wait answer</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/15/2021, 5:14:44 PM</span>
+                </div>
+                <div class="message-content">As you already know - your network and all of your data were encrypted by CONTI team. Besides the encryption process we've downloaded a large pack of your internal documents and files that will be published in case our negotiations fail. How it happens can be seen on our website https://continews.icu
+The recovery price is $1100000 (20 BTC). If you want to make sure we can recover all of your data - you can send us the two files of your choice and we will decrypt them free of charge.
+If we reach mutual agreement your will be provided with decryption tool, none of your internal data will be published and you will be provided with security tips on how to avoid further breaches.
+We strongly recommend to review our offer in a timely manner to avoid additional expenses from your side on security software and on building the new network from scratch.
+The example data pack will be provided, which will include part of the file list and some actual data you can review.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/15/2021, 5:16:17 PM</span>
+                </div>
+                <div class="message-content">The total amount of data downloaded from your network is 835 GB.
+The 30% of the whole file listing is attached. You can choose any 2 files from the list and we will upload them as a proof.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/15/2021, 5:16:59 PM</span>
+                </div>
+                <div class="message-content">30percentlisting.txt [ 5.9MB ]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/16/2021, 5:16:39 PM</span>
+                </div>
+                <div class="message-content">[redacted]_ENCRYPTED.zip [ 675kB ]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/16/2021, 5:16:50 PM</span>
+                </div>
+                <div class="message-content">[redacted]-Finances.zip [ 211kB ]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/16/2021, 5:16:58 PM</span>
+                </div>
+                <div class="message-content">[redacted]-Dev.zip [ 128kB ]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/16/2021, 5:17:02 PM</span>
+                </div>
+                <div class="message-content">can you demonstrate decryption?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/16/2021, 5:39:25 PM</span>
+                </div>
+                <div class="message-content">[redacted]_ENCRYPTED.zip [ 651kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/16/2021, 5:39:58 PM</span>
+                </div>
+                <div class="message-content">Of course.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/17/2021, 2:27:57 PM</span>
+                </div>
+                <div class="message-content">appreciated.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/17/2021, 2:28:14 PM</span>
+                </div>
+                <div class="message-content">could you give us these files: 
+~$Budget 2020-2021 COVID19-2 [redacted]-HSBC v1.1 FINAL FINAL.xlsx                       [165 Bytes]
+~$[redacted] 2021-2022.xlsx                                                          [165 Bytes]
+~$[redacted] 21-01-2021.xlsx                            [165 Bytes]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/17/2021, 4:51:38 PM</span>
+                </div>
+                <div class="message-content">Yes. Wlll upload soon.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/17/2021, 5:35:48 PM</span>
+                </div>
+                <div class="message-content">https://www.sendspace.com/file/[redacted]
+[redacted]
+https://www.sendspace.com/delete/[redacted]/[redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/17/2021, 5:50:08 PM</span>
+                </div>
+                <div class="message-content">appreciate. We will download and review.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/18/2021, 1:56:59 PM</span>
+                </div>
+                <div class="message-content">We understand you are asking for 1.1Mil. This is not an amount we can consider as it is more than our annual revenue. You will find if you search us, that we went bankrupt 2 years ago and have been on the losing side since. We would like to discuss how to proceed, but we do not know where to start with this amount.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/18/2021, 4:32:53 PM</span>
+                </div>
+                <div class="message-content">We can provide you with 25% discount as a step forward.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/19/2021, 2:00:25 PM</span>
+                </div>
+                <div class="message-content">Hi - We are trying to see what we can do but meanwhile can you send me any files from: 1. E:\mssql\data folder on a server called [redacted]-db? log files or something like that. Also on a server called [redacted] can you get me a file from c:\users\[redacted]\documents\[redacted]\exports please? thank you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/20/2021, 8:01:14 AM</span>
+                </div>
+                <div class="message-content">We are looking for those files. Will upload soon.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/20/2021, 1:14:04 PM</span>
+                </div>
+                <div class="message-content">We can't find the files you requested by path. We need the exact file names to look for.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/20/2021, 6:56:09 PM</span>
+                </div>
+                <div class="message-content">can you find a table in a database if we give you the table name?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/21/2021, 12:23:34 PM</span>
+                </div>
+                <div class="message-content">Well, yes, I suppose. But please specify the database name too.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/21/2021, 12:37:01 PM</span>
+                </div>
+                <div class="message-content">can you see if you have these files: A) [redacted] server - "TransfertsWeb7DerniersJours_20201220" and "TransfertsWeb7DerniersJours_20201213"; and B)  vRaym-DB - "templog.ldf"</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/22/2021, 12:16:37 PM</span>
+                </div>
+                <div class="message-content">Yes. We have them. Although we have already provided two files of your choice that you have requested I can provide only parts of those files as a confirmation.
+StoreName_FromSomme de TotalQtySomme de TotalRetail
+[redacted]54717956.87
+StoreName_FromSomme de TotalQtySomme de TotalRetail
+[redacted]862923.85</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/22/2021, 8:20:02 PM</span>
+                </div>
+                <div class="message-content">We have provided everything you asked by now. Now we are waiting for your decision. It's been a week already and we are almost past the deadline to we need your decision by tomorrow.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/22/2021, 10:16:28 PM</span>
+                </div>
+                <div class="message-content">You have provided everything we asked.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/22/2021, 10:16:59 PM</span>
+                </div>
+                <div class="message-content">It is appreciated. It is also used to build some trust in a situation like this.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/22/2021, 10:17:32 PM</span>
+                </div>
+                <div class="message-content">We also used the time to see what we can raise in funds because even 800k is not an amount anything will give us.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/22/2021, 10:18:11 PM</span>
+                </div>
+                <div class="message-content">I will respond tomorrow we are trying one other thing and then I will be able to say if and what we can offer.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/23/2021, 5:58:47 AM</span>
+                </div>
+                <div class="message-content">Ok, we are waiting for the news by tomorrow.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/23/2021, 2:10:38 PM</span>
+                </div>
+                <div class="message-content">Hi - we reviewed all the files. The data is not worth much. We are recovered so we do not need decryptors. We cannot pay what you are asking. We are on the verge of insolvency and this certainly does not help. I can pay you 50K to make this go away if you promise and provide assurance that you deleted all the data. This is as much as I am able to do without triggering law enforcement and the banks after me.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/23/2021, 2:29:25 PM</span>
+                </div>
+                <div class="message-content">50K is totally impossible. As you can find our from the open sources our "average" is more than a mil. Although we are ready to make a step forward towards you and go down to $450k (if the decryptor is not required, only for the data deletion). My team will not let me go even a dollar lower than $450k.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/24/2021, 12:43:40 AM</span>
+                </div>
+                <div class="message-content">We cannot do that, we do not have that kind of funds available to give. I guess we cannot proceed because I cannot give you what you want and I do not have.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/24/2021, 9:29:51 AM</span>
+                </div>
+                <div class="message-content">Understandable. Too bad though. We will start auctioning your data to your competitors within next 48 hours.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/24/2021, 12:10:28 PM</span>
+                </div>
+                <div class="message-content">Let me know who is interested in buying this information, might be a potential buyer :) Like I said the price is far too high that I cannot budge more than +10k. Of course if you decide to access I promise not to tell the media that the amount but sounds like we are not even in the ball-park.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/24/2021, 5:34:22 PM</span>
+                </div>
+                <div class="message-content">That's just impossible in our enterprise.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/24/2021, 5:40:58 PM</span>
+                </div>
+                <div class="message-content">Let me discuss with the team to reevaluate your abilities and I will get back to you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/24/2021, 8:15:20 PM</span>
+                </div>
+                <div class="message-content">Well. Ok, we can make it 100k and finish this one on a private terms from both sides.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/25/2021, 5:50:25 PM</span>
+                </div>
+                <div class="message-content">Hi - Ok, all agreed; 100k. Please send wallet</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/26/2021, 1:51:38 PM</span>
+                </div>
+                <div class="message-content">Hello - OK, we confirm 100k to resolve this.
+We have a bitcoin broker ready to do transfer today.
+Please confirm on payment you will provide:
+1.  complete file tree of the data downloaded from our network and a deletion log of all of the data,
+2.  confirmation that you deleted and will never publish any of our data, including our chat, now or in the future, and
+3.  a security report on how we got hacked, and how we can prevent future problems 
+Please confirm 1 to 3 and send us the bitcoin wallet address.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/26/2021, 4:20:06 PM</span>
+                </div>
+                <div class="message-content">All of those is confirmed
+The wallet is : [redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/26/2021, 6:34:18 PM</span>
+                </div>
+                <div class="message-content">OK standby</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/26/2021, 7:53:03 PM</span>
+                </div>
+                <div class="message-content">OK, the broker sent $100K / 1.8650 bitcoins. Please confirm receipt and provide to us the deal items as soon as possible, thank you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/27/2021, 6:57:03 AM</span>
+                </div>
+                <div class="message-content">The payment is received. We will provide the decryption tool the soonest possible.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/27/2021, 10:41:54 AM</span>
+                </div>
+                <div class="message-content">[redacted]_decryptor.exe [ 103kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/27/2021, 10:42:16 AM</span>
+                </div>
+                <div class="message-content">Decryptor:
+1) Launch the decryptor under Administrative rights
+2) Wait till the decryptor window is closed
+3) if any of the files haven't changed the extension back to the original - repeat 1 and 2</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">March 15, 2021 at 3/27/2021, 4:18:40 PM</span>
+                </div>
+                <div class="message-content">OK - thanks. Regarding our data and files, can you please provide the full 100% file-tree list and proof of shred/deletion. Also, the security report of what happen so we can improve our network. thank you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">March 15, 2021 at 3/29/2021, 7:18:54 AM</span>
+                </div>
+                <div class="message-content">Yes, we will keep you updated on this one.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

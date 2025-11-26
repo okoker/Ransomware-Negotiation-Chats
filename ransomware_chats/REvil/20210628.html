@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20210628</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20210628 | Date: June 28, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 39</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 21</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 18</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 4 days ago</span>
+                </div>
+                <div class="message-content">We take you seriously and we want to work something out but $50k is too
+ much for us to get our computers back. COVID ruined our finances and we
+ have entire lots of cars from last year sitting outside that no one is 
+interested in because no one is driving anymore. Can we work out a 
+reduction in the price?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 3 days ago</span>
+                </div>
+                <div class="message-content">Hello , my boss can offer 20% discount</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 3 days ago</span>
+                </div>
+                <div class="message-content">Thanks for working with us. I'm not sure if that's going to be enough 
+of a discount but I will talk with my boss and see what we can do. We 
+see different names for the notes on each computer with different keys 
+in them. Does the price include unlocking all of our computers?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 3 days ago</span>
+                </div>
+                <div class="message-content">for all network</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">Sorry we haven't reached out in a little while but we have been trying 
+to figure all this out while keeping the business running. We want to 
+make sure you are able to decrypt more than just one system. Can you 
+decrypt these files to show you can?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">File 1</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">File 2</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">Pulling these down now. I talked to my boss and he said we can't pay in Monero do you accept Bitcoin?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">Of course , btc enabled</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">Ok that's good to know. My boss wanted to see if you would be willing 
+to let us pay $10,000 for the decryption. We know it's not what you are 
+asking for but this is short notice and we are trying to do what we can 
+to find available cash.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">not interested</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">OK, my boss had someone willing to loan him some money if he needed to.
+ Will you take $20,000? We could buy the Bitcoin and get you the money 
+in 24 hours.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">25k and okay not lower</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">price update</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">OK, let me talk to my boss and get back to you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">Just so I'm clear that payment would get us a decryptor for all our encrypted computers?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">of course</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">OK we are working on getting the money together right now. Did you take
+ any files from our computers? And how fast after we pay could we get 
+the decryption software?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">few minutes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">OK thats good to know but my boss still wanted to know about whether or not you guys took our data before we sent the money.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">We took your data</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">What did you take?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">It will take more than a month to analyze the data.
+If all you need is a data, leave this chat.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">We still want to move forward with payment for the decryptor we are 
+just trying to understand what data was taken because it could impact 
+our customers and we care about them. If you can give us a list of files
+ it would help us a lot. Can you confirm that the bitcoin wallet is 
+still [redacted]? Will you help us if something 
+goes wrong with the decryption?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">We want to make payment today if you can confirm the wallet for us. We don't want to send it to the wrong place.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">[redacted] yes it is the right adress</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">thanks for verifying.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">we are getting ready to make payment. Are you able to provide us a Dir listing of what you exfil'd?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 1 day ago</span>
+                </div>
+                <div class="message-content">of course</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 17 hours ago</span>
+                </div>
+                <div class="message-content">It took us longer yesterday than we thought to get the money together. 
+We should be able to buy the bitcoin and send you payment today.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 17 hours ago</span>
+                </div>
+                <div class="message-content">ok we wait</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 9 hours ago</span>
+                </div>
+                <div class="message-content">OK, it was difficult to get everything done on the weekend since the 
+banks were closed most of the time but we should be making payment very 
+soon. I just wanted to confirm that the price is still $25,000. The site
+ shows 0.77 BTC which is $25,569 and there is a reference to Bitcoin 
+(+10%). As long as we pay the agreed $25,000 you will decrypt all of our
+ files on all computers right?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 9 hours ago</span>
+                </div>
+                <div class="message-content">OK, it was difficult to get everything done on the weekend since the 
+banks were closed most of the time but we should be making payment very 
+soon. I just wanted to confirm that the price is still $25,000. The site
+ shows 0.77 BTC which is $25,569 and there is a reference to Bitcoin 
+(+10%). As long as we pay the agreed $25,000 you will decrypt all of our
+ files on all computers right?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 8 hours ago</span>
+                </div>
+                <div class="message-content">OK we sent the 0.77 Bitcoin, please confirm as soon as you get it.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 5 hours ago</span>
+                </div>
+                <div class="message-content">confirm</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 5 hours ago</span>
+                </div>
+                <div class="message-content">yes for all network</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 28, 2021 at 5 hours ago</span>
+                </div>
+                <div class="message-content">waiting 3 confirmations</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

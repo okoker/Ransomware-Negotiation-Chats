@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - AB0404E049514B50</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: AB0404E049514B50 | Date: AB0404E049514B50</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 28</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 14</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 14</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-10T23:16:50.760546Z</span>
+                </div>
+                <div class="message-content">Where is the listing is step 1?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-11T00:18:00.831244Z</span>
+                </div>
+                <div class="message-content">tree.txt filesize:2352921</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-11T00:18:16.513956Z</span>
+                </div>
+                <div class="message-content">Here is the list of files.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-12T13:28:39.055759Z</span>
+                </div>
+                <div class="message-content">We will work on getting you the 3 files</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-12T13:28:52.697488Z</span>
+                </div>
+                <div class="message-content">How did you all get in?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-12T13:32:40.055477Z</span>
+                </div>
+                <div class="message-content">Data on the method of penetration and work within the network are provided only after successful completion of negotiations. We are waiting for your files to demonstrate the test decryption.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-13T03:05:19.964810Z</span>
+                </div>
+                <div class="message-content">Will work on that too</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-14T18:40:51.565505Z</span>
+                </div>
+                <div class="message-content">Please provide us with the following files:</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-14T18:41:07.665303Z</span>
+                </div>
+                <div class="message-content">[Redacted].pdf [Redacted].xlsx [Redacted].xlsx</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-14T18:47:10.846028Z</span>
+                </div>
+                <div class="message-content">[Redacted].xlsx filesize:1826490</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-14T18:47:35.671018Z</span>
+                </div>
+                <div class="message-content">[Redacted].pdf filesize:2490220</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-14T18:48:11.168050Z</span>
+                </div>
+                <div class="message-content">[Redacted].xlsx filesize:2774610</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-14T18:48:48.901797Z</span>
+                </div>
+                <div class="message-content">[Redacted].xlsx filesize:132809</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-15T02:43:29.785757Z</span>
+                </div>
+                <div class="message-content">We will check theses out.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-15T18:57:07.383843Z</span>
+                </div>
+                <div class="message-content">Is this everything you have? What are you wanting from us?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-15T19:00:36.817314Z</span>
+                </div>
+                <div class="message-content">Have you checked the decryption capability and made sure that we have the files?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-15T19:06:24.489669Z</span>
+                </div>
+                <div class="message-content">We could only decrypt one file but it worked from what we could tell and you sent us the files we requested from the list provided.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-15T19:09:07.493667Z</span>
+                </div>
+                <div class="message-content">We can decrypt all the data back, and we will delete the data that is received from your network. The cost will be 500,000$</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-16T16:29:53.615706Z</span>
+                </div>
+                <div class="message-content">Is that file listing you sent earlier 100% of the files?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-16T16:39:40.995198Z</span>
+                </div>
+                <div class="message-content">This is the list that we have decided to share with you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-17T01:53:31.530191Z</span>
+                </div>
+                <div class="message-content">What percentage is it?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-17T01:54:35.954113Z</span>
+                </div>
+                <div class="message-content">This is the list that we have decided to share with you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-17T15:43:03.343335Z</span>
+                </div>
+                <div class="message-content">That is a lot of money when we don't know everything you have</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-17T15:51:09.306020Z</span>
+                </div>
+                <div class="message-content">You have been provided with the necessary information. You can also see the countdown timer. Upon completion, the data will be published, and the decryption program will be deleted. You will not be able to recover data from recovery companies. After the timer expires, the decryptor will actually be deleted, and it will not be available for any money. These are standard terms and conditions, and you know it. The situation can be resolved quickly for the specified amount and continue working quietly. Think about it.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-17T18:48:28.757111Z</span>
+                </div>
+                <div class="message-content">Is there any wiggle room in the amount? That would be a lot to try to produce by the time the timer reaches zero.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-17T18:51:53.813026Z</span>
+                </div>
+                <div class="message-content">Abstract conversation does not lead to success. Name the amount and the due date. And we will discuss it with you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-18T19:28:05.857541Z</span>
+                </div>
+                <div class="message-content">We are having internal conversations here but it would be helpful for you all to give us a better starting point on the price</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">AB0404E049514B50 at 2025-04-18T19:32:21.405713Z</span>
+                </div>
+                <div class="message-content">Starting point 500 000$</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

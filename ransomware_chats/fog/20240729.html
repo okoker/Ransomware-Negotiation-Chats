@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20240729</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20240729 | Date: July 29, 2024</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 144</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 89</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 55</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 15:37:56</span>
+                </div>
+                <div class="message-content">Hi</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 15:40:39</span>
+                </div>
+                <div class="message-content">hi</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 15:41:22</span>
+                </div>
+                <div class="message-content">I will give you details in a minute</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 15:47:24</span>
+                </div>
+                <div class="message-content">[provides a plain TXT files list]
+this is what has been taken from your network</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 16:34:00</span>
+                </div>
+                <div class="message-content">What are the instruction to restore our data?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 17:21:31</span>
+                </div>
+                <div class="message-content">Hi are you there?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 17:53:48</span>
+                </div>
+                <div class="message-content">I will give you instructions after payment</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 18:11:40</span>
+                </div>
+                <div class="message-content">What payment?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 18:15:24</span>
+                </div>
+                <div class="message-content">If you want your data fully decrypted and the files we stole removed from our source, you will have to pay a fee. We will also be able to provide a security report and explain how we did it to get in. I will give you our demand soon.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 19:59:48</span>
+                </div>
+                <div class="message-content">Any news?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 29 July 2024 20:07:44</span>
+                </div>
+                <div class="message-content">If you need a proof we indeed possess your data, send me a couple of directories to the files you want to see. To test our tool, send me 3 random encrypted files and we will decrypt them for free. Our demand is $200,000.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 09:53:26</span>
+                </div>
+                <div class="message-content">Hello, we don't know how to make the payment or how to facilitate it for you. On the other hand, we are a very small company and cannot afford the payment you are mentioning. What options do we have? And about the three files what is the procedure?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 10:36:45</span>
+                </div>
+                <div class="message-content">As for the files, if you need a proof we indeed possess your data, send me a couple of directories to the files you want to see. We can provide you with a $20,000 discount if you pay us this week. The price is fair for your company.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 13:40:45</span>
+                </div>
+                <div class="message-content">We are willing to cooperate, but the amount requested is far beyond our capabilities as a small company. We can offer a smaller sum and pay it as soon as possible. Additionally, we need to clearly understand the payment process and the guarantees we have to securely recover our data. Please provide detailed instructions on how to proceed and assure us that we will receive all our data without further issues</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 14:16:50</span>
+                </div>
+                <div class="message-content">I can't give you an additional discount until I see your number. The price can be increased at any second if you keep haggling like this.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 14:20:59</span>
+                </div>
+                <div class="message-content">What number do you mean?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 14:28:00</span>
+                </div>
+                <div class="message-content">The number you are ready to pay at the moment.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 14:59:21</span>
+                </div>
+                <div class="message-content">We can offer $120,000 and want to be transparent, avoiding a prolonged negotiation. Additionally, we need to understand how to make the payment. We will provide several files for you to decrypt to verify your capabilities.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 15:16:50</span>
+                </div>
+                <div class="message-content">$120,000 is not a bad offer but I can't accept this. I also want to avoid a prolonged negotiation, so our final price is $150,000. You have 2 days to gather the rest $30k and we will be done with it. I will give you our wallet for payment later.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 16:03:24</span>
+                </div>
+                <div class="message-content">We are agreeable to proceeding with the following conditions: First, we will provide several encrypted files for you to decrypt as proof of your decryption capabilities. Following this, we will make an initial payment of $120,000 in exchange for the instructions and necessary tools to decrypt the rest of our systems. Once we have successfully recovered our data, we will make a final payment of $30,000. In return, we expect a report detailing how the attack was carried out and confirmation that all our data has been removed from your possession and any related systems</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 16:04:57</span>
+                </div>
+                <div class="message-content">[provides a zip archive of encrypted files]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 16:35:49</span>
+                </div>
+                <div class="message-content">tell is there the file named "auth.log.fog.savepoint" somewhere near the file "auth.log.fog"?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 17:04:09</span>
+                </div>
+                <div class="message-content">We couldn't find the file you mentioned, could you tell us where this file should be located and what it contains?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 17:39:30</span>
+                </div>
+                <div class="message-content">it should be in the same directory with the file auth.log.fog that your gave me</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Tuesday, 30 July 2024 17:40:44</span>
+                </div>
+                <div class="message-content">Isn't in this directory</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Admin 19:02:03</span>
+                </div>
+                <div class="message-content">[provides 2 decrypted files]
+I will give you everything right away when I received the full 150k payment. Let's resolve the issue quickly.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Admin 19:03:52</span>
+                </div>
+                <div class="message-content">[redacted] this is id for payment</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Admin 19:09:35</span>
+                </div>
+                <div class="message-content">We understand your position, but we must adhere to our agreed-upon model. We need to follow the steps we outlined previously: first providing a portion of the payment, receiving the necessary decryption instructions, and then completing the full payment upon confirmation. Additionally, specify which cryptocurrency it is for the payment.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Admin 19:27:14</span>
+                </div>
+                <div class="message-content">We work with bitcoins. We cannot violate our policy, which means we cannot accept fractional payments.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Admin 20:32:49</span>
+                </div>
+                <div class="message-content">Once the payment is made, how does the decryption process work? What guarantees do we have that all our data will be fully recovered and secured? We also want to understand what you will provide to us after the payment. Please understand that we are concerned due to our lack of experience with situations like this and need reassurance that everything will be resolved properly.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Admin 20:48:18</span>
+                </div>
+                <div class="message-content">Once the payment is made, you will get the .exe files that you will need to run on your systems (win or esxi) to decrypt your files. We guarantee that you will be able to recover all the encrypted data. We will give you a deletion log file which means the files we stole .were removed from our source.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Admin 21:08:16</span>
+                </div>
+                <div class="message-content">We need to finalize the financial and legal aspects on our end before proceeding with the payment. Once everything is ready and the payment is made, we will notify you immediately.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Admin 21:14:23</span>
+                </div>
+                <div class="message-content">Standing by, thanks.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Wednesday, 31 July 2024 08:08:12</span>
+                </div>
+                <div class="message-content">We are currently reviewing the payment method, and since we are not familiar with this process, we are unsure how to proceed. Could you explain how this is typically done and which services are usually used? We want to ensure that everything is handled correctly.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Wednesday, 31 July 2024 09:34:36</span>
+                </div>
+                <div class="message-content">see the link https://www.csoonline.com/article/570047/how-to-buy-bitcoin-for-ransomware-payment-if-you-must.html</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Wednesday, 31 July 2024 09:54:27</span>
+                </div>
+                <div class="message-content">Thanks ,we are checking, but the registration process and validation will take some time.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Wednesday, 31 July 2024 10:38:24</span>
+                </div>
+                <div class="message-content">sure</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Wednesday, 31 July 2024 14:10:07</span>
+                </div>
+                <div class="message-content">How's your progress with that?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Wednesday, 31 July 2024 14:39:30</span>
+                </div>
+                <div class="message-content">The cryptocurrency purchase platform needs to verify the user, and this won't be completed until tomorrow. The process is turning out to be quite long and complex for us.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Wednesday, 31 July 2024 14:52:24</span>
+                </div>
+                <div class="message-content">tell me when you have updates</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Wednesday, 31 July 2024 15:21:43</span>
+                </div>
+                <div class="message-content">Sure</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Thursday, 01 August 2024 09:37:55</span>
+                </div>
+                <div class="message-content">We have conducted an initial test to verify that the process we're following is correct. Could you confirm that you have received the first transfer of $5? Meanwhile, we are in the process of acquiring the total amount of cryptocurrency needed for the full payment, but it is taking some time.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Thursday, 01 August 2024 10:00:09</span>
+                </div>
+                <div class="message-content">I received 0.000082</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Thursday, 01 August 2024 10:29:02</span>
+                </div>
+                <div class="message-content">Okay, we are in the process of obtaining the full amount. Once we have it, we will proceed with the transfer.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Thursday, 01 August 2024 10:29:43</span>
+                </div>
+                <div class="message-content">Once the payment is received, what are the next steps?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Thursday, 01 August 2024 10:43:53</span>
+                </div>
+                <div class="message-content">I will give you the decrypter after I see the money in the wallet</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Thursday, 01 August 2024 10:44:05</span>
+                </div>
+                <div class="message-content">and instructions of course</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Thursday, 01 August 2024 17:18:25</span>
+                </div>
+                <div class="message-content">We are gathering the payment in the exchange, but we need to proceed gradually with the euro money transfers to the wallet. I believe we can have it ready in less than 48 hours. Maybe in 24 hours. I'll keep you informed.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Thursday, 01 August 2024 17:20:04</span>
+                </div>
+                <div class="message-content">From the moment we make the payment transfer, how long will it take you to send me the decryptors for Windows files and virtual machines? Will you send them here, or should I give you an email?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Thursday, 01 August 2024 19:20:05</span>
+                </div>
+                <div class="message-content">I will send the decrypters via this chat after full sum received</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 12:29:16</span>
+                </div>
+                <div class="message-content">Hi, I already have the funds available. I'm going to make a small test transfer from this wallet, and then the rest will be ok?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 12:43:01</span>
+                </div>
+                <div class="message-content">Sure. But you have already sent a test amount of 0.000082 BTC. Anyway, you can send another one.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 14:14:33</span>
+                </div>
+                <div class="message-content">Please give me 3 hours and we will proceed. I write to you here. Thank you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 14:36:49</span>
+                </div>
+                <div class="message-content">Standing by.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 15:48:05</span>
+                </div>
+                <div class="message-content">Hi, we just did the test transfer. Please tell me everything is ok.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 15:48:29</span>
+                </div>
+                <div class="message-content">When you verify it we make the final large transfer.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 15:59:04</span>
+                </div>
+                <div class="message-content">I see 0.003 confirming</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 15:59:37</span>
+                </div>
+                <div class="message-content">ok Sr.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:00:15</span>
+                </div>
+                <div class="message-content">We proceed to make the payment. Can you confirm that I will have the decrypters instantly please?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:18:32</span>
+                </div>
+                <div class="message-content">You're online?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:19:23</span>
+                </div>
+                <div class="message-content">I can confirm</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:19:47</span>
+                </div>
+                <div class="message-content">ok, thanks. wait a minute please</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:20:01</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:21:36</span>
+                </div>
+                <div class="message-content">we are working on it, give me just 2 minutes. please prepare the decrypters to send me.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:22:13</span>
+                </div>
+                <div class="message-content">preparing</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:26:27</span>
+                </div>
+                <div class="message-content">it's OK.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:26:34</span>
+                </div>
+                <div class="message-content">Transfer OK.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:29:42</span>
+                </div>
+                <div class="message-content">It has arrived, can you confirm it for me?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:30:49</span>
+                </div>
+                <div class="message-content">confirming</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:30:57</span>
+                </div>
+                <div class="message-content">Thanks!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:31:01</span>
+                </div>
+                <div class="message-content">give me a minute</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:31:15</span>
+                </div>
+                <div class="message-content">ok, sr.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:44:47</span>
+                </div>
+                <div class="message-content">Esxi
+chmod +x unlocker
+./unlocker --id [redacted] --log --target "/vmfs/volumes/"
+Windows
+unlocker.exe -nomutex -console -target \\SERVER\C$
+unlocker.exe -nomutex -console -target C:\</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:45:06</span>
+                </div>
+                <div class="message-content">[provides a zip file with the decryptor]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 16:48:51</span>
+                </div>
+                <div class="message-content">OK, we'll try it out and I'll write to you if there are any questions or problems. Thanks.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Friday, 02 August 2024 17:14:35</span>
+                </div>
+                <div class="message-content">ok I am here</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Admin 18:45:50</span>
+                </div>
+                <div class="message-content">[provides a PNG file]
+It gives us an error with the ESXI, I attach an image</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Admin 19:03:42</span>
+                </div>
+                <div class="message-content">maybe too many files on the machine?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Admin 19:14:23</span>
+                </div>
+                <div class="message-content">specify one vm in directory of decrypter</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Admin 23:08:27</span>
+                </div>
+                <div class="message-content">we are having some problems. I leave you screenshots:[provides 2 PNG files]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Admin 23:11:35</span>
+                </div>
+                <div class="message-content">I am attaching the files that we cannot decrypt. Let's see if you can help us since they are very important to be able to operate:[provides 3 TXT files]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Admin 23:13:47</span>
+                </div>
+                <div class="message-content">We have carried out the test of specifying a machine instead of a folder and it does not give an error, but it does not decrypt either.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Admin 23:14:03</span>
+                </div>
+                <div class="message-content">It is a very serious problem for us. Please, help.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 06:42:29</span>
+                </div>
+                <div class="message-content">For example, these files are impossible to decrypt (and they are small):[provides 8 .FOG files]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 08:12:52</span>
+                </div>
+                <div class="message-content">my team is working on it</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 09:05:55</span>
+                </div>
+                <div class="message-content">how many vms did you already fix and run?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:08:09</span>
+                </div>
+                <div class="message-content">We are very concerned because those machines are the SAP and two other environments we use to operate the business. Without these environments, we cannot function. Let me tell you which machines they are:</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:08:36</span>
+                </div>
+                <div class="message-content">1 - [redacted]-flat.vmdk
+1 - [redacted].vmdk
+0 - [redacted]-flat.vmdk
+0 - [redacted]-flat.vmdk
+[redacted]-flat.vmdk
+[redacted]-flat.vmdk
+0 - [redacted]-flat.vmdk
+0 - [redacted].vmdk
+[redacted]-flat.vmdk
+[redacted]-ctk.vmdk</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:08:57</span>
+                </div>
+                <div class="message-content">And swap files:
+vmx-[redacted].vswp
+vmx-0 - [redacted].vswp
+vmx-[redacted].vswp
+vmx-[redacted].vswp
+[redacted].vswp</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:09:22</span>
+                </div>
+                <div class="message-content">And .vmsd file:
+0 - [redacted].vmsd</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:10:06</span>
+                </div>
+                <div class="message-content">And also many other files in .log format that are secondary and not needed to start the machines.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:10:45</span>
+                </div>
+                <div class="message-content">How can we solve this? Do you need me to share more files that we cannot decrypt?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:11:10</span>
+                </div>
+                <div class="message-content">I have shared some small files above that cannot be decrypted.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:12:03</span>
+                </div>
+                <div class="message-content">All the files we cannot decrypt are these (I already listed them above, but here they are again for your reference):</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:14:42</span>
+                </div>
+                <div class="message-content">This is very urgent because we cannot operate the business without it. We have tried everything possible. We have tried decrypting locally, on other machines, specifying directory paths, and the final paths of the machines.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:51:40</span>
+                </div>
+                <div class="message-content">there are some options for solving this</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 10:52:59</span>
+                </div>
+                <div class="message-content">start decryption of the following folders using --threads 16
+/vmfs/volumes/[redacted]/
+/vmfs/volumes/[redacted]/
+/vmfs/volumes/[redacted]/
+/vmfs/volumes/[redacted]/
+/vmfs/volumes/[redacted]/</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 11:02:31</span>
+                </div>
+                <div class="message-content">when you have 'error open file' try to recheck permissions of a file copying it to another folder because permissions could change. use the command ls -la. Example: -rw-r--r--    1 root     root          8024 Aug
+Decrypter should be run as host
+file permissions -rw
+If host and permission don't match, then change host using 'chown' or change permissions using 'chmod'</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 11:03:33</span>
+                </div>
+                <div class="message-content">Or another options is to try replace a file to another folder an run decrypter to decrypt exactly this one file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 11:06:17</span>
+                </div>
+                <div class="message-content">ok let's try it.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 11:26:12</span>
+                </div>
+                <div class="message-content">Using -- threads 16 and other parameters that we have tried does not work, I attach an image:[provides a PNG file]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 11:26:43</span>
+                </div>
+                <div class="message-content">Let's test the permissions issue of the second option. However, we run it as root.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 11:27:03</span>
+                </div>
+                <div class="message-content">We tried the third option yesterday and this morning and it doesn't work for us.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 11:27:14</span>
+                </div>
+                <div class="message-content">Now I'll tell you about the issue of permissions.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 12:21:04</span>
+                </div>
+                <div class="message-content">None of the options work.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 12:21:33</span>
+                </div>
+                <div class="message-content">Without these files we cannot operate, they are the core of the organization.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 12:22:30</span>
+                </div>
+                <div class="message-content">Do you want me to upload virtual machines to the cloud, or give you access to a system?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 12:22:46</span>
+                </div>
+                <div class="message-content">please help</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 13:10:04</span>
+                </div>
+                <div class="message-content">my team is working on the trouble</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 13:52:08</span>
+                </div>
+                <div class="message-content">Upload to the cloud we will fix the file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 13:58:04</span>
+                </div>
+                <div class="message-content">OK sr. Thanks!!!![provides a .vswp.fog file]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 17:52:52</span>
+                </div>
+                <div class="message-content">I'm sending you this small file so that your team can analyze why the decrypter doesn't decrypt. We followed all your instructions. Let's see if you can try it in your environment. It's 83Mb of file so you don't have to pass anything bigger that is difficult to handle.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 18:19:43</span>
+                </div>
+                <div class="message-content">[provides a JPG file]
+In this image more information with the permissions:[provides another JPG file]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 18:43:48</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 18:43:53</span>
+                </div>
+                <div class="message-content">wait</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 18:45:15</span>
+                </div>
+                <div class="message-content">Thanks!!!!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 18:59:50</span>
+                </div>
+                <div class="message-content">I will have news for you most likely on Sunday</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 19:08:42</span>
+                </div>
+                <div class="message-content">OK, thank you very much for your attention. We will be waiting for your news.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 22:02:43</span>
+                </div>
+                <div class="message-content">send me vmdk or vmdk-flat file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 22:15:08</span>
+                </div>
+                <div class="message-content">In a few hours you will have the files in a repository. Does that seem okay to you? This way we will not be able to share so many gigabytes. Thank you very much, without these virtual machines our entire company cannot work. It is the core of the business.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Saturday, 03 August 2024 22:15:21</span>
+                </div>
+                <div class="message-content">Thank you very much</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 11:30:20</span>
+                </div>
+                <div class="message-content">We almost have a machine uploaded to the cloud to share the link with you. We have uploaded a "small" 1.2Gb file of those that also cause problems and are on critical routes for us:</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 11:30:27</span>
+                </div>
+                <div class="message-content">https://[redacted].log.fog</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 11:30:56</span>
+                </div>
+                <div class="message-content">Give me a few minutes and I'll send you the link for the vdmk machine</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 11:31:36</span>
+                </div>
+                <div class="message-content">Thank you for your help. Without these operational vdmk machines our company would go bankrupt.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 11:38:18</span>
+                </div>
+                <div class="message-content">We have the vdmk uploaded to the cloud. I am sending you credentials:</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 11:38:36</span>
+                </div>
+                <div class="message-content">sftp://[redacted].vmdk.fog</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 11:38:54</span>
+                </div>
+                <div class="message-content">Password:   [redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 11:39:49</span>
+                </div>
+                <div class="message-content">We are waiting for your news. With these files and the 83Mb one I sent you earlier that is also causing problems, I think your programmers could see what is wrong with the decrypter.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 11:40:24</span>
+                </div>
+                <div class="message-content">We are very concerned because all the critical files of vmdk virtual machines are in this situation. (8 machines)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 13:08:02</span>
+                </div>
+                <div class="message-content">got it</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 13:08:43</span>
+                </div>
+                <div class="message-content">I wait for something from my team</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 13:37:47</span>
+                </div>
+                <div class="message-content">Thanks</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 17:34:18</span>
+                </div>
+                <div class="message-content">Hi, sorry to bother you. I wanted to know if we'll receive any updates today on how to resolve the file decryption issues. We are overwhelmed as we cannot decrypt files like the ones I mentioned in the conversation. Thank you, sorry for the insistence.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 17:36:02</span>
+                </div>
+                <div class="message-content">Please, if you don't help us, our company will close, and we will lose our jobs.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 17:56:36</span>
+                </div>
+                <div class="message-content">we will help</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 17:56:43</span>
+                </div>
+                <div class="message-content">wait</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 18:03:19</span>
+                </div>
+                <div class="message-content">Thanks!!!!</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 22:29:58</span>
+                </div>
+                <div class="message-content">Can we turn off the SFTP machine where we have uploaded the .vmdk file?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Sunday, 04 August 2024 22:30:35</span>
+                </div>
+                <div class="message-content">We can leave it active if necessary.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 05 August 2024 06:33:17</span>
+                </div>
+                <div class="message-content">let it be active for some time</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 05 August 2024 06:42:52</span>
+                </div>
+                <div class="message-content">Ok thanks</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 05 August 2024 11:25:13</span>
+                </div>
+                <div class="message-content">try to copy a vmdk file to a separate folder and run it after removing extension .fog</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">July 29, 2024 at Monday, 05 August 2024 12:55:22</span>
+                </div>
+                <div class="message-content">OK,wait a moment.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

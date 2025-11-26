@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20211026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20211026 | Date: October 26, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 46</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 25</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 21</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-26 13:36</span>
+                </div>
+                <div class="message-content">Hello and welcome to Hive.
+How may I help you?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-26 13:38</span>
+                </div>
+                <div class="message-content">we have some files crypted and we want to decrypt them</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-26 14:20</span>
+                </div>
+                <div class="message-content">anybody there?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-26 17:15</span>
+                </div>
+                <div class="message-content">To decrypt your files you have to pay $3,500,000 in Bitcoin. The price is not a subject to discuss.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-26 18:03</span>
+                </div>
+                <div class="message-content">sorry, are we talking about 3,5K or 3,5M $</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-26 18:04</span>
+                </div>
+                <div class="message-content">in the first case, how should we do the payment and when will we be able to decrypt files?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-26 18:06</span>
+                </div>
+                <div class="message-content">It's clearly the price is $3.5M</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-26 18:07</span>
+                </div>
+                <div class="message-content">We also have exfiltrated files which will be disclosed in case of refusing to pay.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-27 18:38</span>
+                </div>
+                <div class="message-content">To convince you to pay we can make calls to your partners to notify them about the incident.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-27 18:46</span>
+                </div>
+                <div class="message-content">No need for it. We've been checking with Finance your figures and despite willing to pay, we cannot afford the requested amount. We are a roughly over 77M $ yearly revenue company as you can check at official business directory (https://www.dnb.com/business-directory/company-profiles.[redacted].html). That amount is far away from our ability to comply with your demands.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-27 19:11</span>
+                </div>
+                <div class="message-content">The price is not a subject to discuss.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-27 19:16</span>
+                </div>
+                <div class="message-content">We performed files analysis. The impact of disclosure and undecryptable files will cost you few times more then $3.5M.
+To prove that we have exfiltrated files I give you a sample archive.
+https://privatlab.com/s/v/NQqR2jo2B7SyQeBnp5y4</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-27 19:17</span>
+                </div>
+                <div class="message-content">I'm not trying to negotiate. It's just you are considering we are about 500% bigger than we are. It's just a matter of being realistic.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-10-27 19:18</span>
+                </div>
+                <div class="message-content">I'll fix the number at the company's profile but it will not change anything.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-01 11:15</span>
+                </div>
+                <div class="message-content">We will not wait forever. You have to decide.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-02 14:40</span>
+                </div>
+                <div class="message-content">Let me explain to you something.
+There is no other way to decrypt files other then to purchase the decryption software. The attempts to use something different then original software MAY cause irreversible damage. Your files will be unable to decrypt!</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-04 11:22</span>
+                </div>
+                <div class="message-content">We perfectly understand you but, as told before, we have a significantly lower size than you have considered. Your demands are far from feasible for us (no such cash available).
+As I told you, we are not trying to negotiate but if we want to reach something feasible for both parties, we need to get close to realistic capabilities.
+Are you open to discuss?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-04 20:02</span>
+                </div>
+                <div class="message-content">I offer you $2,500,000 and it's valid until the end of the weekend.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 14:35</span>
+                </div>
+                <div class="message-content">Still high, but anyway I'll pass your offer to management. Anyway, is there any proof of trust that the decryption software will fully solve the issue?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 14:47</span>
+                </div>
+                <div class="message-content">By the way, we don't have Bitcoin. How shall we proceed?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 16:29</span>
+                </div>
+                <div class="message-content">To prove the decryption software works you may upload few encrypted files and a key related to them. It usually locates at C:\*.key.* or at root of a shared folder</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 16:35</span>
+                </div>
+                <div class="message-content">You may purchase Bitcoin here -  https://www.kraken.com/
+Just create a new business account and make SEPA-payment.
+After registration and SEPA-payment you should immediately contact to Kraken Support and raise the withdrawal limit to $2.5M per 1 BTC transaction.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 16:57</span>
+                </div>
+                <div class="message-content">there are several files like this one</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 19:03</span>
+                </div>
+                <div class="message-content">Yes, and then upload encrypted files which contain 4igKANBkvldLbBKaHpLIOSo-[redacted]*.[redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 20:51</span>
+                </div>
+                <div class="message-content">OK OK, now I undertand</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:00</span>
+                </div>
+                <div class="message-content">I will upload a single folder with different file types. Is it OK?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:02</span>
+                </div>
+                <div class="message-content">my colleagues are warning me about some sort of verifications asked by Kraken registration. I will be updating status.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:03</span>
+                </div>
+                <div class="message-content">Upload few encrypted files with a key. You don't have to upload full folder.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:29</span>
+                </div>
+                <div class="message-content">there you go</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:35</span>
+                </div>
+                <div class="message-content">I have uploaded one file and others, I see they contain important info. I can mask some data in it^
+Passphrase : XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+Vault      : Serverdom
+Machine    : SERVERDOM</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:38</span>
+                </div>
+                <div class="message-content">Name	Type	Data	Timestamp
+_msdcs			
+_sites			
+_tcp			
+_udp			
+DomainDnsZones			
+ForestDnsZones			
+(same as parent folder)	Host (A)	192.168.YYY.XXX	03/07/2019 19:00:00
+(same as parent folder)	Host (A)	192.168.YYY.XXX	01/09/2019 16:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	20/06/2019 14:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	25/08/2019 12:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	25/06/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	25/06/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	25/06/2019 12:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	13/08/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 10:00:00
+Backups	Host (A)	192.168.YYY.XXX	static
+Backups2	Host (A)	192.168.YYY.XXX	29/08/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	12/08/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	12/08/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	08/08/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	08/08/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/08/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	30/08/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	30/08/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	18/06/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	31/08/2019 19:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	08/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	26/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	29/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	08/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	27/08/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	01/09/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 0:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	01/09/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	31/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	23/08/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	static
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 7:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 0:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	03/09/2019 14:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	01/08/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 7:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 7:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	22/08/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	29/08/2019 3:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	08/09/2019 3:00:00
+Gestion	Host (A)	192.168.YYY.XXX	28/08/2019 8:00:00
+[redacted]	Host (A)	10.0.0.11	static
+[redacted]	Host (A)	10.0.0.12	static
+[redacted]	Host (A)	10.0.0.13	static
+[redacted]	Host (A)	192.168.YYY.XXX	26/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	23/08/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 14:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	26/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	03/09/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 7:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+LAPTOP-[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 13:00:00
+LAPTOP-[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	03/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 3:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	static
+[redacted]	Host (A)	192.168.YYY.XXX	static
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 16:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	27/08/2019 19:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 17:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	26/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	30/08/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	26/08/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	07/09/2019 22:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	13/08/2019 7:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/08/2019 14:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	26/07/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	24/07/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 17:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	01/08/2019 14:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	07/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	16/07/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	16/07/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	07/09/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	24/07/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	03/07/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	17/07/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	22/08/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	29/08/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	26/08/2019 17:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 14:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	31/08/2019 10:00:00
+[redacted]SRV	Host (A)	192.168.YYY.XXX	31/08/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	26/08/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	01/09/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	30/08/2019 16:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	27/08/2019 20:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	01/09/2019 0:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	29/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 7:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	31/08/2019 22:00:00
+[redacted]SRV	Host (A)	192.168.YYY.XXX	08/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/08/2019 14:00:00
+NAS-2	Host (A)	192.168.YYY.XXX	static
+[redacted]	Host (A)	192.168.YYY.XXX	04/07/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	01/09/2019 0:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	03/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	26/08/2019 7:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	27/08/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	27/08/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	03/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	27/08/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 12:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	27/08/2019 3:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	30/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 12:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	31/08/2019 2:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 11:00:00
+PRESTA[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 19:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 7:00:00
+[redacted]-HP	Host (A)	192.168.YYY.XXX	02/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	03/09/2019 12:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	30/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	08/09/2019 5:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	01/09/2019 12:00:00
+Server[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 8:00:00
+SERVER[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+Server[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 13:00:00
+Server[redacted]	Host (A)	192.168.YYY.XXX	31/08/2019 8:00:00
+SERVER[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 11:00:00
+serverdom	Host (A)	192.168.YYY.XXX	static
+Server[redacted]	Host (A)	192.168.YYY.XXX	25/08/2019 8:00:00
+Server[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 8:00:00
+ServerEditorial	Host (A)	192.168.YYY.XXX	05/09/2019 13:00:00
+Server[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 8:00:00
+Server[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 8:00:00
+servergit	Host (A)	192.168.YYY.XXX	static
+ServerHCM	Host (A)	192.168.YYY.XXX	02/09/2019 8:00:00
+Server[redacted]	Host (A)	192.168.YYY.XXX	11/08/2019 8:00:00
+serverjava	Host (A)	192.168.YYY.XXX	static
+SERVERMD	Host (A)	192.168.YYY.XXX	08/09/2019 8:00:00
+ServerMonPrint	Host (A)	192.168.YYY.XXX	03/09/2019 8:00:00
+serverpc	Host (A)	192.168.YYY.XXX	static
+serverphp	Host (A)	192.168.YYY.XXX	static
+serverrails	Host (A)	192.168.YYY.XXX	static
+ServerRDP	Host (A)	192.168.YYY.XXX	25/08/2019 8:00:00
+Server[redacted]	Host (A)	192.168.YYY.XXX	25/08/2019 9:00:00
+SERVERSAP	Host (A)	192.168.YYY.XXX	03/09/2019 8:00:00
+SERVER[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 11:00:00
+SERVER[redacted]	Host (A)	192.168.YYY.XXX	30/06/2019 6:00:00
+Server[redacted]	Host (A)	192.168.YYY.XXX	01/09/2019 8:00:00
+SERV[redacted]	Host (A)	192.168.YYY.XXX	28/08/2019 10:00:00
+Servervpn	Host (A)	192.168.YYY.XXX	25/08/2019 15:00:00
+serverweb	Host (A)	192.168.YYY.XXX	static
+ServerWebW1Apps	Host (A)	192.168.YYY.XXX	static
+SERVERWSUS	Host (A)	192.168.YYY.XXX	26/08/2019 8:00:00
+Srv[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 8:00:00
+SRV[redacted]	Host (A)	192.168.YYY.XXX	07/09/2019 15:00:00
+SRV[redacted]	Host (A)	192.168.YYY.XXX	26/08/2019 9:00:00
+SRV[redacted]	Host (A)	192.168.YYY.XXX	25/08/2019 15:00:00
+SRV[redacted]	Host (A)	192.168.YYY.XXX	26/08/2019 8:00:00
+SRV[redacted]	Host (A)	192.168.YYY.XXX	07/09/2019 11:00:00
+srv[redacted]	Host (A)	192.168.YYY.XXX	static
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 11:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	03/09/2019 8:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	29/08/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 3:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	08/09/2019 22:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 7:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 7:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 14:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	04/09/2019 14:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	05/09/2019 15:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	02/09/2019 16:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 12:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	06/09/2019 13:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 9:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 10:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 7:00:00
+[redacted]	Host (A)	192.168.YYY.XXX	09/09/2019 7:00:00
+[redacted]ADMIN01	Host (A)	192.168.YYY.XXX	21/06/2019 9:00:00
+WIN-[redacted]	IPv6 Host (AAAA)	2002:1400:0122:0000:0000:0000:1400:0122	static
+(same as parent folder)	Name Server (NS)	serverdom02.[redacted].local.	static
+(same as parent folder)	Name Server (NS)	serverdom.[redacted].local.	static
+(same as parent folder)	Start of Authority (SOA)	[222783], serverdom.[redacted].local., hostmaster.[redacted].net.	static</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:40</span>
+                </div>
+                <div class="message-content">too much masking, isn'tit?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:41</span>
+                </div>
+                <div class="message-content">i cannot use them for checking validity</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:44</span>
+                </div>
+                <div class="message-content">All you need is to see that I have decrypted it. There is nothing to validate more</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:44</span>
+                </div>
+                <div class="message-content">I understand</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:45</span>
+                </div>
+                <div class="message-content">well, I'll pass the outcome to management but it doesn't appear to be complete</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:45</span>
+                </div>
+                <div class="message-content">I'll be back to you</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:46</span>
+                </div>
+                <div class="message-content">those where config files</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:47</span>
+                </div>
+                <div class="message-content">the more trivial info available</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 21:55</span>
+                </div>
+                <div class="message-content">I will not to disclose you any sensitive files until payment will be made. Select other files if you still do not believe that the decryption software works.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-05 22:02</span>
+                </div>
+                <div class="message-content">no, it's OK. I'll give that to management and if they trust it I'll keep you posted</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-08 17:43</span>
+                </div>
+                <div class="message-content">I need to hear an update from you today</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-14 18:52</span>
+                </div>
+                <div class="message-content">guys, we finally give up with this shit</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-14 18:53</span>
+                </div>
+                <div class="message-content">Kraken has blocked our registration and funds cannot be moved</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-14 18:53</span>
+                </div>
+                <div class="message-content">it seems to be an impossible process</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 26, 2021 at 2021-11-14 20:48</span>
+                </div>
+                <div class="message-content">I'm sure this situation will be resolved</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

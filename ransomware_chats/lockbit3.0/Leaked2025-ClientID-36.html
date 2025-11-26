@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 36</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 36 | Date: 36</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 55</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 26</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 29</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 10:56:21</span>
+                </div>
+                <div class="message-content">You can attach a few files for test decryption by packing them into an archive with zip, rar, tar, 7zip, 7z, tar.gz extensions of no more than 10 megabytes using the attach button directly in the chat.\r\n\r\nIf your archive weighs more than 10 megabytes, please use our file sharing service.\r\nhttp://lockbitfss2w7co3ij6am6wox4xcurtgwukunx3yubcoe5cbxiqakxqd.onion\r\nhttp://lockbitfsvf75glg226he5inkfgtuoakt4vgfhd7nfgghx5kwz5zo3ad.onion\r\nhttp://lockbitfskq2fxclyfrop5yizyxpzu65w7pphsgthawcyb4gd27x62id.onion\r\nFor security reasons we do not click on other links you send in chat.\r\nPlease wait for a reply, sometimes it takes several hours due to possible time zone differences.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-23 10:57:33</span>
+                </div>
+                <div class="message-content">hello sir, can you help me what you need to decrypt my files?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-23 10:58:55</span>
+                </div>
+                <div class="message-content">[redacted].pdf.usKv553SJ this is a sample file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 11:31:23</span>
+                </div>
+                <div class="message-content">You can attach a few files for test decryption by packing them into an archive with zip, rar, tar, 7zip, 7z, tar.gz extensions of no more than 10 megabytes using the attach button directly in the chat.\n\nIf your archive weighs more than 10 megabytes, please use our file sharing service.\nhttp://lockbitfss2w7co3ij6am6wox4xcurtgwukunx3yubcoe5cbxiqakxqd.onion\nhttp://lockbitfsvf75glg226he5inkfgtuoakt4vgfhd7nfgghx5kwz5zo3ad.onion\nhttp://lockbitfskq2fxclyfrop5yizyxpzu65w7pphsgthawcyb4gd27x62id.onion</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-23 12:28:50</span>
+                </div>
+                <div class="message-content"></div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-23 13:10:53</span>
+                </div>
+                <div class="message-content">could you please how much it will cost to recover my files because we need to know the costs involved.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 14:50:20</span>
+                </div>
+                <div class="message-content">wait, tech support will send your test files</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 14:51:56</span>
+                </div>
+                <div class="message-content">price decrypt 80k in bitcoin, for all hosts and files</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-23 15:47:11</span>
+                </div>
+                <div class="message-content">sir this amount is very high to be paid. We would like to work with you because it will take much time to recover our infrastructure. So some questions from our side \n1. Can you please provide a generous discount so it\'s easier for us to consider your solution?\n2. How fast the recovery process will take if we work with you ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 16:08:06</span>
+                </div>
+                <div class="message-content">we can\'t offer you a discount</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 16:12:12</span>
+                </div>
+                <div class="message-content">if you pay quickly and restore the infostructure on the same day</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 16:14:28</span>
+                </div>
+                <div class="message-content">I saw your financial report, our price is not big for you</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 16:16:24</span>
+                </div>
+                <div class="message-content"></div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-23 16:38:16</span>
+                </div>
+                <div class="message-content">Thank you for the file.\nIt\'s been a very hard year for our company, also as you know we are in Greece and since 2010 it\'s been very tough times for businesses. And the end of the year is always very hard financially with cashflows.\n\nThat\'s why i am asking for your understanding in price, so I can make an easier decision for my manager to decide.\nPlease if you can convince your own management to consider a generous discount it will help us in our decision with positive result. \nFrom our side we want our files faster and without loses than the options we have now. \nIt seems that you can provide this service from the proof you sent.\nIt would be nice if we can find an agreement on a price we can pay so we can pay you.\nRight now the amount you said is far beyond our real financial capability so we cannot consider this an option.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 16:46:36</span>
+                </div>
+                <div class="message-content">ok, we can do a 20% discount</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-23 17:14:17</span>
+                </div>
+                <div class="message-content">First of all thank you for your understanding and the discount you provided. \nI appreciate your help on this. \nBut still we are very far away from what we can really pay. \nStill the amount you mentioned after the discount is very hard to find in cash.\nWe need to take some serious IT decisions tomorrow as most consultants advised us to format and start from latest offline files which will take several days.\nSo please if you can give us a more grounded financial proposal do so since the purpose here is to see if we can use your services.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 17:19:57</span>
+                </div>
+                <div class="message-content">I don\'t care whether you pay me or not, there will be no more talk about discounts</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 17:25:20</span>
+                </div>
+                <div class="message-content">If you don\'t make a decision, the price will be 2x tomorrow.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-23 17:29:26</span>
+                </div>
+                <div class="message-content">Please don\'t misunderstand the interest to find a way to pay you with insult. This was not my point. I respect you are talking with us right now and understanding our side. I just want to make it work for our company based on our limitations in cashflow in the end of the year. I know that you don\'t care about us. You attacked us after all. I understand that it\'s just business for you. Some pay, some don\'t. We want us to both benefit from this incident. We gain knowledge and you gain money. But we wanted to get an amount that we can be able to pay you realistically. We are not here to play either. Unfortunately if your purpose is to raise the price there is no point of discussing any more. Even if we find the correct amount we can pay, we will need at least 7 working days to pay you. Regulations are hard with this kind of transactions.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 17:35:39</span>
+                </div>
+                <div class="message-content">the price will be 60k your decision to pay or not.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-23 17:56:21</span>
+                </div>
+                <div class="message-content">Is there a way to recover 2-3 computers with 15k and get a partial service from your side?  So we can see the quality of your service that is valid and then during next year purchase some more bundle of computers? I am just exploring options here to help our operations based on our cashflows.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-23 17:58:44</span>
+                </div>
+                <div class="message-content">no, the decryptor will be available for all your files with the extension</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-24 16:32:59</span>
+                </div>
+                <div class="message-content">Hello sir, could you please accept the price of 30000$ before the end of the year so we can catch up with the processes to pay you in full for the full service you provide? It will take a lot of effort for us to return to normality so we can see this as a successful penetration test from your team and justify the expenses we need to pay to your work. Mention we need some days to manage to pay this huge amount of money so we need your understanding on this.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-24 18:04:24</span>
+                </div>
+                <div class="message-content">you can pay 50k, but the offer will be available for a some days\nif you can\'t pay on the weekend, I\'ll refund price.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-24 21:03:25</span>
+                </div>
+                <div class="message-content">Please stay with me on this. Even if we find a way to work together, the amount is too big to find it these days. Last two years it\'s been very hard for us and it\'s the end of the year. We are trying to find whatever resources are available in cash and let you know. In the following two days we will have a better picture on our financials. We need at least 6-7 days to find 30k, we will need more to get more money to you. There is very limited cashflow in the end of the year which makes things very hard. Let me see what we can do and get back to you. I will try my best, because we want this to finish soon. There is big spending in the end of the year and limited cash receivable. Need more time to see what we can do for you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 10:16:45</span>
+                </div>
+                <div class="message-content">hello sir, can you please let us know how we can do the payment?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 12:54:26</span>
+                </div>
+                <div class="message-content">hello, btc wallet: [redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 13:08:42</span>
+                </div>
+                <div class="message-content">We managed to gather this amount you requested. It\'s been very hard. \n\nPlease let us know if you accept the following.\nWhen we pay 50.000$ USD to this wallet [redacted] you will keep your promise to:\n1. Give us a tool to decrypt all our files in ESXi and all computers affected and we will decrypt today\n2. Provide technical support from your side in case something doesn\'t work\n3. Promise you will never attack us in the future\n4. Help us understand how we can prevent such incidents again in the future and explain how you managed to get in our infrastructure along with technical details.\n\nWhen we have your replies and confirmation for the above we proceed in the payment.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 13:18:22</span>
+                </div>
+                <div class="message-content">1. there will be no problems with the decryptor,for esxi and all windows files\n2. you will need to disable your av and just run the .exe decryptor\n3. it could be someone else\n4. you know your pass P@ssw0rd</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 13:20:28</span>
+                </div>
+                <div class="message-content">if we pay in the next hour when we will get decryptor?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 13:24:37</span>
+                </div>
+                <div class="message-content">i make a request to tech support, it can take from an hour to five hours</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 13:26:16</span>
+                </div>
+                <div class="message-content">shall we sent 10$ just you to confirm and then send the rest 49990 ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 13:27:13</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 13:31:24</span>
+                </div>
+                <div class="message-content">https://mempool.space/tx/[redacted] can you confirm you received this ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 13:34:48</span>
+                </div>
+                <div class="message-content">yes 0.00010389</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 14:12:01</span>
+                </div>
+                <div class="message-content">bitcoin seller sais you got the money. Please confirm\nhttps://mempool.space/tx/[redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 14:19:47</span>
+                </div>
+                <div class="message-content">is ok, thank you</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 14:24:03</span>
+                </div>
+                <div class="message-content">wait pls, tech support will drop decryptor here</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 14:24:15</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 14:27:31</span>
+                </div>
+                <div class="message-content"></div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 14:32:37</span>
+                </div>
+                <div class="message-content">this is not decryptor</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 14:37:36</span>
+                </div>
+                <div class="message-content">yes, decryptor  we wait</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 15:49:34</span>
+                </div>
+                <div class="message-content"></div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 15:55:19</span>
+                </div>
+                <div class="message-content">What about esxi ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 15:55:52</span>
+                </div>
+                <div class="message-content">Give me readme file from esxi</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 15:57:26</span>
+                </div>
+                <div class="message-content">ok give me 5 minutes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 16:18:02</span>
+                </div>
+                <div class="message-content"></div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 16:30:50</span>
+                </div>
+                <div class="message-content">the VMDK files cannot be decrypter with the .exe decryptor. could you please send decryptor for VMDK in ESxi based on the txt file i sent you 15 minutes ago ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 16:31:33</span>
+                </div>
+                <div class="message-content">yes</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 16:31:38</span>
+                </div>
+                <div class="message-content">wait 5 minutes</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 16:36:55</span>
+                </div>
+                <div class="message-content"></div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 16:40:14</span>
+                </div>
+                <div class="message-content">is there a way to decrypt VMDK files on windows? i have a copy of them and the windows decryptor doesn\'t work with them</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Lockbit3.0</span>
+                    <span class="timestamp">36 at 2024-12-27 16:40:31</span>
+                </div>
+                <div class="message-content">only linux</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 16:42:05</span>
+                </div>
+                <div class="message-content">please provide command line instructions to run linux</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">36 at 2024-12-27 16:55:40</span>
+                </div>
+                <div class="message-content">1. Could you please tell me which commands to run on ESXi step by step in order to decrypt all files?\n2. Is there a chance that something goes wrong when i execute this decrypt_ESXI_X64 command on ESXi? Do i lose all the VMDK files in the server?</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

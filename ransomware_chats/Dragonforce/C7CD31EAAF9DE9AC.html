@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - C7CD31EAAF9DE9AC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: C7CD31EAAF9DE9AC | Date: C7CD31EAAF9DE9AC</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 71</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 36</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 35</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T19:33:22.282577Z</span>
+                </div>
+                <div class="message-content">hello? there was a readme.txt file with instructions to come to this site. can you please explain what is going on? the files have .dragonforce_encrypted on the end of them and are not opening.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T19:36:30.576866Z</span>
+                </div>
+                <div class="message-content">Hi, wait.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T19:40:36.490148Z</span>
+                </div>
+                <div class="message-content">Attachment sent: tree_mastery.zip (3.38 MB)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T19:40:55.408331Z</span>
+                </div>
+                <div class="message-content">Besides the fact that the files on your network are encrypted, you have also lost some of them. They are with us. Here is a list of them.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T19:50:03.47268Z</span>
+                </div>
+                <div class="message-content">what is this? a list of the files? what do you mean by 'lost'? were they deleted?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T19:51:59.904327Z</span>
+                </div>
+                <div class="message-content">We have these files. As well as a program to restore information on your computers.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T20:11:08.559673Z</span>
+                </div>
+                <div class="message-content">okay. so in addition to scrambling the files, you also stole files? are the files from this list (the files you stole) still on my computers?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T20:12:07.496824Z</span>
+                </div>
+                <div class="message-content">Yes, that's right</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T20:14:25.993514Z</span>
+                </div>
+                <div class="message-content">all the filenames are scrambled so i don't know what files are what. for proof you can unscramble them, you say you need a certain file type, but i have no idea what files are what on my side.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T20:14:33.330746Z</span>
+                </div>
+                <div class="message-content">what do you want from me??</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T20:16:41.215838Z</span>
+                </div>
+                <div class="message-content">The architecture of the folders with your files is not broken. You can select a small file from a folder whose contents you know, and we will do a test decryption. Examples of such files are described in the rules, they cannot be critical data.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T20:45:28.928091Z</span>
+                </div>
+                <div class="message-content">i will try to guess and find the right files to decode. without the filenames, i simply won't know for sure. can you explain why you attacked me and what you want?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T20:50:59.419056Z</span>
+                </div>
+                <div class="message-content">You've probably already used Google and know who we are and what we want. We will restore the data from you and delete the data from us after you pay. Otherwise, the data we have will be published. It is often not immediately believed that without payment we will actually publish the data. So check out our blog and make sure we do it.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T20:57:23.92655Z</span>
+                </div>
+                <div class="message-content">i think i understand all of that. but what do you want from me?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-17T20:59:08.506013Z</span>
+                </div>
+                <div class="message-content">Money</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-18T22:41:09.808095Z</span>
+                </div>
+                <div class="message-content">here are 3 files from the list you sent me.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-18T22:41:21.797589Z</span>
+                </div>
+                <div class="message-content">1) [Redacted]20190304.xlsx</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-18T22:41:28.232985Z</span>
+                </div>
+                <div class="message-content">2) [Redacted].msg</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-18T22:41:34.241647Z</span>
+                </div>
+                <div class="message-content">3) [Redacted]23-24.pptx</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T00:44:57.203938Z</span>
+                </div>
+                <div class="message-content">Attachment sent: [Redacted]20190304.xlsx</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T00:46:36.102356Z</span>
+                </div>
+                <div class="message-content">Attachment sent: [Redacted].xlsx (42 KB)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T00:46:44.547715Z</span>
+                </div>
+                <div class="message-content">Attachment sent: [Redacted].msg (87 KB)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T00:46:52.872674Z</span>
+                </div>
+                <div class="message-content">Attachment sent: [Redacted]23-24.pptx (3.96 MB)</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T14:39:51.66601Z</span>
+                </div>
+                <div class="message-content">does the list of files you sent show all the files you took?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T14:46:19.756032Z</span>
+                </div>
+                <div class="message-content">Yes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T18:47:02.367298Z</span>
+                </div>
+                <div class="message-content">i have 3 small scrambled files from a windows computer. i have no idea what files they are, but are from a folder that shouldn't have anything important. how do i give these to you to prove to me that you can fix them?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T19:01:28.85014Z</span>
+                </div>
+                <div class="message-content">You should have uploaded the decryption verification file in the previous step in this dialog. You had instructions on how to do it.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T19:02:53.602854Z</span>
+                </div>
+                <div class="message-content">how do i get back to that step?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T19:04:30.173636Z</span>
+                </div>
+                <div class="message-content">We have now moved you to this step again. Try refreshing the page.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T19:24:45.283597Z</span>
+                </div>
+                <div class="message-content">okay. i put 1 of the files through</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-19T19:26:03.175022Z</span>
+                </div>
+                <div class="message-content">You have made sure that we have your files and we have a file recovery tool on your network.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-23T15:55:39.527918Z</span>
+                </div>
+                <div class="message-content">Have you already assessed the situation and are ready to discuss payment, or would you like more time? As per our rules, I will need to make an announcement regarding the publication of your data on our blog tomorrow if negotiations continue to drag on.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-23T19:18:48.399592Z</span>
+                </div>
+                <div class="message-content">What negotiatons? I asked what you want and all you say is money. I'm not sure what I'm missing or should do at this point. I am waiting for you to tell me what you want.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-23T19:22:02.852478Z</span>
+                </div>
+                <div class="message-content">Attachment sent: 2023 Form 990 for Mastery Schools.pdf (583 KB)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-23T19:22:21.569084Z</span>
+                </div>
+                <div class="message-content">Do you know this document?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-23T19:38:52.85204Z</span>
+                </div>
+                <div class="message-content">Usually, for a company of your size, the amount is $2,000,000. But since you are filing tax reports on Form 990, we are ready to reduce it to $950,000. This way you can hide it in the reports and keep the whole incident a secret.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-23T19:38:54.493669Z</span>
+                </div>
+                <div class="message-content">I know you have my files. You already proved this. What do you want?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-23T19:39:45.841953Z</span>
+                </div>
+                <div class="message-content">$950 000</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-24T18:27:01.313374Z</span>
+                </div>
+                <div class="message-content">We are talking through everything and trying to process next steps. Can you confirm for us what we would get if we were to pay you?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-24T18:37:36.518164Z</span>
+                </div>
+                <div class="message-content">Read the F.A.Q., there are answers. More specifically, we will not publish your files (we will delete them) you will also receive a decryption program.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-27T18:36:14.42272Z</span>
+                </div>
+                <div class="message-content">We are meeting next week with finance to see how much we can pay. I'll be back after the weekend. Thanks</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-27T18:44:56.378567Z</span>
+                </div>
+                <div class="message-content">Okay, i get you. I will turn off the timer until friday next week, to facilitate negotiations. Can you name a day when you will have an answer?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-30T15:17:36.873675Z</span>
+                </div>
+                <div class="message-content">We are meeting about this now and we simply don't understand why you are asking for so much. Your price is just so high that we honestly don't see anything we can do on our end. We know you have all of our files and know exactly how much money we have, but why ask for more money than you know we have? Paying you seems impossible at such a high amount.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-30T15:39:26.310817Z</span>
+                </div>
+                <div class="message-content">Earlier, I sent you the file with your tax records. These are the official documents that you submitted to the tax authorities. They show the amounts of your income and expenses. Is the information you submitted to the tax service unreliable?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-30T15:44:50.006559Z</span>
+                </div>
+                <div class="message-content">We are a public school. Our "income" isn't normal income like a company. We don't generate revenue and don't have income. We operate on a strict and tight budget.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-30T15:51:29.665726Z</span>
+                </div>
+                <div class="message-content">We have reviewed your documentation, not just the file you sent us above. The amount you are being offered is significantly lower than what a commercial organization would receive.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-30T16:04:17.818395Z</span>
+                </div>
+                <div class="message-content">For that, we are appreciative. I don't mean to be disrespectful or unappreciative, but we just don't have the budget for a massive expense like this. You have all of our documents and can see this. Our athletic department doesn't even have the funds to travel to away sporting events so they are trying to raise funds with bake sales and car washes.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-30T16:04:27.912689Z</span>
+                </div>
+                <div class="message-content">Listen, I don't want to waste your time. Can you let me know the lowest amount you would be willing to accept so we can see if a payment is even possible?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-30T16:07:01.105724Z</span>
+                </div>
+                <div class="message-content">I've given you the amount. Now I expect the amount from you. We will discuss this and eventually come to some figure. It usually happens like this. And if we are not talking about deliberately small amounts, then negotiations can go very quickly, to our mutual satisfaction.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-30T16:09:43.006456Z</span>
+                </div>
+                <div class="message-content">Okay. We will review the budget and see how much funding we can allocate to this, but please be aware that it won't be much. We also would like to arrive at a mutual agreement. I'll be back</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-09-30T16:12:44.302913Z</span>
+                </div>
+                <div class="message-content">Ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-01T16:15:42.369077Z</span>
+                </div>
+                <div class="message-content">We think we can pay something around $80,000</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-01T17:11:13.949515Z</span>
+                </div>
+                <div class="message-content">It seems to me that you misspelled the amount there. Forgot one digit in the number of $800,000</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-01T18:04:00.508225Z</span>
+                </div>
+                <div class="message-content">No, not a typo. We can't offer what we don't have. Anything you can do to make this work?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-01T18:09:19.717396Z</span>
+                </div>
+                <div class="message-content">There is one option. You raise the amount to 2 BTC exactly. Now it's about $127,000. And you name the date by which you will pay, if we agree today. And I will try to explain to the management that despite the grants and sponsors, you don't have any more money and we can make such a deal. Perhaps the management will agree.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-01T19:28:08.456317Z</span>
+                </div>
+                <div class="message-content">We can't commit to anything before we take a closer look at our budget. This is a really large amount for us so we can't act on it instantly. Can we get back to you by the end of the week?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-01T19:46:34.793947Z</span>
+                </div>
+                <div class="message-content">The longer the negotiations take, the more difficult it will be for me to convince the management of this amount. But as I promised you, the timer is stopped until the end of the week.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-01T20:22:04.613704Z</span>
+                </div>
+                <div class="message-content">Thanks</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-04T15:36:53.167683Z</span>
+                </div>
+                <div class="message-content">Good morning. We've been meeting and working on this for a few days now and the most we are able to afford to pay is still $80,000. We are a public school and simply don't have the budget for something like this. That said, we are trying to get an appointment to meet with the State Education Board to see about obtaining an emergency grant. Due to the Jewish holiday, we won't be able to get an appointment until after the weekend. I know you've been very patient with us so far, so all I ask right now is that you continue to remain patient so we can meet after the weekend to try to get the funds to pay you. Is this okay?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-04T15:39:24.797947Z</span>
+                </div>
+                <div class="message-content">On monday, will you tell me the result and the date when you will make the payment?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-04T15:42:37.30867Z</span>
+                </div>
+                <div class="message-content">On Monday, I hope to know when we'll be able to meet with the State BOE. I'll let you know when we'll be able to meet with them. I know for any emergency funding requests, there's a vote that needs to take place and it could take a few days to be approved after the initial meeting.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-04T15:43:53.639364Z</span>
+                </div>
+                <div class="message-content">My guess is we'll meet on Tuesday or Wednesday and hopefully by Friday we should get approved, or at least have a good idea of when we'll be approved.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-04T15:44:12.614878Z</span>
+                </div>
+                <div class="message-content">Ok. I will be waiting for information from you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-04T15:44:49.432191Z</span>
+                </div>
+                <div class="message-content">Thank you. I know the timing isn't ideal for either of us, but I appreciate your patience.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-07T17:38:13.221508Z</span>
+                </div>
+                <div class="message-content">Good morning, I have good news. We have an appointment to meet with the State Board of Education on Wednesday. They are aware of the situation and that we will request emergency funding. After the meeting on Wednesday, I will be back to let you know how it went.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-08T01:19:04.001869Z</span>
+                </div>
+                <div class="message-content">Ok, we will be waiting for information from you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-09T16:29:17.384845Z</span>
+                </div>
+                <div class="message-content">Good news! We got an appointment to meet with the State BOE to explain the situation and to request emergency funding. We will meet with them on Friday afternoon. They said that they'll have to vote on the measure of the emergency funding request during their next closed-door session, which will happen on Thursday, October 17th in the morning. Once the voting is done, they will let us know right away and then I'll be back here to let you know.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-09T16:30:49.628919Z</span>
+                </div>
+                <div class="message-content">I know that's not until next week, but we'll just have to be patient because they are the only ones who can help. In the meantime, can you please explain in detail how the payment process works?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-09T16:34:06.513176Z</span>
+                </div>
+                <div class="message-content">You will need to pay BTC to the wallet address given to you. To exchange USD for BTC, you need to use any intermediary that suits you. We will only accept BTC.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-09T16:39:16.453079Z</span>
+                </div>
+                <div class="message-content">Okay. We will start looking into that now. I'll be back after the vote next Thursday, the 17th. Once you have a bitcoin address for us to use, please provide it.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Attacker</span>
+                    <span class="timestamp">C7CD31EAAF9DE9AC at 2024-10-09T16:44:03.668073Z</span>
+                </div>
+                <div class="message-content">I can provide it right now. It has been added to the section for payment on your part. And the amount indicated is 2 BTC. Right now it's $123,660</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

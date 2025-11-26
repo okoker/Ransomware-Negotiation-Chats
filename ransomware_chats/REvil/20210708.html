@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20210709</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20210709 | Date: July 09, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 28</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 12</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 16</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 10 days ago</span>
+                </div>
+                <div class="message-content">Hello,  We are REvil Group. We want to inform that your company local network have been hacked and encrypted. We have all your local network data. The Price to unlock is $3.000,000. Now we're keeping it a secret, but if you do not reply us within 3 days it will be posted on our news-site. Think about the financial damage to your stock price from this publication. In case of successful negotiations we guarantee that you will get decryptors for all your machines, non recoverable removal of downloaded data and security report on how you were hacked to fix your vulnerabilities. We hope that you can correctly assess the risks for your company. You can find more information about REvil group in Google.    Posting on our blog and further publications in the media will lead to significant losses for your company: court and government fines, data recovery, loss of reputation, abandonment of clients, drop in limits.  But don't panic! We are in business, not in war. We can unblock your data and keep everything secret. All we need is a ransom. In this case, you also get: a security report, a complete tree of compromised data files, permanently deleting downloaded data, support with tips on unlocking and protecting.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">Hello there. You encrypted our network and we are stuck. But the amount on your website must be a mistake. We are a tiny company in a very rural state that just finally came out of lockdown. There is no way we can ever pay this much. Is there something different we can work out?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">Hello we know all about your company. My boss can offer 20% discount</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">Thanks for getting back. And thank you for lowering the price. But this is still really really too much money. If you know all about our company, you know things are not so good the past five years. What documents did you take from us?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">we prepare proof of hack</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">offer your price and my boss will review it</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">we are waiting for the proof pack, also we have taken your discount to our management team.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 4 days ago</span>
+                </div>
+                <div class="message-content">small example</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">Looking forward to your reply today or we start publication in our blog</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">We apologize for the delay. We are working on getting you an offer, but right now we are struggling to get the cash together to make you happy. We do not want to insult you with a low number, but as I mentioned... things have not been so good the past few years. Since you know all about us, you know that this is true. We will get you something to offer you first thing tomorrow. Is that okay?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">we wait</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 22 hours ago</span>
+                </div>
+                <div class="message-content">Okay I spoke to my boss. We really don’t want you to publish anything, but we are afraid we will never be able to make a deal with you because the price is so high. We just don’t have that kind of money. Here is what we do have. First, my boss has cancelled the reopening of the office for the rest of the year, which was earmarked at $30,000. It turns out we have an insurance policy that could help out as well. (I was not aware of this). The insurance is $100,000. Finally, my boss will personally contribute his own family money of $20,000. That is $150,000! I know it is not as much as you wanted, but please look at what we are doing here. My boss also wanted me to ask you to look at the financial records that you stole from us. He wanted me to tell you that if you look at those documents, they show that our company has a “negative returned earnings value”. I don’t know what that means, but my boss said that as a businessman, you would understand</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 22 hours ago</span>
+                </div>
+                <div class="message-content">not interested</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 22 hours ago</span>
+                </div>
+                <div class="message-content">we start published your data</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 18 hours ago</span>
+                </div>
+                <div class="message-content">Please man. That’s not fair! My boss is going to kill me. You have to give us more time… please! I am sure we can come up with more money, but you're demanding so much from us. Is there any way we can prove to you our financial situation. I can email you our tax records or something from our accountant? You have to believe me man… Please give me more time…</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 18 hours ago</span>
+                </div>
+                <div class="message-content">Your suggestions don't even come close to meeting our needs</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 15 hours ago</span>
+                </div>
+                <div class="message-content">300k and okay if you pay quickly</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 10 hours ago</span>
+                </div>
+                <div class="message-content">Oh wow, that is awesome. We are very appreciative of the huge discount. We want to get this behind us as fast as possible We can probably get $300,000, but we don’t have it today. We could probably get it by Monday. If you want something today, I know we have exactly $264,766 because I am looking at an email right now. Can we can get you $264,766. If you really need $300k, it’ll take some more time. Can we just pay you the $264,766 in the next 24 hours and be done with this?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 10 hours ago</span>
+                </div>
+                <div class="message-content">300k last price your accept it or we start published data</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 7 hours ago</span>
+                </div>
+                <div class="message-content">We will find the money somewhere. We agree to 300,000 USD. Will you provide the decryption tool, return our data and then delete it after? How do we pay you?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 7 hours ago</span>
+                </div>
+                <div class="message-content">Please also decrypt attached sample file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 3 hours ago</span>
+                </div>
+                <div class="message-content">btc or xmr</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 3 hours ago</span>
+                </div>
+                <div class="message-content">btc</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 3 hours ago</span>
+                </div>
+                <div class="message-content">test</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">July 09, 2021 at 3 hours ago</span>
+                </div>
+                <div class="message-content">the earlier file you sent was empty so sending new test files.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 3 hours ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 3 hours ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">July 09, 2021 at 3 hours ago</span>
+                </div>
+                <div class="message-content">btc enabled , price update</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

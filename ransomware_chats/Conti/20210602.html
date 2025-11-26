@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20210602</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20210602 | Date: June 02, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 81</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 37</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 44</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 02/06/2021, 15:17:16</span>
+                </div>
+                <div class="message-content">What do you want?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 02/06/2021, 15:19:29</span>
+                </div>
+                <div class="message-content">Hello?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 02/06/2021, 15:22:24</span>
+                </div>
+                <div class="message-content">readme.txt [ 1kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 02/06/2021, 16:39:33</span>
+                </div>
+                <div class="message-content">Hello, please wait answer</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 02/06/2021, 16:43:25</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 02/06/2021, 16:46:55</span>
+                </div>
+                <div class="message-content">As you already know - your network and all of your data were encrypted by CONTI team. Besides the encryption process we've downloaded a large pack of your internal documents and files that will be published in case our negotiations fail. How it happens can be seen on our website.
+The recovery price is $1700000 (45 BTC). If you want to make sure we can recover all of your data - you can send us the two files of your choice and we will decrypt them free of charge.
+If we reach mutual agreement your will be provided with decryption tool, none of your internal data will be published and you will be provided with security tips on how to avoid further breaches.
+We strongly recommend to review our offer in a timely manner to avoid additional expenses from your side on security software and on building the new network from scratch.
+The example data pack will be provided soon, which will include part of the file tree list and some actual data you can review.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 02/06/2021, 19:42:25</span>
+                </div>
+                <div class="message-content">30perclisting.zip [ 223kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 02/06/2021, 19:43:06</span>
+                </div>
+                <div class="message-content">You can choose any 2 files from the listing, we will discard them as proof that the files were really stolen
+You can also send 2 files for a free decrypt
+---
+Upon conclusion of the agreement, our price includes
+1) Universal decryptor for your network
+2) Permanently delete all stolen information + logs of removing
+3) Security advisories and report how we infiltrated your system</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 02/06/2021, 19:52:47</span>
+                </div>
+                <div class="message-content">datapack.7z [ 47.2MB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 03/06/2021, 20:29:32</span>
+                </div>
+                <div class="message-content">Have you reviewed the documents and our offer?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 14:51:59</span>
+                </div>
+                <div class="message-content">If we will not receive the response today we shall start transmitting your data to 3-rd parties step by step notifying your clients and employees about the breach and on how you guard their data.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 15:23:33</span>
+                </div>
+                <div class="message-content">we have just pulled down the files for review.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 15:25:59</span>
+                </div>
+                <div class="message-content">i will let you know when we are done.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 15:26:48</span>
+                </div>
+                <div class="message-content">how do we know if you are able to recover our machines?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 15:27:25</span>
+                </div>
+                <div class="message-content">You can provide two random low-value encrypted files and we will decrypt them as a proof and upload back</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 15:28:02</span>
+                </div>
+                <div class="message-content">It took you two days to download files from review? We are not that patient and you should be more operative otherwise we will consider you stalling</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 15:51:55</span>
+                </div>
+                <div class="message-content">will provide the files.  No, it did not take us 2 days to download the files and review. we only logged back on this morning and saw that you sent them.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 15:52:40</span>
+                </div>
+                <div class="message-content">[redacted] Office.doc.[redacted] [ 533kB ]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 15:52:50</span>
+                </div>
+                <div class="message-content">[redacted].pdf.[redacted] [ 75kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 15:53:14</span>
+                </div>
+                <div class="message-content">Will upload the decrypted files asap.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 17:03:30</span>
+                </div>
+                <div class="message-content">[redacted].pdf [ 74kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 17:03:51</span>
+                </div>
+                <div class="message-content">[redacted] Office.doc [ 533kB ]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 17:46:33</span>
+                </div>
+                <div class="message-content">ok thank you</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 21:50:59</span>
+                </div>
+                <div class="message-content">we are currently still reviewing everything.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 21:52:18</span>
+                </div>
+                <div class="message-content">additionally, my higher up are requesting additional proofs because you are asking 45btc which is quite a lot of money.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 04/06/2021, 22:09:21</span>
+                </div>
+                <div class="message-content">What proof do you need?
+We showed that we can decrypt files
+Select any 2 files from the listing archive and we will discard them to you</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 05/06/2021, 03:31:54</span>
+                </div>
+                <div class="message-content">Having received the decryptor, you can start working in 2 hours</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 05/06/2021, 03:32:46</span>
+                </div>
+                <div class="message-content">Read about us on the Internet - we work honestly. It is much more profitable to conclude an agreement with us than to incur losses</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 05/06/2021, 04:00:17</span>
+                </div>
+                <div class="message-content">thats for that additional information.  will pass this information along to my boss.  I will also let you know the file names once they let me know.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 05/06/2021, 15:08:34</span>
+                </div>
+                <div class="message-content">Still haven't heard anything yet.  Will try to get an answer as soon as possible.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 05/06/2021, 15:23:01</span>
+                </div>
+                <div class="message-content">Ok, keep me updated</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 05/06/2021, 15:28:55</span>
+                </div>
+                <div class="message-content">will do.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 06/06/2021, 17:01:44</span>
+                </div>
+                <div class="message-content">haven't heard anything yet from my boss (most likely because it is the weekend). I should have more information tomorrow</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 07/06/2021, 15:42:21</span>
+                </div>
+                <div class="message-content">good morning.  I have a meeting here shortly and should have those file names for proof of decryption</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 07/06/2021, 15:55:10</span>
+                </div>
+                <div class="message-content">hello</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 07/06/2021, 15:56:02</span>
+                </div>
+                <div class="message-content">what file names ? Are you talking about 100% listing?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 07/06/2021, 15:58:25</span>
+                </div>
+                <div class="message-content">from the file listing you sent me earlier</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 07/06/2021, 16:02:22</span>
+                </div>
+                <div class="message-content">Proof of file decryption - you sent 2 files to us, we deciphered them and threw them off.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 07/06/2021, 16:03:21</span>
+                </div>
+                <div class="message-content">File with the title "30perclisting.zip"
+Here is a list of 20 - 30 percent stolen information from your network.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 07/06/2021, 16:05:27</span>
+                </div>
+                <div class="message-content">When you conclude an agreement, you will receive a decryptor for your entire network and return the state of computers to their previous state in a few hours</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 07/06/2021, 16:09:02</span>
+                </div>
+                <div class="message-content">yes im sorry. I confused myself.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 09:59:41</span>
+                </div>
+                <div class="message-content">any updates?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 15:29:23</span>
+                </div>
+                <div class="message-content">yes sorry, sending the filenames over now.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 15:41:50</span>
+                </div>
+                <div class="message-content">ok, waiting.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 16:03:04</span>
+                </div>
+                <div class="message-content">ok finally received the list</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 16:03:12</span>
+                </div>
+                <div class="message-content">uploading the text file now</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 16:03:35</span>
+                </div>
+                <div class="message-content">FileRequest.txt [ 2kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 16:05:01</span>
+                </div>
+                <div class="message-content">Well, it's way more than 2 files, but we will provide.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 16:05:54</span>
+                </div>
+                <div class="message-content">Sorry about that but definitely appreciated!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 22:00:10</span>
+                </div>
+                <div class="message-content">2019_[redacted].xlsx [ 43kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 22:00:28</span>
+                </div>
+                <div class="message-content">2019_[redacted].xlsx [ 152kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 22:00:32</span>
+                </div>
+                <div class="message-content">Logo [redacted].pdf [ 87kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 22:00:50</span>
+                </div>
+                <div class="message-content">[redacted].pdf [ 69kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 22:00:54</span>
+                </div>
+                <div class="message-content">[redacted] - Employee agreement [redacted].docx [ 44kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 22:00:59</span>
+                </div>
+                <div class="message-content">[redacted] - Employee agreement [redacted].docx [ 46kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 22:01:04</span>
+                </div>
+                <div class="message-content">[redacted].PNG [ 83kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 22:01:08</span>
+                </div>
+                <div class="message-content">Agreement [redacted].docx [ 42kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 22:01:11</span>
+                </div>
+                <div class="message-content">2020 [redacted] (1).xlsx [ 21kB ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 08/06/2021, 22:01:51</span>
+                </div>
+                <div class="message-content">[redacted].pdf [ 5.4MB ]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 09/06/2021, 19:48:31</span>
+                </div>
+                <div class="message-content">thank you, pulling those files down now</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 10/06/2021, 22:33:54</span>
+                </div>
+                <div class="message-content">just wanted to let you know, my boss and the higher ups are having meetings to discuss this.  I will keep you updated, as much as i can.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 11/06/2021, 00:15:13</span>
+                </div>
+                <div class="message-content">thanks</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 13/06/2021, 14:26:20</span>
+                </div>
+                <div class="message-content">definitely appreciate your patience. Haven't received work yet (most likely due to the weekend). Will keep you updated.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 16/06/2021, 17:56:06</span>
+                </div>
+                <div class="message-content">do we have an agreement?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 16/06/2021, 18:02:14</span>
+                </div>
+                <div class="message-content">We are still waiting, but not for too long.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 16/06/2021, 18:22:08</span>
+                </div>
+                <div class="message-content">are you declining our offer?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 16/06/2021, 18:28:09</span>
+                </div>
+                <div class="message-content">would you please repeat your offer, seems like your message didn't go through</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 16/06/2021, 18:29:28</span>
+                </div>
+                <div class="message-content">This message was send before -    thats still out of our range($274,350).  our offer $175k.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 16/06/2021, 18:30:16</span>
+                </div>
+                <div class="message-content">I an confused, where have you sent your offer?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 16/06/2021, 18:30:34</span>
+                </div>
+                <div class="message-content">I don't see any relevant message within this chat</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 17/06/2021, 15:19:02</span>
+                </div>
+                <div class="message-content">woah... I am just seeing those messages now.   I did not send those messages</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 17/06/2021, 15:21:07</span>
+                </div>
+                <div class="message-content">are you in talks with other people? maybe the framework picked up cross talk?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 17/06/2021, 15:21:44</span>
+                </div>
+                <div class="message-content">Perhaps one of your employees writes here</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 17/06/2021, 15:23:47</span>
+                </div>
+                <div class="message-content">Send your current offer now</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 17/06/2021, 16:22:00</span>
+                </div>
+                <div class="message-content">No, that's impossible, suppose some of your employees send the messages, maybe we should move to another chat making it private?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 17/06/2021, 18:19:20</span>
+                </div>
+                <div class="message-content">i am working on getting that answer for you.    yeah moving to a new chat might be best.  how can we do that?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 17/06/2021, 20:41:17</span>
+                </div>
+                <div class="message-content">i have an update from my boss/higher ups</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 17/06/2021, 20:42:04</span>
+                </div>
+                <div class="message-content">I will provide the new chat ID within an hour.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 17/06/2021, 20:42:19</span>
+                </div>
+                <div class="message-content">ok thanks.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 02, 2021 at 18/06/2021, 16:56:18</span>
+                </div>
+                <div class="message-content">Ok, i made it over to that chat and sent a msg.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 02, 2021 at 18/06/2021, 17:00:48</span>
+                </div>
+                <div class="message-content">Ok, let's move there, should I block this chat forever?</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20230427</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20230427 | Date: April 27, 2023</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 62</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 32</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 30</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 09:09]</span>
+                </div>
+                <div class="message-content">hello？</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 09:14]</span>
+                </div>
+                <div class="message-content">Sent the file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 09:23]</span>
+                </div>
+                <div class="message-content">Brother, please give me a discount</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">BOT</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 12:26]</span>
+                </div>
+                <div class="message-content">To send funds, use the BTC address specified below: [redacted]. Do not send more than 1 payment to this BTC address</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">BOT</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 12:26]</span>
+                </div>
+                <div class="message-content">Discount 20%. Discount expiration date: 2023-05-03</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 12:41]</span>
+                </div>
+                <div class="message-content">We are a small enterprise and we cannot afford to spend so much money. Is 5000 USD okay</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">BOT</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 12:44]</span>
+                </div>
+                <div class="message-content">To recover your files you need a decryption tool. We are ready to sell it to you at the price indicated on this page</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 12:48]</span>
+                </div>
+                <div class="message-content">If I were to make money now, how long would I be able to give me the tools</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">hiervos</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 12:51]</span>
+                </div>
+                <div class="message-content">Then we will complete the deal today.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 12:52]</span>
+                </div>
+                <div class="message-content">Can you decrypt the test file so that we can take a look?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">BOT</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 12:56]</span>
+                </div>
+                <div class="message-content">We can make test decrypt for free for not valuable files (xls, doc, bat, txt, jpeg, png, pdf, exe or etc)If you need a test then upload your file on any file host and send me download linkFile hosts: sendspace.com / dropmefiles.com / google.com/drive / file.io / wetransfer.com</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 12:57]</span>
+                </div>
+                <div class="message-content">https://dropmefiles.com/[redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 12:57]</span>
+                </div>
+                <div class="message-content">this link</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">hiervos</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 13:07]</span>
+                </div>
+                <div class="message-content">wait</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 13:08]</span>
+                </div>
+                <div class="message-content">Okay, please hurry up</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 13:29]</span>
+                </div>
+                <div class="message-content">We plan to make payment after seeing the decrypted test files. Could you please hurry up? Thank you</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">hiervos</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 13:52]</span>
+                </div>
+                <div class="message-content">wait</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 14:38]</span>
+                </div>
+                <div class="message-content">Could you please hurry up</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">hiervos</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 14:48]</span>
+                </div>
+                <div class="message-content">The technician went out, wait</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 14:49]</span>
+                </div>
+                <div class="message-content">Can we complete the transaction tonight? We have been waiting on our end, please make sure to complete the transaction tonight</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">hiervos</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 14:53]</span>
+                </div>
+                <div class="message-content">yes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 16:29]</span>
+                </div>
+                <div class="message-content">Hello, has the technology returned? We have been waiting</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">hiervos</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 16:35]</span>
+                </div>
+                <div class="message-content">Wait patiently, don't worry, I will tell you after the production is completed</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 16:36]</span>
+                </div>
+                <div class="message-content">How long will it take</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 17:04]</span>
+                </div>
+                <div class="message-content">We've been waiting all night tonight, please feel free to contact me anytime</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">hiervos</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 17:39]</span>
+                </div>
+                <div class="message-content">I know</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:21]</span>
+                </div>
+                <div class="message-content">Sent the file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:22]</span>
+                </div>
+                <div class="message-content">which amount you are going to pay?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:25]</span>
+                </div>
+                <div class="message-content">Didn't you say 20000U?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:25]</span>
+                </div>
+                <div class="message-content">current price for decryption tool after disocunt is 20000 USD</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:25]</span>
+                </div>
+                <div class="message-content">that's right</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:25]</span>
+                </div>
+                <div class="message-content">just to figure out</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:26]</span>
+                </div>
+                <div class="message-content">We are 
+confirming the correctness of the document and will make payment 
+immediately after confirmation. Please stay online and wait for me</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:27]</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:42]</span>
+                </div>
+                <div class="message-content">The customer cannot confirm that it is their own file. Can we decrypt a test file again?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:44]</span>
+                </div>
+                <div class="message-content">https://dropmefiles.com/[redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:46]</span>
+                </div>
+                <div class="message-content">Sent the file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 18:49]</span>
+                </div>
+                <div class="message-content">wait a moment</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:07]</span>
+                </div>
+                <div class="message-content">Confirm the transfer address, BTC quantity, and we are ready to make payment</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:12]</span>
+                </div>
+                <div class="message-content">$20000 / 0.6874617 btc</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:12]</span>
+                </div>
+                <div class="message-content">btc address [quotes BOT]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:12]</span>
+                </div>
+                <div class="message-content">Is this address? [quotes BOT]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:13]</span>
+                </div>
+                <div class="message-content">Ok
+wait</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:18]</span>
+                </div>
+                <div class="message-content">Enclosed please find!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:18]</span>
+                </div>
+                <div class="message-content">yes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:19]</span>
+                </div>
+                <div class="message-content">Payment has been made. Please check the records on your end. Thank you</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:22]</span>
+                </div>
+                <div class="message-content">How long can I receive the decryption tool</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:40]</span>
+                </div>
+                <div class="message-content">in 30 minutes after payment</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:40]</span>
+                </div>
+                <div class="message-content">we are waiting bitcoin network confirmations</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:41]</span>
+                </div>
+                <div class="message-content">when payment will be credited to the account decryptor will be sent</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:46]</span>
+                </div>
+                <div class="message-content">Okay, I've been waiting</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">BOT</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:48]</span>
+                </div>
+                <div class="message-content">Received $19987</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:49]</span>
+                </div>
+                <div class="message-content">hi</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [27/04/2023 19:52]</span>
+                </div>
+                <div class="message-content">Sent the decryptor. To unpack use the password: 123</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [29/04/2023 13:09]</span>
+                </div>
+                <div class="message-content">Hello, there are two file decryptors that cannot recognize it. Can you help restore it?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [29/04/2023 13:09]</span>
+                </div>
+                <div class="message-content">These two files are very important to me</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [29/04/2023 13:12]</span>
+                </div>
+                <div class="message-content">https://dropmefiles.com/[redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">hiervos</span>
+                    <span class="timestamp">April 27, 2023 at [29/04/2023 13:21]</span>
+                </div>
+                <div class="message-content">Yes, wait a little</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 27, 2023 at [29/04/2023 18:23]</span>
+                </div>
+                <div class="message-content">Are you there?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">hiervos</span>
+                    <span class="timestamp">April 27, 2023 at [29/04/2023 18:51]</span>
+                </div>
+                <div class="message-content">yes</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [29/04/2023 20:46]</span>
+                </div>
+                <div class="message-content">Hello</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Support</span>
+                    <span class="timestamp">April 27, 2023 at [29/04/2023 20:46]</span>
+                </div>
+                <div class="message-content">I'm 
+sorry, unfortunately these two files were not fully encrypted. They are 
+missing critical recovery information, so I can't decrypt them.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

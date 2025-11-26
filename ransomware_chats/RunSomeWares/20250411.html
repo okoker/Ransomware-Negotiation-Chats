@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20250411</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20250411 | Date: April 11, 2025</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 27</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 12</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 15</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Hello, we want to resolve this, but we have no experience of this sort of event and do not know how this works. Our management want proof you can fix our data and are still reviewing the file list you to understand what files you took. Does the list show all the files you took?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">This is an exhaustive list.
+        You can send us some files and we will decrypt it for free.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Hello, please can you provide the following files as proof you have our data:
+                   File 1 - [1.2M]  [Redacted]_files/01.0 - [Redacted].xlsx
+File 2 - [ 15M]  [Redacted]_files/[Redacted].pptx
+File 3 - [100K]  [Redacted]_files/[Redacted].html
+File 4 - [2.4M] [Redacted]_files/[Redacted].jpg
+File 5 -[2.6M] [Redacted]_files/[Redacted].JPG</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">here it is</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Thank you for providing the requested files. We will get our team to verify them. We will also get our IT to obtain some suitable files and come back to you as soon as we can for a test of your decryption. This may take us some time due to the weekend, therefore we ask that you be patient and stop the timer while work with you to sort this.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Your time is up. This is last chance  to get a deal.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Hello, 
+        We want to resolve this with you, but your price is very high. Please can you give us a better price. 
+        We have attached a small file for a test of your decryption capability, but our management need assurance that you can restore all our data including larger files. We have a file that is 16GB in size. How do we get proof you can decrypt this?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">The file, you've attached is a binary file. We decrypted it. To check it, you can open it with any text editor.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Thank you for providing the decrypted file. We will get IT to verify it. How do we share a larger file with you? We will pass your discount to our management for their consideration and will come back to you</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Upload it to any public share.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Our management said your price is still very high and the limited time for discount is not achievable for us – Our approvals process takes time and it would take us longer than 2 days to get stakeholders together for approvals and obtain bitcoin. We want to reach a deal with you but we need better discount with time to get the necessary approvals to make a payment.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">How much time do you need? Give me the date.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">It would likely take us 3 - 4 business days to get stakeholder approvals for a payment and gathering the funds to obtain bitcoin, so towards the latter part of next week. Please give us a significant discount so we can reach a deal and resolve this quickly for both our benefit.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">We analized the company's revenue, possible reputational losses, files we have and encrypted data. The company provides IT security services, and belong to the most influential family in the world. It's great headline for newspapers. And if that's the case, you will lose most of you customers. Besides, we have huge value of you and your customers data.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">OK, we will pass your reply to our management. They will need to meet with stakeholders after the weekend to discuss this.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Ok, when will the response be ready?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Management have discussed the situation and they want to reach a deal with you, but they could not agree to the very large amount you are asking due to the cost our business has incurred already because of your attack. They said that they can offer to pay you * Bitcoin to resolve this quickly. Please accept this so we can reach a deal.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">We have spent a lot of time and resources so we can't acept such a small price.
+        If the deal goes through quikly, we can settle for *Btc. Let's get a deal.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Thank you for giving some further discount. We will pass your price to our management for their consideration and come back to you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Let's get a deal this week</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Our management said they cannot reach the high amount you are asking, but they want to come to an agreement with you and would be able to pay * Bitcoin to resolve this soon. We ask you to please accept this amount so we can reach a deal.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Ok. Let's make a deal. We agree to *Btc.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Thank you for the reply. We have passed your offer to our management but they will need to meet with stakeholders to obtain approval for extra funds. We will come back to you after the weekend.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Monday is here, let's get a deal!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Unfortunately, our managment gave us 2 days. Let's make a deal. We can no longer waste time.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Guys, it's last chance. Let's get a deal! We can't wait longer.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">RSW</span>
+                    <span class="timestamp">No timestamp</span>
+                </div>
+                <div class="message-content">Ok, we start the publishing process with a mailing to your customers, partners and media. Bye!</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

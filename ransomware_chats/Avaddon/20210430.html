@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID:  | Date: </div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 103</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 61</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 42</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 11:55 30.04.2021</span>
+                </div>
+                <div class="message-content">Hello from Avaddon Team .Price for you is 
+$300,000. We have downloaded a lot of critical data, which will be 
+published on our news website (http://avaddongun7rngel.onion) if you do 
+not make a payment. After the payment we will decrypt all your systems, 
+give you listing of files that we have taken, remove data from our 
+servers and give you proofs of deletion. Also we will provide you with 
+security report, so you can fix all your vulnerabilities and be safe 
+again.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 11:56 30.04.2021</span>
+                </div>
+                <div class="message-content">We are ready to talk to you and discuss on this matter ....</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 14:58 30.04.2021</span>
+                </div>
+                <div class="message-content">hi</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 14:58 30.04.2021</span>
+                </div>
+                <div class="message-content">is anyone here?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:05 30.04.2021</span>
+                </div>
+                <div class="message-content">Hello!</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:06 30.04.2021</span>
+                </div>
+                <div class="message-content">wnat to talk to you about this situation</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:07 30.04.2021</span>
+                </div>
+                <div class="message-content">your price is very expensive for us</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:07 30.04.2021</span>
+                </div>
+                <div class="message-content">300.000$ is our 3 year budget</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:08 30.04.2021</span>
+                </div>
+                <div class="message-content">tell us the real possible price and we ready to pay</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:09 30.04.2021</span>
+                </div>
+                <div class="message-content">How much can you pay at most?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:13 30.04.2021</span>
+                </div>
+                <div class="message-content">give me 5 minute</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:13 30.04.2021</span>
+                </div>
+                <div class="message-content">i will talk with my chief</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:14 30.04.2021</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:19 30.04.2021</span>
+                </div>
+                <div class="message-content">redy to pay 3000$</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:30 30.04.2021</span>
+                </div>
+                <div class="message-content">This is a joke?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:30 30.04.2021</span>
+                </div>
+                <div class="message-content">Your price is $ 300,000.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:32 30.04.2021</span>
+                </div>
+                <div class="message-content">300.000$ is a joke</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:32 30.04.2021</span>
+                </div>
+                <div class="message-content">becauuse we havn't this amount of money</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:33 30.04.2021</span>
+                </div>
+                <div class="message-content">3000$ we can pay or go ahead to reainstall all our systems</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:35 30.04.2021</span>
+                </div>
+                <div class="message-content">search on map our country Armenia</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:35 30.04.2021</span>
+                </div>
+                <div class="message-content">300.000 is out country budget how we can pay this kind of money?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:38 30.04.2021</span>
+                </div>
+                <div class="message-content">Perhaps the price is too high for you and we are ready to make a small discount.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:40 30.04.2021</span>
+                </div>
+                <div class="message-content">But on $ 3,000 we will never agree.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:43 30.04.2021</span>
+                </div>
+                <div class="message-content">Reinstalling all systems and restoring the 
+workflow will take a very long time and you will incur heavy losses. The
+ best option would be to pay and get back to normal quickly.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:44 30.04.2021</span>
+                </div>
+                <div class="message-content">yes you are right</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:44 30.04.2021</span>
+                </div>
+                <div class="message-content">we will lose money while trying to 
+reainstall all systems and getting back informtion from external backups</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:45 30.04.2021</span>
+                </div>
+                <div class="message-content">but don't lose so much as you want</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:45 30.04.2021</span>
+                </div>
+                <div class="message-content">3000$ ready to pay, agree or not?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:51 30.04.2021</span>
+                </div>
+                <div class="message-content">We have a lot of your important files that 
+we will publish on our blog if you do not cooperate with us.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:52 30.04.2021</span>
+                </div>
+                <div class="message-content">I know all this</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:52 30.04.2021</span>
+                </div>
+                <div class="message-content">but we havn't money!</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:52 30.04.2021</span>
+                </div>
+                <div class="message-content">what can we do?!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:52 30.04.2021</span>
+                </div>
+                <div class="message-content">You will never be able to get your files 
+back without our decryptor! Only we have a unique key to decrypt your 
+files. Don't waste time and money trying to decrypt files yourself.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:53 30.04.2021</span>
+                </div>
+                <div class="message-content">I know that very well</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:54 30.04.2021</span>
+                </div>
+                <div class="message-content">I comunicate with you before</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:54 30.04.2021</span>
+                </div>
+                <div class="message-content">I know all this processes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:54 30.04.2021</span>
+                </div>
+                <div class="message-content">and now that we cant decrypt our files</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:54 30.04.2021</span>
+                </div>
+                <div class="message-content">we just can reinstall all systemss and restore backups but it will take too long for us</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:54 30.04.2021</span>
+                </div>
+                <div class="message-content">We are ready to make a very big discount for
+ you. If you pay within 67 hours, we will offer you a 50% discount. Then
+ the price will again be $ 300,000.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:55 30.04.2021</span>
+                </div>
+                <div class="message-content">so we ready to pay as much as we can</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:56 30.04.2021</span>
+                </div>
+                <div class="message-content">Now you need to pay $ 150,000.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:56 30.04.2021</span>
+                </div>
+                <div class="message-content">what's your name?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:57 30.04.2021</span>
+                </div>
+                <div class="message-content">It does not matter.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:58 30.04.2021</span>
+                </div>
+                <div class="message-content">you know our country?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:58 30.04.2021</span>
+                </div>
+                <div class="message-content">how the small firm in Armenia can pay you 150.000?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:59 30.04.2021</span>
+                </div>
+                <div class="message-content">my house cost 15.000$ in all</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:59 30.04.2021</span>
+                </div>
+                <div class="message-content">Sir, you are offering us a ridiculous price,
+ it does not suit us at all. Before we set you a price of $150,000, we 
+analyzed your profitability and your capabilities in general, this price
+ was taken not from the sky, but according to specific criteria, and by 
+analysis.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:00 30.04.2021</span>
+                </div>
+                <div class="message-content">what can I say, your analysis is wrong...</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:01 30.04.2021</span>
+                </div>
+                <div class="message-content">last time a year ago I paid 1700$ for your decrypting key</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:06 30.04.2021</span>
+                </div>
+                <div class="message-content">And we will tell you that $ 15,000 is still 
+not enough, and we do not agree to such a small amount. Suggest more or 
+we will use other methods. We can share your financial statements, your 
+employee and customer data, and more in the public domain. Use DDOS. We 
+can completely ruin the reputation of your business. Then you will have a
+ lot of problems and you will suffer a lot of damage. You choose ...</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:07 30.04.2021</span>
+                </div>
+                <div class="message-content">I don't event suggest 15.000$, because I havn't</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:10 30.04.2021</span>
+                </div>
+                <div class="message-content">We want to talk to your boss.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:11 30.04.2021</span>
+                </div>
+                <div class="message-content">I called him, will be here in 15 minutes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:22 30.04.2021</span>
+                </div>
+                <div class="message-content">Hi, I'm CEO</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:23 30.04.2021</span>
+                </div>
+                <div class="message-content">my name is [redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:25 30.04.2021</span>
+                </div>
+                <div class="message-content">ready to cooperate with you ...</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:25 30.04.2021</span>
+                </div>
+                <div class="message-content">Hello, [redacted]!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:26 30.04.2021</span>
+                </div>
+                <div class="message-content">Are you already aware of the situation?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:26 30.04.2021</span>
+                </div>
+                <div class="message-content">yes, of course</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:29 30.04.2021</span>
+                </div>
+                <div class="message-content">but unfortunately your requirements are in not compatible with the budget of our company ...</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:31 30.04.2021</span>
+                </div>
+                <div class="message-content">How much can you offer? As we already wrote,
+ the amount of $ 15,000 or $ 20,000 does not interest us.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:33 30.04.2021</span>
+                </div>
+                <div class="message-content">:)</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:34 30.04.2021</span>
+                </div>
+                <div class="message-content">and how much you want if you don't agree with 15.000 or 20.000?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:37 30.04.2021</span>
+                </div>
+                <div class="message-content">You're not serious! You do not understand 
+the magnitude of the problems for your company. Are you ready to incur 
+losses and ruin your reputation or will you cooperate and offer a higher
+ amount?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:37 30.04.2021</span>
+                </div>
+                <div class="message-content">We have already offered you a very large 
+discount, which we do not do for other clients. We have made a 50% 
+discount for you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:38 30.04.2021</span>
+                </div>
+                <div class="message-content">I asked how much you want?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:39 30.04.2021</span>
+                </div>
+                <div class="message-content">I perfectly understand all the risks</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:44 30.04.2021</span>
+                </div>
+                <div class="message-content">The price for you is $ 150,000.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:44 30.04.2021</span>
+                </div>
+                <div class="message-content">After the expiration of the time, the price will double and then it will be $ 300,000.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:49 30.04.2021</span>
+                </div>
+                <div class="message-content">it's not serious my company is not able to 
+pay you that kind of money let my IT specialists stay awake for several 
+days and restore archives or pay you this money as they want</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:49 30.04.2021</span>
+                </div>
+                <div class="message-content">by</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:52 30.04.2021</span>
+                </div>
+                <div class="message-content">You cannot recover files without our unique key.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:53 30.04.2021</span>
+                </div>
+                <div class="message-content">You have 66 hours to start working with us or you will have a lot of problems.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 04:02 03.05.2021</span>
+                </div>
+                <div class="message-content">After 7 o'clock your amount to double. This is the last chance to pay at such a low price.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 11:39 03.05.2021</span>
+                </div>
+                <div class="message-content">Hi guys are you there ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 11:40 03.05.2021</span>
+                </div>
+                <div class="message-content">Contact us if you see this, it looks like we have a misunderstanding.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:04 03.05.2021</span>
+                </div>
+                <div class="message-content">hi</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 16:04 03.05.2021</span>
+                </div>
+                <div class="message-content">what you mean?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 16:20 03.05.2021</span>
+                </div>
+                <div class="message-content">Sir, we found out that one of the branches 
+of your network is located in Armenia, our policy of work does not allow
+ working in the CIS countries, so we will give you a decryptor general 
+with which you can decrypt your entire network. We strongly apologize 
+for this unpleasant incident and would like to say that we will help you
+ restore your systems even if you have any problems.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 05:32 04.05.2021</span>
+                </div>
+                <div class="message-content">really? this is a great news</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 05:35 04.05.2021</span>
+                </div>
+                <div class="message-content">despite the fact that we already recover 
+most of our information, we will be thankful if you give us the key</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 05:40 04.05.2021</span>
+                </div>
+                <div class="message-content">You can download the decryptor.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 05:43 04.05.2021</span>
+                </div>
+                <div class="message-content">from where? give link please</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 05:43 04.05.2021</span>
+                </div>
+                <div class="message-content">is it free software?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 05:46 04.05.2021</span>
+                </div>
+                <div class="message-content">http://avaddonbotrxmuyl.onion/[redacted]/buy</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 07:00 04.05.2021</span>
+                </div>
+                <div class="message-content">look like it's work...</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 07:03 04.05.2021</span>
+                </div>
+                <div class="message-content">can you also help us to understand how you did that?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 07:04 04.05.2021</span>
+                </div>
+                <div class="message-content">we want to found out loophole in our network</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 07:33 04.05.2021</span>
+                </div>
+                <div class="message-content">Weak passwords.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 07:41 04.05.2021</span>
+                </div>
+                <div class="message-content">but how you could come in to our network?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 07:42 04.05.2021</span>
+                </div>
+                <div class="message-content">I will clarify this point.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 07:47 04.05.2021</span>
+                </div>
+                <div class="message-content">we will wait for your clarifying ant will be very thankful for your support</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 07:48 04.05.2021</span>
+                </div>
+                <div class="message-content">Ok</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 08:16 04.05.2021</span>
+                </div>
+                <div class="message-content">You guys should do penetration tests more 
+often. Hire a professional company and they will find all loopholes in 
+your network. It will cost you few ten thousends but you will be safe.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 08:18 04.05.2021</span>
+                </div>
+                <div class="message-content">Update all services with outside internet, especially Ms Exchange server.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 08:21 04.05.2021</span>
+                </div>
+                <div class="message-content">you used zerologon exploit ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 08:26 04.05.2021</span>
+                </div>
+                <div class="message-content">We cannot say anything more for security reasons for personal purposes.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 08:30 04.05.2021</span>
+                </div>
+                <div class="message-content">ok , we understood , thanks for information ,
+ we will upgrade our exchange server and do several things for security</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 08:58 04.05.2021</span>
+                </div>
+                <div class="message-content">Ok guys, excuse us again, I hope you didn't report this to the police? :)</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 09:21 04.05.2021</span>
+                </div>
+                <div class="message-content">))</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 09:23 04.05.2021</span>
+                </div>
+                <div class="message-content">What does it mean ?:)</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 09:27 04.05.2021</span>
+                </div>
+                <div class="message-content">don't worry about that</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 09:28 04.05.2021</span>
+                </div>
+                <div class="message-content">Ok sir , good luck</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

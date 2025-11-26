@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20210428</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20210428 | Date: April 28, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 44</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 25</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 19</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T14:55:32+03:00</span>
+                </div>
+                <div class="message-content">hello,
+ why did you decide to run audit of our company? I know, or secure is 
+poor, because of we have faced to critical situations for last 3 
+years...</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:05:46+03:00</span>
+                </div>
+                <div class="message-content">Hello.
+ Do you understand it is a real attack or you do think it is just a 
+penetration test? Do you understand that we have got a lot of essential 
+data from your company? Also, do you understand that this data can 
+compromise your company and CEO before the law?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:10:25+03:00</span>
+                </div>
+                <div class="message-content">unfortunately,
+ we expect, that this is attack, not penetration test. We need to 
+negotiate. But the amount of 1 MIO USD is deathfull for our company</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:14:21+03:00</span>
+                </div>
+                <div class="message-content">Okay.
+ We made you an offer; if it doesn't fit you, you can offer your price. 
+However, you need to know that we won't provide you a too big discount. 
+Data we got is too sensible.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:20:40+03:00</span>
+                </div>
+                <div class="message-content">you
+ are right, data is sensible. But I don't know, which kind of 
+information about our company you have? we have small company from Czech
+ Republic. Not big corporation. We have poor financial results in last 
+years due to pressure to decrease of margins in industry, Covid-19, now 
+we face to Suez transport crisis... Youz can check our financial reports
+ from available sources (for example - justice.cz)...</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:37:59+03:00</span>
+                </div>
+                <div class="message-content">We know about your financial situation.We have all personal data of your employees and administrative staff, including private photos.Also,
+ we have a full list of your clients, and I think you understand we can 
+inform them about this incident. It will be a hard strike for your 
+reputation.Also, we have got all information and documentation related to your projects, including schemes and drafts.We
+ are still waiting for your price. We all realize that if this info will
+ be uploaded to the public sources, you will lose much more.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:46:18+03:00</span>
+                </div>
+                <div class="message-content">All
+ the customers/client has been informed about this attack on [redacted]. So 
+all of them know our situation. As well as all employees. We are in 
+position of Tear 2 supplier = small supplier. All the clients data we 
+have is not critical for them, not secret development data.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:47:37+03:00</span>
+                </div>
+                <div class="message-content">Regarding our offer to start negotiate I have to contact our Board by phone to hear out their idea...</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:48:33+03:00</span>
+                </div>
+                <div class="message-content">Okay. And what do you think about the GPDR?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:48:59+03:00</span>
+                </div>
+                <div class="message-content">Sure, contact anyone you need and return to us with your offer.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:52:02+03:00</span>
+                </div>
+                <div class="message-content">Do
+ you mean GDPR? In case if we will not be successful with negotiation, 
+we will have to contact Police and The Office for Personal Data 
+Protection. In case if we will make a deal, it will be only between 
+us...</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:56:15+03:00</span>
+                </div>
+                <div class="message-content">Yes,
+ I am speaking exactly about it. If we make a deal, you avoid all the 
+problems and we will got our money. Also, we are ready to inform you 
+about used vulnerability to avoid such situation in future.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T15:58:57+03:00</span>
+                </div>
+                <div class="message-content">If not, all your data will remain encrypted and we will upload sensible info to public.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:09:33+03:00</span>
+                </div>
+                <div class="message-content">I'm
+ back. Before we will start to negotiate I have an order to provide you 
+with company results for the last 3 years. Just to explain our 
+position...</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:09:53+03:00</span>
+                </div>
+                <div class="message-content">year/sales/result:</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:10:49+03:00</span>
+                </div>
+                <div class="message-content">2018 / [redacted] 000 USD / [redacted] 000 USD (=loss)</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:11:23+03:00</span>
+                </div>
+                <div class="message-content">2019 / [redacted] 000 USD / [redacted] 000 USD (loss)</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:12:09+03:00</span>
+                </div>
+                <div class="message-content">2020 / [redacted] 000 USD / [redacted] 000 USD (profit)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:12:34+03:00</span>
+                </div>
+                <div class="message-content">Okay, we see</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:13:33+03:00</span>
+                </div>
+                <div class="message-content">So,
+ we are still waiting for your offer. I tell you about it third time 
+already. One more - and we delete the chat and upload data</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:14:53+03:00</span>
+                </div>
+                <div class="message-content">Yeah.
+ that is reality of our company which is available and you can check on 
+official places... I can offer 10 000 USD (but have no any experience 
+with BTC, how it works)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:16:42+03:00</span>
+                </div>
+                <div class="message-content">Depending on your serious situation, we can offer you a 50% discount. So, your price will be 500k</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:17:08+03:00</span>
+                </div>
+                <div class="message-content">500k CZK?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:17:35+03:00</span>
+                </div>
+                <div class="message-content">USD</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:20:15+03:00</span>
+                </div>
+                <div class="message-content">If it is too hard, you can ask your shareholders to help</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:20:39+03:00</span>
+                </div>
+                <div class="message-content">sorry, this is unrealistic... That means to sold part of company or some of unused equipment...</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:21:15+03:00</span>
+                </div>
+                <div class="message-content">Otherwise, you will try to find cash to avoid prison</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:21:58+03:00</span>
+                </div>
+                <div class="message-content">We need to talk with business owners. Speaking with middleman is not interesting for us.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:25:57+03:00</span>
+                </div>
+                <div class="message-content">unfortunately,
+ that is my company position. As a CEO I have not so much authorization.
+ From my position I can offer max. 23 246 USD (=500 000 CZK - that is my
+ limit)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:31:18+03:00</span>
+                </div>
+                <div class="message-content">You can take a loan to pay this sum. Your offers is not even serious.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:32:01+03:00</span>
+                </div>
+                <div class="message-content">You have two days to pay, after this period, data will be posted and you won't be able to contact us anymore</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:38:46+03:00</span>
+                </div>
+                <div class="message-content">not
+ realistic get any loan from Bank due to company summary results from 
+the last years... In 2020 we had to sell some equipment to be able to 
+survive... You have an experience with our IT infrastructure - you can 
+see that's very poor solution. It's becase of we have no many, no chance
+ for the bank loan... We try to survive from day to day... Please, take 
+our situation in consideration.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T17:44:43+03:00</span>
+                </div>
+                <div class="message-content">We
+ did it already. You can search for a recovery company in your country, 
+they can offer you a loan in this situation. As I said already, we can 
+make a discount, but your offer must be serious too.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T19:29:24+03:00</span>
+                </div>
+                <div class="message-content">the statement of our shareholders is clear for me. My personal responsibility for the problem, my personal responsi</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T19:33:00+03:00</span>
+                </div>
+                <div class="message-content">...responsibility
+ for the solution. Due to my knowledge about this company for me is it 
+the same "shit situation" to pay 0,5MIO CZK (as I have offered) or lost 
+the data and start to re-build infrastructure and data again from zero. 
+And in case If I will realize the payment, where is any guaranty that 
+you are going to fulfill the deal? Is there any history about your BABYK
+ group?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T19:34:34+03:00</span>
+                </div>
+                <div class="message-content">All the customers, suppliers and employees know the situation in detail. They express their support to us.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T19:36:49+03:00</span>
+                </div>
+                <div class="message-content">This
+ conversation have no sense now. We also have info about your 
+shareholders, and I don't think they will be glad when it will be 
+published. Anyway, you have the time to think about the situation and 
+make us a good offer.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Babuk</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T19:38:15+03:00</span>
+                </div>
+                <div class="message-content">About
+ your question - your guarantee is our reputation. Use Google to find 
+info. We NEVER publish info and leave data encrypted if companies pay.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T19:38:23+03:00</span>
+                </div>
+                <div class="message-content">And
+ as you wrote before - to avoid to prison??? You have committed the 
+crime - to steal data and you threaten to publish them. Not me - that is
+ the law in CZ. No deal = I hav eto start to cooperate with Police and 
+The Office for Personal Data Protection about your attack. I know you 
+are far away from here and you don´t care...</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T19:43:24+03:00</span>
+                </div>
+                <div class="message-content">Your reputation? To attack the company using WinXP, Exchange 2007 and similar and ask 1 MIO USD? Sorry... it sounds like joke...</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T19:46:30+03:00</span>
+                </div>
+                <div class="message-content">On
+ Google I see taht you evaluate the company basd on profile on 
+zoominfo.com. Do you realy thing that company from [redacted location] in CZ 
+has sales [redacted] 000 000 USD. I wish to be...</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T20:12:01+03:00</span>
+                </div>
+                <div class="message-content">https://www.google.com/maps/place/[redacted]?hl=cs-CZ</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-04-28T21:21:54+03:00</span>
+                </div>
+                <div class="message-content">This
+ conversation doesn't lead to conclusion. Your expectation from this 
+action is far away to our reality. Now, we have taken a decision to 
+re-build the company IT structure starting tomorrow 29/04, 10:00 CET. 
+Please, understand to your error that you have made with tip and attack 
+small company, send to us decryptor and keep your reputation in your 
+world. Be sure, if you are ready to "ruin our world", we are ready to 
+build it again. From zero to hero. Thanks for the challenge.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">April 28, 2021 at 2021-05-01T15:44:21+03:00</span>
+                </div>
+                <div class="message-content">Ok tell us fast where we have to pay?</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

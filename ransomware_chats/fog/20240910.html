@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20240910</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20240910 | Date: September 10, 2024</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 26</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 17</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 9</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 05:05:28</span>
+                </div>
+                <div class="message-content">My name is [redacted]. I am 72 and have maintained this server for the last 23 years.  I am not a cybersecurity expert, but I thought I would contact you to see how we can get you to release the data.
+I know the boss will not pay the Ransom, but it may be cheaper for me to pay it out of my pocket if it is not too much so that I can keep this job.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 05:51:03</span>
+                </div>
+                <div class="message-content">Hello.  They are a tiny firm of Architects with four people in a squishy office.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 05:55:32</span>
+                </div>
+                <div class="message-content">I am waiting for your reply.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 07:09:08</span>
+                </div>
+                <div class="message-content">Hello. Please wait for details.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 07:17:02</span>
+                </div>
+                <div class="message-content">OK</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 08:05:33</span>
+                </div>
+                <div class="message-content">I have some chores to do.  I will be back as soon as I can, and I will check before I go to sleep.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 09:21:52</span>
+                </div>
+                <div class="message-content">I am back.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 09:42:47</span>
+                </div>
+                <div class="message-content">Please.  Let these people work.  They recently received some good jobs to turn them around after many years of hardship.  The profit margins are very slim.  Architects are expensive and hard to find good people.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 09:51:13</span>
+                </div>
+                <div class="message-content">+These are nice people.  Please let them and me work.  Please.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 10:25:56</span>
+                </div>
+                <div class="message-content">It is nearly 9:30 p.m. and I need to go to sleep.  Please think about this.  They are good people.  Please.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 10:41:52</span>
+                </div>
+                <div class="message-content">I am not going to rob you</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 10:43:31</span>
+                </div>
+                <div class="message-content">No data was taken. We can decrypt your systems in a couple of hours for only $125,000. Just send us 3 random encrypted files to be sure - we'll decrypt them for free.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 10:49:42</span>
+                </div>
+                <div class="message-content">They do not have $125,000.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 11:07:07</span>
+                </div>
+                <div class="message-content">You are going to kill this business.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 11:39:35</span>
+                </div>
+                <div class="message-content">what do they have?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 11:56:49</span>
+                </div>
+                <div class="message-content">Not even $10,000 to spare. It is costly to run a business in Australia nowadays. Eighty per cent of start-ups go broke within the first three years, and many companies go broke daily. A major Airline went broke, owing millions of dollars. The Server is nine years old, and they cannot afford to buy another, but it will cost more with AWS, etc.  Things are very tight here in Australia.  I will lose this job after this.  I make $800.00 per two weeks after their expenses, plus my Aged Pension of $1,100.00 per two weeks gets me through.  Electricity and Gas are both at a ridiculous level.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 11:58:16</span>
+                </div>
+                <div class="message-content">We do not have that sort of money.  Please let us go.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Thursday, 10 September 2024 12:47:13</span>
+                </div>
+                <div class="message-content">Good night.  It is now 11:45 p.m.  I must sleep.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 10, 2024 at Admin 13:59:04</span>
+                </div>
+                <div class="message-content">Windows
+unlocker.exe -nomutex -console -target \\SERVER\C$
+unlocker.exe -nomutex -console -target C:\
+Esxi \ LINUX
+chmod +x unlocker_key
+./unlocker_key --id [redacted] --log --target "/vmfs/volumes/"</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Admin 20:17:33</span>
+                </div>
+                <div class="message-content">Good morning. If this is what I hope it is, thank you very much. I am so relieved that these people will keep their businesses and their livelihoods. You have made this old man very happy. If there is anything I can do for you, please let me know. I can be contacted at [redacted]@gmail.com or +61 [redacted].  I want to give you a big hug.  Thank you again.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 10, 2024 at Admin 20:52:03</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Admin 23:50:49</span>
+                </div>
+                <div class="message-content">It is working.  Thank you from the bottom of my heart for your generosity and understanding.  As I stated before, please let me know if there is anything I can do in the future.  You have my details.  My e-mail address should have read [redacted]@gmail.com.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 10, 2024 at Friday, 11 September 2024 17:58:12</span>
+                </div>
+                <div class="message-content">I dont need anything from you anymore</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 10, 2024 at Friday, 11 September 2024 17:58:17</span>
+                </div>
+                <div class="message-content">all the best</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 10, 2024 at Friday, 11 September 2024 19:36:08</span>
+                </div>
+                <div class="message-content">Thank you.  All the best for you too.  I appreciate what you did for me, very much.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 10, 2024 at Friday, 11 September 2024 19:58:55</span>
+                </div>
+                <div class="message-content">thanks</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

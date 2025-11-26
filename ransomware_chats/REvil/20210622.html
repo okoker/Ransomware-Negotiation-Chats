@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20210622</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20210622 | Date: June 22, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 52</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 32</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 20</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">Hello, are you a live person</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">Hello , yes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">what can we do if we dont have this much money?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">because we dont have $100,000</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">My boss can offer 10% discount for fast payment</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">we dont even have this money to pay in 3 days, we would have to get loans or other means of payment.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">We can add time</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">how much time do you need ?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">even if we get it, we have to buy monero and that takes time to clear 
+the funds, it takes weeks to get validated with any exchange.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">binance.com - 1 day</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">why is this much?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">why is it this much?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">The price depends on your income</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">My income is only 10,000 a month. Its in the system it shows it that way</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">You work for a company, don't bluff with us</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">yea, i am the owner. the company is mine. Im not bluffing. I make 120k a
+ year and 10k a month I work for the company. this is [redacted] service 
+company. Our service call charge is $75 per service call. How can I pay a
+ 100,000?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">My boss can offer 10% discount</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">i understand and thank you but we need more of a discount</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">i simply cannot afford 90-100k</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">what guarantee do i have that my system will start working after i do what you ask for</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">check our name in web</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">I dont know this things. im just a [redacted]. Im asking a friend to look in to it.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">I have to borrow money from friends. So give time so i can see what i can get</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">Okay</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">So I was able to get 35,000.00 so far from friends which i have now. I 
+understand this is your job and what your demanding so i can have mine 
+back. I respect that even when i don't. 
+But I checked your web and there are no guarantees.
+I have family and i work for this money, so loosing it is not an option 
+for me. I need some type guarantee so i know your the guy and i wont be 
+lied to and loose the money</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 23 days ago</span>
+                </div>
+                <div class="message-content">You can try trial decryption to make sure we unblock everything</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 17 days ago</span>
+                </div>
+                <div class="message-content">You messed up my entire work and life. The only way I will pay you is 
+to be 100% sure you will release the files after I pay you. 
+The only way you can prove me is I will pay 10,000.00 for 1 specific database file. If you agree let me know. 
+And I don't know if that is also possible, 
+I don't have any guarantee from you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 17 days ago</span>
+                </div>
+                <div class="message-content">We can agree to 35k and we guarantee that you will be able to decrypt all your files</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 10 days ago</span>
+                </div>
+                <div class="message-content">Hello</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 10 days ago</span>
+                </div>
+                <div class="message-content">We had 70% back up and i was able to hire IT guys to build me a new 
+system and restore 70% of my data. I spent 12,250.00 for this and I 
+don't have anymore the 35,000.00 
+I am willing to pay the balance to you to get the remaining data so I can continue with my life. 
+Let me know what you want to do. I will wait on you. 
+took long to get back to you as we were busy building a new system</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 10 days ago</span>
+                </div>
+                <div class="message-content">These are just your problems.
+Nobody made you pay other teams to get well.
+Our decryptor completed this in a few hours.
+20% discount is all that we are ready to offer</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 9 days ago</span>
+                </div>
+                <div class="message-content">you made this problem for me. 
+Ok, I dont have the money. I am working on a job and will get paid in 2 
+weeks at most . so let me get the money together and will get back to 
+pay.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 9 days ago</span>
+                </div>
+                <div class="message-content">28,000.00 correct ?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 9 days ago</span>
+                </div>
+                <div class="message-content">I have 22,750.00 now. Let make the deal and move forward please. This is hard for me</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 9 days ago</span>
+                </div>
+                <div class="message-content">price update you can pay</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 8 days ago</span>
+                </div>
+                <div class="message-content">I dont understand what your saying ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 8 days ago</span>
+                </div>
+                <div class="message-content">Nothing</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 8 days ago</span>
+                </div>
+                <div class="message-content">I have to go to work. leave the answer when i get back tonight i will contact</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 8 days ago</span>
+                </div>
+                <div class="message-content">R u asking what i can pay ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 8 days ago</span>
+                </div>
+                <div class="message-content">are you ready to pay ?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 8 days ago</span>
+                </div>
+                <div class="message-content">Yes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 8 days ago</span>
+                </div>
+                <div class="message-content">I already transferred 22,750.00 to my friends account today to help me 
+send the money or xmr to you. I dont know this things how they work. We 
+have to purchase it and send it to you</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 8 days ago</span>
+                </div>
+                <div class="message-content">also monero price is 273.97 today not 82.52</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 8 days ago</span>
+                </div>
+                <div class="message-content">price fixed</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">when will i get the code after i pay</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">30 minutes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 3 days ago</span>
+                </div>
+                <div class="message-content">Hi, I just sent money to a friends account. He will transfer to his 
+bianca account to purchase monero and send it to you. I instructed him 
+not to send the full amount. He will send an amount and you have to 
+check and let me know that number so i can make sure its coming to you 
+and I will have him send the remaining balance.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 3 days ago</span>
+                </div>
+                <div class="message-content">should be done in few days</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 3 days ago</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 9 hours ago</span>
+                </div>
+                <div class="message-content">we're almost done sending the first payment. Binance.us doenst support 
+monero, and neither does kucoin or coinbase. I had to buy litecoin on 
+coinbase, send it to cakewallet, and Im using that the convert to 
+monero. Maybe will take a few hours.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 22, 2021 at 5 hours ago</span>
+                </div>
+                <div class="message-content">Just sent to the monero address above. Verify how much it is and let me know.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 22, 2021 at 4 hours ago</span>
+                </div>
+                <div class="message-content">5 monero receive</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

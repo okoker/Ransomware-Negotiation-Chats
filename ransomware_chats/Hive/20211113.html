@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20211113</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20211113 | Date: November 13, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 136</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 83</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 53</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 13:53</span>
+                </div>
+                <div class="message-content">Hello and welcome to Hive.
+How may I help you?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 13:54</span>
+                </div>
+                <div class="message-content">Hi, decryption key price?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 13:58</span>
+                </div>
+                <div class="message-content">how many files are stolen? and can you share some file names?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 13:59</span>
+                </div>
+                <div class="message-content">maybe no ones here</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 13:59</span>
+                </div>
+                <div class="message-content">Hello</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:00</span>
+                </div>
+                <div class="message-content">To decrypt your files you have to pay $20,000,000 in Bitcoin.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:01</span>
+                </div>
+                <div class="message-content">thats way too much, can you please discount
+And please share the hash of the ransomware file so we can at least black list it. You have already stolen everything anyway</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:03</span>
+                </div>
+                <div class="message-content">We don't provide any hashes. Every time the software is unique. There is  no need of hashes here. It will not help anyway.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:04</span>
+                </div>
+                <div class="message-content">If you want a discount I would like to see for how much</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:04</span>
+                </div>
+                <div class="message-content">let me talk to the management</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:05</span>
+                </div>
+                <div class="message-content">share some file names?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:05</span>
+                </div>
+                <div class="message-content">I'll share with you later when my teammate will be online.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:05</span>
+                </div>
+                <div class="message-content">ok
+when should I log back in?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:06</span>
+                </div>
+                <div class="message-content">I don't know. Maybe today</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:06</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:07</span>
+                </div>
+                <div class="message-content">please ask him/her to share the file names so I can have them when I login, its not easy to use TOR here</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:07</span>
+                </div>
+                <div class="message-content">Okay, I'll do my best</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 14:08</span>
+                </div>
+                <div class="message-content">thanks</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 16:16</span>
+                </div>
+                <div class="message-content">I have uploaded the list of exfiltrated files.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 18:10</span>
+                </div>
+                <div class="message-content">where?
+I cant see them</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 18:14</span>
+                </div>
+                <div class="message-content">is it like 100G?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 19:07</span>
+                </div>
+                <div class="message-content">It's at the left panel titled Uploaded files</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 13 November 2021 19:27</span>
+                </div>
+                <div class="message-content">I uploaded a list of files not the files themselves</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 04:38</span>
+                </div>
+                <div class="message-content">yes got it, thanks</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 04:38</span>
+                </div>
+                <div class="message-content">you can delete it now</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 04:41</span>
+                </div>
+                <div class="message-content">Can you please share the hash of the ransomware. SO we can just add it to black list and ask the management for money. They are scared that the payload will come back. If you can't I understand but this will make th eprocess easy</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 04:56</span>
+                </div>
+                <div class="message-content">We are well-known organization. We honor our agreements. There is no point in the blacklist right now. You need to concentrate on how to collect money.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 07:19</span>
+                </div>
+                <div class="message-content">I have another option for you. You will give me your email address (protonmail is preferred) and I'll send you new credentials to login. Then I'll upload the encryptor to VirusTotal and provide you a link to it. All necessary hashes will be available there. 
+But to prevent others to login to your customer website you have to get new credentials first.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 08:58</span>
+                </div>
+                <div class="message-content">Here
+[redacted]@protonmail.com</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 08:58</span>
+                </div>
+                <div class="message-content">just like you wanted ... protonmail</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 08:59</span>
+                </div>
+                <div class="message-content">please keep your word, I will login again in a bit or check my email</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:38</span>
+                </div>
+                <div class="message-content">BTW, the site you guys made is beautiful. Better support than normal companies :)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:38</span>
+                </div>
+                <div class="message-content">Thank you</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:40</span>
+                </div>
+                <div class="message-content">did you upload the file?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:40</span>
+                </div>
+                <div class="message-content">and why did you change my creds ... are you planing to hack me too ? :(((((</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:41</span>
+                </div>
+                <div class="message-content">The encryptor didn't uploaded yet, looking for it rn.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:42</span>
+                </div>
+                <div class="message-content">What do you mean about creds? From what?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:43</span>
+                </div>
+                <div class="message-content">you change the credential to login to this site</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:45</span>
+                </div>
+                <div class="message-content">It was necessary because whether I upload the encryptor other researchers will be able to login and read your conversation.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:45</span>
+                </div>
+                <div class="message-content">It's a potential data leakage so I have prevented it</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:46</span>
+                </div>
+                <div class="message-content">Thanks</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:50</span>
+                </div>
+                <div class="message-content">would you share the link here or email?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:50</span>
+                </div>
+                <div class="message-content">Here is safe now</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:51</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:56</span>
+                </div>
+                <div class="message-content">why do you prefer protonmail?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:56</span>
+                </div>
+                <div class="message-content">is it on tor?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:57</span>
+                </div>
+                <div class="message-content">https://www.virustotal.com/gui/file/12baa6c83e6f8b059e7f14cb67bdad4e917b90bc8a139b5379a4b42a0c92a6be?nocache=1</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 09:58</span>
+                </div>
+                <div class="message-content">Thanks. I dont have virus total account but at least I got the hash. Really appreciat eit</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:01</span>
+                </div>
+                <div class="message-content">we have mcafee and symantec and nothing prevented this :(</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:02</span>
+                </div>
+                <div class="message-content">Actually I didn't spend too much time to hide it but I will</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:02</span>
+                </div>
+                <div class="message-content">What a recovery company are you from?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:03</span>
+                </div>
+                <div class="message-content">not from company, directly the SOC team</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:04</span>
+                </div>
+                <div class="message-content">I got it</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:04</span>
+                </div>
+                <div class="message-content">working with the management to do something</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:05</span>
+                </div>
+                <div class="message-content">they may hire someone in hope of recovery.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:06</span>
+                </div>
+                <div class="message-content">Unfortunately for them there are only two options: 
+1) start from a scratch
+2) purchase the decryption software from us</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:07</span>
+                </div>
+                <div class="message-content">yes I have provided all the data</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:08</span>
+                </div>
+                <div class="message-content">Recovery companies no matter what they say can't decrypt.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:08</span>
+                </div>
+                <div class="message-content">I understand but in the demo they show us how they can do the magic and impress the management</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:09</span>
+                </div>
+                <div class="message-content">THey told us that they will recover the keys from the memory and then decrypt files? is that possible?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:09</span>
+                </div>
+                <div class="message-content">For ESXi servers it's not possible</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:11</span>
+                </div>
+                <div class="message-content">why not? please educate me to I can understand and tell the management not to waste time. We have way too many vendors here</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:12</span>
+                </div>
+                <div class="message-content">The encryptor software rewrites the key from memory.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:13</span>
+                </div>
+                <div class="message-content">what? :( ... liek in simple words please?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 10:13</span>
+                </div>
+                <div class="message-content">Array of bytes in memory where the key resides in rewrites to prevent such operation</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 17:39</span>
+                </div>
+                <div class="message-content">Thats awesome. Is this for all servers or only esxi?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 17:50</span>
+                </div>
+                <div class="message-content">For all of course</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 17:53</span>
+                </div>
+                <div class="message-content">so if we end-up hiring a company that charges us $400 an hour, its pretty much useless?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 17:54</span>
+                </div>
+                <div class="message-content">BTW, the array of memory that you mentioned, these are the public keys or the private keys?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 17:57</span>
+                </div>
+                <div class="message-content">Encryptor even don't know anything about private keys. It only has public keys. Public keys need to encrypt random field which uses in encryption process.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 17:59</span>
+                </div>
+                <div class="message-content">In my opinion spending money to external IT companies will only waste your valuable time.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 14 November 2021 18:00</span>
+                </div>
+                <div class="message-content">Thanks, appreciate it. Its clear to me now</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 16 November 2021 06:24</span>
+                </div>
+                <div class="message-content">Hey, how much data have you stolen 100Gig?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 16 November 2021 06:25</span>
+                </div>
+                <div class="message-content">And the price you provided $20,000,000 is way too much</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 16 November 2021 06:25</span>
+                </div>
+                <div class="message-content">This is 20 million $?????</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 16 November 2021 06:29</span>
+                </div>
+                <div class="message-content">Yes, your company has $2B revenue. We usually rate 1% of revenue</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 16 November 2021 06:34</span>
+                </div>
+                <div class="message-content">:(
+And the total you have stolen in GB?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 16 November 2021 06:36</span>
+                </div>
+                <div class="message-content">I am guessing you used the VPN to get on the network. Did you steal the credentials after that? SYmantec and McAfee didn't prevent stealing credentials?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 16 November 2021 07:40</span>
+                </div>
+                <div class="message-content">We have 32 Gb total. 
+Almost all AntiViruses are useless against real hackers.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 05:16</span>
+                </div>
+                <div class="message-content">unfortunate but true</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 05:17</span>
+                </div>
+                <div class="message-content">For some reason the IT guy told us that they can see certain portion of files and they could be decrypted.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 05:17</span>
+                </div>
+                <div class="message-content">I think you are only encrypting certain portion of files right? they can see the file content in bigger files</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 05:31</span>
+                </div>
+                <div class="message-content">There is a spotted encryption mechanism. If you are talking about ESXi files then I don't think they can. Some text files - yes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 05:35</span>
+                </div>
+                <div class="message-content">I mean the big files are not fully encrypted. They are encypted at the header and then footer I think ... but in the middle one can see the text.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 07:33</span>
+                </div>
+                <div class="message-content">It's true. First 4Kb, the last, and a few blocks in the middle</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 08:34</span>
+                </div>
+                <div class="message-content">But this is nto true for ESXi files? everything for them is encrypted?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 08:36</span>
+                </div>
+                <div class="message-content">also how efficient is your encryption process? are you faster than lockbit2.0?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 08:37</span>
+                </div>
+                <div class="message-content">we also got one file for lockbit but was protected that was few weeks ago</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 09:36</span>
+                </div>
+                <div class="message-content">I didn't compare it with lockbit but my software is quite fast, especially ESXi</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 09:38</span>
+                </div>
+                <div class="message-content">How is it going with decision making?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 09:43</span>
+                </div>
+                <div class="message-content">its slow, we provided all the data and making sure they understand the complexity</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 09:44</span>
+                </div>
+                <div class="message-content">But for the esxi part, you don't use partial encryption? and everything is encrypted?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 09:44</span>
+                </div>
+                <div class="message-content">not just 4kb header etc</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 10:04</span>
+                </div>
+                <div class="message-content">can you please explain 2 things to understand . Explain a bit more on how you re-write the keys in the memory and the efficiency of esxi encryption. That way I can explain to everyone as well, that no hope for recovery</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 10:05</span>
+                </div>
+                <div class="message-content">most probly I will ask for discount shirtly</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 10:52</span>
+                </div>
+                <div class="message-content">It's very simple. ESXi files especially virtual drives are very fragile. Even few changes make them unreadable because it has a binary structure.
+ESXi was encrypted using spot method. 4 Kb of beginning of the files, 4 Kb of ending of the file and along file. Totally 100 Kb over the each file is encrypted. It's a quite enough.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 10:53</span>
+                </div>
+                <div class="message-content">cool and the memory re-writing? as I understand you are not creating a new key for each file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:02</span>
+                </div>
+                <div class="message-content">The memory overwrite is my last question. So I can make sure the SOC team understands</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:11</span>
+                </div>
+                <div class="message-content">When encryptor starts it creates a random field which will be used in encryption process. It is static. After encryption process finishes it rewrites to prevent restoration process. RSA keys private and public only use to encrypt/decrypt the random field. Only knowing the field it's possible to decrypt files. Encryptor has only public RSA keys, decryptor - private RSA keys.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:13</span>
+                </div>
+                <div class="message-content">by random fields u mean aes?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:13</span>
+                </div>
+                <div class="message-content">No, a truly cryptographic random field.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:15</span>
+                </div>
+                <div class="message-content">like PRNG or truly random numbers?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:15</span>
+                </div>
+                <div class="message-content">Of course not PRNG:)</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:15</span>
+                </div>
+                <div class="message-content">:(</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:15</span>
+                </div>
+                <div class="message-content">can you give me an example</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:16</span>
+                </div>
+                <div class="message-content">so you have the origanal private key. The ransomware generates fields that will encrypt files? are these fields used as keys? for aes?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:17</span>
+                </div>
+                <div class="message-content">You are one smart guy</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:17</span>
+                </div>
+                <div class="message-content">Actually I already disclose you a lot of details which was never disclosed to anyone. I think it's enough to make a decision.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:18</span>
+                </div>
+                <div class="message-content">Thanks</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:18</span>
+                </div>
+                <div class="message-content">AES is a chiper, I use a different one - some kind of Vernam's chiper. It's impossible to decrypt without knowing the keys.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:27</span>
+                </div>
+                <div class="message-content">that means only one key will be used for all files and then re-written</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:27</span>
+                </div>
+                <div class="message-content">so no way to get back</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:31</span>
+                </div>
+                <div class="message-content">In simplified version the key used to encrypt all files. It exports to the disk using a few RSA public keys applied. Then encryption process follows. After that the key rewrites to prevent recovery from memory. 
+Decryption software has RSA private keys to initially decrypt the exported key.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:40</span>
+                </div>
+                <div class="message-content">Whats the BTC address or wallet?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:51</span>
+                </div>
+                <div class="message-content">I made an offer at the right panel</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:54</span>
+                </div>
+                <div class="message-content">you came into the network via global protect. Are you still on the network?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:55</span>
+                </div>
+                <div class="message-content">No</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:55</span>
+                </div>
+                <div class="message-content">you are very honest for a hacker</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:56</span>
+                </div>
+                <div class="message-content">We are all honest who works at Hive</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:57</span>
+                </div>
+                <div class="message-content">but they say you hacked hospitals like [redacted] etc</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:58</span>
+                </div>
+                <div class="message-content">Yes, we attack every targets, we have no limits here. It's not related with honesty</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 17 November 2021 11:59</span>
+                </div>
+                <div class="message-content">Got it</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 20 November 2021 18:07</span>
+                </div>
+                <div class="message-content">I think the time is up :(</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 20 November 2021 19:58</span>
+                </div>
+                <div class="message-content">Don't worry you have time. Tell me how is it going with upper management please</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 24 November 2021 04:57</span>
+                </div>
+                <div class="message-content">working on it, tough situation</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 29 November 2021 07:02</span>
+                </div>
+                <div class="message-content">Hi, how is it going?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 3 December 2021 15:53</span>
+                </div>
+                <div class="message-content">good thanks</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 3 December 2021 15:56</span>
+                </div>
+                <div class="message-content">how r u</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 3 December 2021 16:17</span>
+                </div>
+                <div class="message-content">I'm good too. I just wanted to know to what direction your company inclined right now. 
+By the way, what about a recovery process from memory from recovery company you told earlier?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 5 December 2021 05:26</span>
+                </div>
+                <div class="message-content">They think the recovery is possible</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 5 December 2021 05:26</span>
+                </div>
+                <div class="message-content">also backup etc</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 5 December 2021 06:06</span>
+                </div>
+                <div class="message-content">Let's play with the price. I think both your management and our side want to resolve this as quick as possible</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 6 December 2021 08:57</span>
+                </div>
+                <div class="message-content">Whats the best price?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 6 December 2021 08:58</span>
+                </div>
+                <div class="message-content">I am not sure if 333 is even remotely possible</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 13, 2021 at 6 December 2021 08:58 Read</span>
+                </div>
+                <div class="message-content">They won't even consider 80 a possibility</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">November 13, 2021 at 6 December 2021 11:01</span>
+                </div>
+                <div class="message-content">I can offer you $3,000,000 in Bitcoin.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

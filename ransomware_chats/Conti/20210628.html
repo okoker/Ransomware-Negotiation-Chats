@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20210628</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20210628 | Date: June 28, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 34</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 16</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 18</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 28/06/2021, 18:01:05</span>
+                </div>
+                <div class="message-content">Hello, are you ready to negotiate?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 03/07/2021, 13:32:04</span>
+                </div>
+                <div class="message-content">Yes tell me how much I have to pay. We are ready to pay you for our data. I have some questions also. after payment will you provide support service? And where I have to pay?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 04/07/2021, 19:52:51</span>
+                </div>
+                <div class="message-content">We will provide all the relevant information the soonest possible.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 05/07/2021, 15:10:30</span>
+                </div>
+                <div class="message-content">Please provide your company name</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 06/07/2021, 14:26:54</span>
+                </div>
+                <div class="message-content">Let me know if you need the decryption tool. The price will be based on this fact.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 11:43:33</span>
+                </div>
+                <div class="message-content">company name is [redacted] now help us fast please</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 11:43:50</span>
+                </div>
+                <div class="message-content">please keep the price low it's a request</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 11:45:19</span>
+                </div>
+                <div class="message-content">We will discuss and let you know within few minutes.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 11:45:42</span>
+                </div>
+                <div class="message-content">okay please stay online</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 11:47:37</span>
+                </div>
+                <div class="message-content">Are you acting on behalf of [redacted] ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 11:52:04</span>
+                </div>
+                <div class="message-content">Please provide us two files for the test decryption.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 12:07:03</span>
+                </div>
+                <div class="message-content">ok wait</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 12:14:03</span>
+                </div>
+                <div class="message-content">desktop.ini.[redacted] [ 708B ]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 12:14:09</span>
+                </div>
+                <div class="message-content">ntuser.ini.[redacted] [ 554B ]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 12:14:58</span>
+                </div>
+                <div class="message-content">now help us fast please with your price and address. One question after payment in how much time we will get the decryptor??</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 12:55:28</span>
+                </div>
+                <div class="message-content">Are you there?? We are waiting for your reply?? How long we have to wait for it?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:02:00</span>
+                </div>
+                <div class="message-content">we will provide the decrypted copies soon. Right now we are trying to figure out what of your resources were attacked, cause for now as we can see this particular strain of Conti was used in [redacted] network, so I ask you again, are you talking to us on their behalf?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:02:20</span>
+                </div>
+                <div class="message-content">As soon as the payment is made the decryption tool will be provided within 20-30 minutes.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:03:20</span>
+                </div>
+                <div class="message-content">Yes we are talking on behalf of them</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:03:52</span>
+                </div>
+                <div class="message-content">Do you need the list of the data that was taken from their network?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:04:49</span>
+                </div>
+                <div class="message-content">The price for the decryption tool and the data for lounsburys.com is $1.25mil</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:05:01</span>
+                </div>
+                <div class="message-content">if you can provide it will be good</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:05:11</span>
+                </div>
+                <div class="message-content">Can you please provide some discount??</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:06:26</span>
+                </div>
+                <div class="message-content">We can make 25% discount if the payment will be made within 24 hours.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:08:17</span>
+                </div>
+                <div class="message-content">desktop.ini [ 174B ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:08:22</span>
+                </div>
+                <div class="message-content">I've processed the request for the file tree list and example data pack to the tech dept. Will upload as soon as they reply</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:08:31</span>
+                </div>
+                <div class="message-content">Ok and where we have to pay??</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:08:32</span>
+                </div>
+                <div class="message-content">ntuser.ini [ 20B ]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:09:03</span>
+                </div>
+                <div class="message-content">The btc wallet for the payment is : [redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:13:41</span>
+                </div>
+                <div class="message-content">Can you please provide non-segwit address if you don't have any problem</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:15:20</span>
+                </div>
+                <div class="message-content">Can we request one more thing please?? Amount is very huge.. can you accept the money into multiple addresses, if you don't have any problem. We will try to pay with diff-diff wallets. I hope you understand our situation. It's a humble request</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:18:13</span>
+                </div>
+                <div class="message-content">Here's the list of addresses for the payment, all are non-segwit :
+[redacted]
+[redacted]
+[redacted]
+[redacted]
+[redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Conti</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:26:27</span>
+                </div>
+                <div class="message-content">Let me know if you've received the addresses. I will have to go offline for a couple of hours but I will be able to get back to you later today.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 28, 2021 at 09/07/2021, 13:31:59</span>
+                </div>
+                <div class="message-content">ok we are talking to higher management with all the details and I will update you by EOD otherwise tomorrow. We will try to pay you by today if higher mangement approves everything</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

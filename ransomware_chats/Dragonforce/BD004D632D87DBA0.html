@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - BD004D632D87DBA0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: BD004D632D87DBA0 | Date: BD004D632D87DBA0</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 25</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 14</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 11</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-22T20:05:51.321439Z</span>
+                </div>
+                <div class="message-content">hello?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-22T21:30:08.489146Z</span>
+                </div>
+                <div class="message-content">Hello. As you can see, your network was encrypted by DragonForce. Also we downloaded your data, so if you don't pay, we will publish it and you will have problems. After payment you will receive decryption software and proof that we've deleted your files. Don't waste your time, in 28 days decryptor will be automatically deleted.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-23T19:57:20.438046Z</span>
+                </div>
+                <div class="message-content">you took data? for what?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-23T19:57:52.378533Z</span>
+                </div>
+                <div class="message-content">how much do we have to pay?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-24T00:01:24.766069Z</span>
+                </div>
+                <div class="message-content">15 BTC. Data is needed for better negotiations. If you don't pay we will publish it so you will have big problems.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-24T19:58:52.541737Z</span>
+                </div>
+                <div class="message-content">interwebs say you can tell us what files were taken</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-27T21:03:38.406842Z</span>
+                </div>
+                <div class="message-content">ok, thank you</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-27T21:05:28.955672Z</span>
+                </div>
+                <div class="message-content">it says, file not found?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-28T19:41:32.154822Z</span>
+                </div>
+                <div class="message-content">Try again, on our side it work.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-29T00:47:20.098922Z</span>
+                </div>
+                <div class="message-content">The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-29T20:52:57.760489Z</span>
+                </div>
+                <div class="message-content">got it</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-29T21:35:02.623698Z</span>
+                </div>
+                <div class="message-content">is this listing represent all the data that was taken?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-30T00:57:58.10373Z</span>
+                </div>
+                <div class="message-content">Yes.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-31T21:34:51.65209Z</span>
+                </div>
+                <div class="message-content">the money you want, is a really large number for us. can anything be done about this?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-01-31T22:12:43.978205Z</span>
+                </div>
+                <div class="message-content">If you pay quickly, we can provide a 10% discount.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-02-04T10:14:53.541054Z</span>
+                </div>
+                <div class="message-content">http://z3wqggtxft7id3ibr7srivv5gjof5fwg76slewnzwwakjuf3nlhukdid.onion/blog?post_uuid=[redacted]]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-02-04T16:36:04.915551Z</span>
+                </div>
+                <div class="message-content">What is this link for?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-02-04T16:39:59.338842Z</span>
+                </div>
+                <div class="message-content">This is a private (hidden) report of a network breach in your company.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-02-04T16:40:34.039585Z</span>
+                </div>
+                <div class="message-content">To incentivize cooperation.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-02-04T20:24:26.202847Z</span>
+                </div>
+                <div class="message-content">it says 388 GB of data?? what is that??</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-02-04T20:29:23.559957Z</span>
+                </div>
+                <div class="message-content">The data we downloaded from your network, we gave you a list of files earlier.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-02-04T20:36:42.857329Z</span>
+                </div>
+                <div class="message-content">that represents 388 GB??</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-02-04T20:55:52.803959Z</span>
+                </div>
+                <div class="message-content">Yes.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-02-13T14:46:39.576792Z</span>
+                </div>
+                <div class="message-content">you put our name on the blog? i thought we had more time?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">DragonForce</span>
+                    <span class="timestamp">BD004D632D87DBA0 at 2025-02-13T15:19:39.883836Z</span>
+                </div>
+                <div class="message-content">We gave you the link earlier, by clicking on it there was a timer when the post would become visible. Now you have 6 days to make the payment.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

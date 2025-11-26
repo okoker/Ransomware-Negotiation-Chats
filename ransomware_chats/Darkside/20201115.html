@@ -1,0 +1,2019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID:  | Date: </div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 243</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 135</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 108</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">How to buy Bitcoin for this amount?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">Hello!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">Moment please, let me prepare a manual for you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">are you sure that you want to pay in bitcoin? maybe you prefer 
+monero? cause in case you want to pay in bitcoin, you have to pay in 20%
+ more because of service fees.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">how monero works?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">process is literally the same</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">give me a moment i provide a monero tutorial</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">ok good for monero</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">monero manual
+here is the fastest and safest service to buy monero in your country https://localmonero.co/
+alternative way is to buy bitcoin via next manual and change it to monero here https://changelly.com/
+bitcoin manual
+here are some services where you can safely buy and send bitcoin
+https://localcryptos.com/ manual how to buy and send is placed on the 
+main page, this is the simplest and fastest way, no any verification 
+required///////
+https://paxful.com/ here is the short manual how to buy and send 
+https://www.youtube.com/watch?v=EjB5qFW0bJ8 profile verification may be 
+required////////
+https://www.coinbase.com/ here is the short manual how to buy and send 
+https://www.youtube.com/watch?v=Neph3rjv0Co profile verification may be 
+required///
+chose which one you like more, and buy bitcoin.
+hen text in chat and we provide the wallet for transfer</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">ok. I'm working on it</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">ok. I'm working on it</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">Hi. The price is too high</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">could we find a mediation?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">we do not have that amount of money. We are a little company</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">5.000€?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">We do not make such big discounts.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">Read about us on the Internet.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">5000 euro is impossible. you are not a small company,  we've been 
+working on your network, we have encryped 200tb of data, you can not be a
+ small company, you have a whole data center.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">please give us a sustainable amount we are 80 people that works from [redacted location]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">[redacted location]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">we work for non profit organization like [redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">before the attack we checked info about your company, so it's 
+absolutely useless to prove us anything. discount is possible, but not 
+in the amount you want. you can try to take a loan and find any 
+cryptobrocker who will resolve all the cryptocurrency exchange.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">10.000€</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">You are wasting our time. Write when you have serious offers.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">discount x100 from first amount is impossible. 
+we can reduce the price by 50 000. so you have to pay 950 000 $</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">we do not have that amount.  Is out of our business</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">take a loan</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">I can make you an offer compatible with my availability and 
+comparable to the time it would take if I had to restore from backups</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">we know everything about your backups, if you could restore, you 
+wouldn't text us at all. so please stop wasting our time and yours, you 
+know, that the only way to restore your business is to make the payment 
+requested</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">are we talking with recovery company right now? cause few hours ago this conversation had a bit another vector.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">no I move from home to office</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">go back home, you were much more pliable from there.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">I'm talking to the CEO to unadestand how much can we pay</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 9 days  ago</span>
+                </div>
+                <div class="message-content">ok we are waiting</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">I talked with my CEO we want to solve the issue. We can offer 
+75.000€ to start the decryption process and 75.000 at the end of the 
+decryption. (in total 150.000€)</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">This amount is not enough. Raise the price and we will give you an additional discount.
+We can refuse payment and not give you a decryptor. Can you afford it? What will you tell your clients?
+We understand you and are ready to give you a decryptor right now. Give us a good offer.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">Any phased payment options are not possible. You pay first, then we 
+give you decryptors. If you are not sure, you can give us test files and
+ we will decrypt them for you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">In Linux, we specially encrypt log files, they are small in size and you can upload them to chat.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">In you site you declare that you do not attack no.profit 
+organization. We host the site of a lot of no profit organization that 
+currently has the service down. Please accept our offer 150.000 all in 
+one</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">Look, if you were a non-profit organization, you wouldn't be 
+attacked by anyone. Everyone can say that they are helping someone.
+In the current case, your offer does not meet our expectations. It will 
+get you nowhere and you are wasting your time. Give us a better price 
+and we will give you a discount.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">I want you to understand one thing, it doesn't matter to me how long
+ it takes to discuss the price. This is important for you. The faster 
+you get decryptors, the faster you will continue to make money.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">I sent you a small files
+[redacted].txt.[redacted]
+8.95 kB</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">File
+[redacted].txt
+8.81 kB</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">Hi, we had a crisis committee meeting. We evaluated your proposal. I
+ know that you don't want waste time but trust me we are not so big as 
+you think.  We need time to get a reasonable amount of MONERO or 
+BITCOIN. We try deliver an extra special effort and we can raise to   
+250.000€. We hope that this offers meet your expectation</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">i'm moving to home becouse of lock down and we had to go home at 10pm</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">We are ready to accept 700k dollars. We will give you a discount of $ 300k.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">We want to pay but we do not have 700k. We did the best effort to offer you 250.000</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">here is midnigth, i need to sleep and I hope to found some good news.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">Let's get back to this question in the morning! you need to rest, you are right! Goodnight!</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">good moring......I hope</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">We've made you a 30% discount. Give us a better price and we will try to give you an additional discount.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">Trust me. We host site for no-profit organization that do not have a
+ lot of money. You found a lot of data but this are our kind of 
+customer. We made the best  250.000€ is a very high amount for us. We 
+had also a problem to find this amount in a few days. The site that you 
+suggested offer MONERO at block of 5000 or 10.000€</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">We are 60 employee and only 6 on IT....we are working on this problem 24 hours....we need your help</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">I spoke to my boss and explained your situation to him. He approved a payment of 350k dollars.
+There will be no more discounts. Now you are offering 300k dollars, raise your price by 50k and we will close this deal now.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">do you have a quick way to get that amount of MONERO?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">we accept your proposal</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">Price updated. Reload the page.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">ok. Give us a reference to get that amount of monero</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">Yes, have you considered buying through the exchange? Or are you having trouble with it?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">If you find it difficult to get Monero - buy Bitcoin first. Then change it to Monero.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">We want to buy through the exchange. But they exchange at block of 10.000€.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">I think it is not difficult to buy bitcoin in your country. Use exchangers or crypto exchanges (binance, et al.).</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">ok. I will update you</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">we have to do change € on our wallet or directly charge on your wallet</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 8 days  ago</span>
+                </div>
+                <div class="message-content">Change money on your wallet and then send us cryptocurrency</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 7 days  ago</span>
+                </div>
+                <div class="message-content">Hi, just to tell you that we are working to get cryptocurrency</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 7 days  ago</span>
+                </div>
+                <div class="message-content">OK, we wait.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 7 days  ago</span>
+                </div>
+                <div class="message-content">Good moring.  Very difficult to move on BTC that amount on one wallet. You need transaction from one wallet alone?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 7 days  ago</span>
+                </div>
+                <div class="message-content">can we make in more transcation?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 7 days  ago</span>
+                </div>
+                <div class="message-content">could you Decrypt some server?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 7 days  ago</span>
+                </div>
+                <div class="message-content">We are waiting for xmr from you, not btc. If you decided to pay with btc, you have to pay additional 20%.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 7 days  ago</span>
+                </div>
+                <div class="message-content">And you can use several transaction</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 7 days  ago</span>
+                </div>
+                <div class="message-content">After payment you will receive decryptor for all your network.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 7 days  ago</span>
+                </div>
+                <div class="message-content">several transaction from same wallet or we could use different wallet?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 7 days  ago</span>
+                </div>
+                <div class="message-content">You can use different wallet</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">How many BTC we had to pay? Yesterday i saw 25.18, now I see 23.3</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">Pay the amount that you see now</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">Btc rate is not stable, so don't wait and pay quickly</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">do not change anymore because we had a lot o difficult to get crypto BTC</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">i can fixed the rate, but you have to pay for 6 hours</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">will pay for this time?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">we'll try in 12 hours , but i'm not sure, maybe 24.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">i have fixed your btc amount, for the next 24 hours it doesn't depend from btc rate</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">but you must pay as soon as possible</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">help us as soon as possible. We are very little to pay that amount 
+but we do....and also we had to work a lot of other days....give an hand
+ as soon as you can....trust us</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">After payment I will immediately give you decryptors.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">Hi. Why the rate changed again?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">you promise me to block the rate of BTC to 23.3</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">we already had a trade for that amount and we need to fix it</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">Are you there?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">Hello</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">Rate was changed yesterday, before i fixed it</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">You actual amount for the next 12 hours 23.61 BTC</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">we bought yesterday 23.3 by an exchanger and we are waiting for the transaction. We cannot change the amount now</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">the payment is in process</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">okay, waiting for 23.3 BTC from you in next several hours</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">ok. May I ask a partial decrypion of one server?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 6 days  ago</span>
+                </div>
+                <div class="message-content">After payment you'll immediately receive decryptor for all network</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">You have the last 3 hours to pay the fixed btc amount after that time the rate will be float again.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">be patient</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">the transaction is in progress with our exchanger</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">technical time</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">Our btc wallet is always actual and the same, so send as quickly as it possible.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">what do you mean?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">The wallet that you see on your page is always relevant</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">i'm here</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">operation is in progress</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">be patient operation with exchanger is taking too long time</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">please</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">How many time you need?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">The exchanger told me that operation should be in the morning. Now here are 20:47</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">Take in mind, that after 35 hours your price will be doubled and this action cannot be undone.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">we know. My mind now is about 23.3 BTC becouse operation is for that amount</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">If you don't pay tomorrow, i'll enable float rate again and don't fixed it anymore.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">So, hurry up your exchanger.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">Good morning! Any updates?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">I had a meeting scheduled with exchanger at 1PM</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">i don't know why he 's taking time. We yesterday moved € to exchanger</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">Well, if anything, do not hesitate to write about the results</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">we need cryptocurrency to close the deal with you and my family will be happy becouse I have to work all weekend</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">I understand you, as far as I know in Europe there are bitcoin ATMs for a long time</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">never seen</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 5 days  ago</span>
+                </div>
+                <div class="message-content">https://coinatmradar.com/country/[redacted]/</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">We won't give you extra time, after 16 hours you price will be doubled, make payment faster.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">Hi, i'm in call with exchanger</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">we had to wait for the transfer of the amount</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">technica time between bank</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">I have the document that prove that we are moving money</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">but we need more time</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">till monday</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">in the week end bank do not operate</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">Send the documents.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">upload in progress
+IMG_20201120_152201.jpg
+5.4 MB</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">3 pages
+IMG_20201120_152152.jpg
+4.8 MB</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">last page
+IMG_20201120_152145__02__01.jpg
+5.06 MB</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">Ok, added time.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">da you update the countdown on this page</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">Time ends on 23 Nov 2020, 09:51</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">in the morning is too eearly</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">the bank open in the morning</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">please set the deadline to 24 November 9 AM</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">so we are sure than on monday close the transaction</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">Refresh the page</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 4 days  ago</span>
+                </div>
+                <div class="message-content">Ok thanks</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 2 days  ago</span>
+                </div>
+                <div class="message-content">Hi, we are at work.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 2 days  ago</span>
+                </div>
+                <div class="message-content">Hello! We, too, how is the exchange process going?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 2 days  ago</span>
+                </div>
+                <div class="message-content">only the bank does not work on the week end</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 2 days  ago</span>
+                </div>
+                <div class="message-content">the decryption tool work per single file?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 2 days  ago</span>
+                </div>
+                <div class="message-content">You will receive a master (universal) decryptor for your Linux and Windows network after payment</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 2 days  ago</span>
+                </div>
+                <div class="message-content">it runs recursively o per file?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 2 days  ago</span>
+                </div>
+                <div class="message-content">the process works as when encrypting only in the opposite direction, we 
+will also send all instructions, and provide support until you decrypt 
+the all network</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 2 days  ago</span>
+                </div>
+                <div class="message-content">see you tomorrow</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 2 days  ago</span>
+                </div>
+                <div class="message-content">Ok! Have a nice day!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">After 17 hours your price will be doubled and we won't change it.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">i'm here</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">good morning</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we are almost ready</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">i'm worried about decryption process</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">there are a lot of file on a lot of volume</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Hello! the process of decryption is similar to the encryption process, 
+you do not need to worry, maximum 4-5 hours and your files will be 
+decrypted</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">on vmware do i need to execute decryption on one host esx that is 
+connected to all volume or do I have to execute on every single host?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">You should upload decryptor to each esxi, set 777 permissions and 
+run. That's all you need, after small time your esxis will be ready for 
+work.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">can we test the decryption process on one single vmdk file?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">We will send decryptor after payment and help with all. Don't worry, it's too easy.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we are doing the first transaction</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">what description in the transaction?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we sent the first little amount in order to test the correct transaction</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">it is ok?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we can see your transaction</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">you can send all amount</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we proceed</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">and after 3 confirmation of bitcoin network we will send you decryptors and instruction</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">with the next trance</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we sent half amount</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">please give us linux or windows decryptor now</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we will send your decryptors only after you send us full amount.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we are waiting for next part</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">one moment</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">sent</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">ok, we can see your transaction</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">waiting for 3 confirmation and then send you decryptors</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we are waiting for decryptor</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Windows:
+The decryptor works in 2 modes:
+1. GUI
+2. Console
+Three functions are available in GUI mode:
+1. "DECRYPT ALL" - search and decrypt ALL encrypted files on the local 
+PC and on network resources (Shares), where this PC has access.
+2. "DECRYPT FOLDER" - decrypts files in the specified folder, which you 
+can select in the "Browse for folders" window or drag and drop the 
+folder into the decryptor window.
+3. "DECRYPT ONE FILE" - decrypts a single file, which you can open in 
+the "Open" window or drag and drop the encrypted file into the decryptor
+ window.
+IMPORTANT!
+Extension of encrypted files may not coincide with the extension of files, which the decryptor suggests to open!
+To open encrypted files with other extensions, in the "Open" window 
+select, in the lower right corner of "All Files (*. *)" or just drag and
+ drop the given file into the decryptor window.
+File extension does not affect the decryption of file!
+Console mode has two parameters:
+1. "-all" - search and decrypt ALL encrypted files on the local PC and on network resources (Shares), where this PC has access.
+You can also use Group Policy to quickly decrypt your entire network.
+2. "-path" - decrypts files in the specified folder or a single file.
+3. Dragging and dropping an encrypted file or folder with encrypted files onto the decryptor file.
+In this mode, the console window will open automatically, which will display the decryption process.
+Command line examples:
+> decryptor.exe -all
+> decryptor.exe -path C:\Folder
+> decryptor.exe -path C:\Folder\file.txt.[redacted]
+win_decryptor.exe
+76.5 kB</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">linux decryptor works alsa per files?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">also</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">linux decryptor decrypts all system, it cant decrypt certain files</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">may I ran on host that see all encrypted volume?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">just run the decryptor on each esxi, that's all, you don't need to do anything anymore</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">after decryption you can use your vms as before that</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we are at work</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Linux decryption instruction:
+1. Upload decryptor to esxi.
+2. Set run permissions: chmod 777 decryptor
+3. Run decryptor: ./decryptor
+jump_decryptor.out
+2.38 MB</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Use this one decryptor for you esxi</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">what is the difference?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">the decryptor did not decrypt some file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">on esx</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Try the last decryptor.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Which file was not decrypted? Give more information.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">/vmfs/volumes/[redacted]/[redacted]_RM_03/[redacted]_RM_03_1-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/WD_[redacted]/WD_[redacted]-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V185E016/V185E016-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V157E016/V157E016_1-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V066E016 - [redacted]/V066E016 - [redacted]_1-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V079E016 - [redacted]/V079E016 - [redacted]-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V195E016/V195E016_1-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V000REPP/V000REPP_1-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V000PAS2/V000PAS2_1-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V060E016/V060E016-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V000TS1P_2012/V000TS1P_2012-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V144E016/V144E016-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V189E016/V189E016-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V067E016/V067E016-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V000AMQP/V000AMQP-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/V000AMMP/V000AMMP_3-flat.vmdk.darkside
+/vmfs/volumes/[redacted]/[redacted] - ArcGis DataStore/[redacted] - ArcGis DataStore-flat.vmdk.darkside</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">have other files been decrypted? Are virtual machines working?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Use the last decryptor. He will decrypt them.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">i will try the other decryptor becouse when i try to start [redacted] seems that a disk is missing</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Try the last one and write to me.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">[START #11] File 
+Path.........../vmfs/volumes/[redacted]/[redacted]_RM_03/[redacted]_RM_03_1-flat.vmdk.darkside
+[INFO] File Size................0mb (4096 Bytes)
+[ERROR] File Too Small, Ignored</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">What is the size of this file? Problem with one file or multiple?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">42</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">seems that some filese were modified and disk size of the VM was set to 0</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">so the VM does not start</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">what 42?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">42 useful file was not decrypted</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">and how much was decrypted?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">a lot</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">If the reason for the non-decryption is that there is 0 size, then I
+ cannot help you. The decryptor cannot decrypt what is not.
+Check all file sizes and tell me them. When you tried to start virtual 
+machines, the hypervisor could damage the encrypted files.
+I mean before you got the decryptor.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Are you having a problem with virtual machines on the same hypervisor? or at all?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we are having some problem</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">answer the questions so that I could understand what to tell you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">the probelm is on esx</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Task name
+Power On virtual machine
+Target
+WD_[redacted]
+Status
+File /vmfs/volumes/[redacted]/WD_[redacted]/WD_[redacted].vmdk was not found</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">Look through ssh. Do you have a file?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">have a file of 4K with .darkside extension</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">we lost some vm</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">sigh!</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">The decryptor checks all checksums, it could not damage virtual 
+machines. This is the first time that a client talks about problems.
+Did you check the sized before decryption?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">How many virtual machines have you failed to recover? Were they on the same esxi?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">You showed me a log in which the decryptor is trying to decrypt empty files. So the problem arose before decryption.
+Why so, I can not answer you, there can be a lot of reasons.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">If you have any other problems with decryption - I will help you, just give me not empty files.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">the empty file has data of creation on 15Nov in the night</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">i don't know why</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">there is a format job runnin</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 1 day  ago</span>
+                </div>
+                <div class="message-content">I need your little but useful help. On veem the volume where we have
+ the backup , this morning was accessible but now the volume is RAW.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 23 hours  ago</span>
+                </div>
+                <div class="message-content">I don't quite understand what you mean</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 22 hours  ago</span>
+                </div>
+                <div class="message-content">the tool that you used to encrypt our backup. At the end of encrypion does it do disprutive action?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 22 hours  ago</span>
+                </div>
+                <div class="message-content">No, it doesn't. If backups are on Windows - use the Windows decryptor.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 22 hours  ago</span>
+                </div>
+                <div class="message-content">Never interrupt the decryption process by closing the program 
+manually. The program may freeze during decryption, this is normal.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 19 hours  ago</span>
+                </div>
+                <div class="message-content">Hi.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 19 hours  ago</span>
+                </div>
+                <div class="message-content">we trusted in you</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 19 hours  ago</span>
+                </div>
+                <div class="message-content">but we need some files that miss</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 17 hours  ago</span>
+                </div>
+                <div class="message-content">We gave you decryptors and they work, if you have problems with them, I will help you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 17 hours  ago</span>
+                </div>
+                <div class="message-content">Before buying decryptors, you saw that some files were empty and you could not pay.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Darkside</span>
+                    <span class="timestamp"> at 17 hours  ago</span>
+                </div>
+                <div class="message-content">We fulfilled our part of the deal, I don't know why you have empty files. You didn't even tell me how many there are.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

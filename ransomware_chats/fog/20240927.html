@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20240927</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20240927 | Date: September 27, 2024</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 60</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 17</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 43</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 27 September 2024 13:24:06</span>
+                </div>
+                <div class="message-content">Hello, we found several of our systems encrypted with your ransomware. Can we talk about resolving this?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 27 September 2024 14:06:37</span>
+                </div>
+                <div class="message-content">hi</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 27 September 2024 14:07:03</span>
+                </div>
+                <div class="message-content">I will give you details soon and we will talk</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 27 September 2024 14:15:28</span>
+                </div>
+                <div class="message-content">[provides a compressed RAR files list]
+this is what's been taken</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 27 September 2024 16:36:06</span>
+                </div>
+                <div class="message-content">We will need some time to take a look at this. In the mean time how would we get our systems decrypted?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 27 September 2024 22:14:03</span>
+                </div>
+                <div class="message-content">when you pay you receive decrypter to fix your systems</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 27 September 2024 22:14:25</span>
+                </div>
+                <div class="message-content">I will tell you the price for decrypter soon</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Sunday, 29 September 2024 19:12:47</span>
+                </div>
+                <div class="message-content">How much would the decrypter cost? Can you confirm that our files would be deleted from your servers and that you will not publish our name or share the data?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Sunday, 29 September 2024 20:55:39</span>
+                </div>
+                <div class="message-content">yes I can confirm your files will be deleted and your name will not be published</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Sunday, 29 September 2024 20:56:09</span>
+                </div>
+                <div class="message-content">I will tell you price soon</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Tuesday, 01 October 2024 11:24:46</span>
+                </div>
+                <div class="message-content">If you want your data fully decrypted and the files we stole removed from our source, you will have to pay a fee. We will also be able to provide a security report and explain how we did it to get in. The bosses are demanding $800,000 for said services.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Wednesday, 02 October 2024 12:47:10</span>
+                </div>
+                <div class="message-content">Do we work?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Wednesday, 02 October 2024 15:17:22</span>
+                </div>
+                <div class="message-content">$800,000 is too high. We are looking to reach an agreement and can offer $150,000 to get this finished quickly.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Wednesday, 02 October 2024 15:47:34</span>
+                </div>
+                <div class="message-content">There's no way we're going to agree to that amount. I don't think we can even give you a $150,000 discount. our demand is more than reasonable in your case. I will talk to the bosses</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Wednesday, 02 October 2024 20:15:53</span>
+                </div>
+                <div class="message-content">bosses agreed to take 715k for everything</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Thursday, 03 October 2024 16:10:09</span>
+                </div>
+                <div class="message-content">How do we know the decrypter will work? Could you decrypt some files for us so we can be sure this will work on our systems</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Thursday, 03 October 2024 16:13:58</span>
+                </div>
+                <div class="message-content">yes</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Thursday, 03 October 2024 16:16:09</span>
+                </div>
+                <div class="message-content">give me a few</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Admin 18:46:52</span>
+                </div>
+                <div class="message-content">[provides a zip archive of files to decrypt]
+there are a few small encrypted files in here</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 04 October 2024 08:16:51</span>
+                </div>
+                <div class="message-content">give me some time</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 04 October 2024 09:57:54</span>
+                </div>
+                <div class="message-content">[provides 5 decrypted files]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Saturday, 05 October 2024 13:54:06</span>
+                </div>
+                <div class="message-content">Thank you. Our business isn't doing as well as we used to and we don't have insurance to cover this. We can't afford anywhere near that amount. We would still like to resolve this, but it needs to be close to our previous offer</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Saturday, 05 October 2024 16:35:23</span>
+                </div>
+                <div class="message-content">I cant close the case at your previous offer</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Saturday, 05 October 2024 16:36:35</span>
+                </div>
+                <div class="message-content">you need to add something to your offer</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Monday, 07 October 2024 10:39:33</span>
+                </div>
+                <div class="message-content">Cash is really tight for us, we are doing all we can but can only raise our offer to $175,000.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Monday, 07 October 2024 11:30:12</span>
+                </div>
+                <div class="message-content">I talked to the bosses. $500,000 and we can end this today. I don't think that you will get any better deal</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Tuesday, 08 October 2024 15:27:22</span>
+                </div>
+                <div class="message-content">We simply cannot afford that. We have rebuilt most of our systems without the decrypter. Can we agree at $200,000 today?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Tuesday, 08 October 2024 16:09:59</span>
+                </div>
+                <div class="message-content">bosses agree to take 350k today</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Tuesday, 08 October 2024 16:10:24</span>
+                </div>
+                <div class="message-content">this is the best bet price for the situation</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Tuesday, 08 October 2024 16:10:51</span>
+                </div>
+                <div class="message-content">tell me when ready to make payment</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Tuesday, 08 October 2024 22:09:49</span>
+                </div>
+                <div class="message-content">just take one last step, and we'll put this behind us.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Tuesday, 08 October 2024 22:14:01</span>
+                </div>
+                <div class="message-content">bosses can take one last step and decrease to 300k. the wallet is [redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Wednesday, 09 October 2024 19:05:01</span>
+                </div>
+                <div class="message-content">hi</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Wednesday, 09 October 2024 19:05:12</span>
+                </div>
+                <div class="message-content">are you leaving me?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Wednesday, 09 October 2024 19:06:14</span>
+                </div>
+                <div class="message-content">tell me should I wait the money today or what</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Thursday, 10 October 2024 11:40:41</span>
+                </div>
+                <div class="message-content">I need your decision guys.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Thursday, 10 October 2024 11:40:56</span>
+                </div>
+                <div class="message-content">this week we have to close your case</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Thursday, 10 October 2024 16:40:18</span>
+                </div>
+                <div class="message-content">We can't go that high, we can offer $225,000</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Thursday, 10 October 2024 18:42:18</span>
+                </div>
+                <div class="message-content">I can't take 225k</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Thursday, 10 October 2024 18:43:06</span>
+                </div>
+                <div class="message-content">confirm 250k to me and I will make my bosses take the offer 250k</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Thursday, 10 October 2024 18:43:25</span>
+                </div>
+                <div class="message-content">we can do that today only</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 11 October 2024 12:00:52</span>
+                </div>
+                <div class="message-content">hello. what is your decision?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 11 October 2024 14:52:25</span>
+                </div>
+                <div class="message-content">ok we will pay $250,0000, can you confirm you will provide a decrypter and you will delete all our data? We will need some time to arrange the payment</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 11 October 2024 15:48:03</span>
+                </div>
+                <div class="message-content">I can confirm that you will receive the .exe files that you will need to run on your systems (win or esxi) to decrypt your files. We guarantee that you will be able to recover all the encrypted data. We will give you a deletion log file which means the files we stole .were removed from our source.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Friday, 11 October 2024 15:49:09</span>
+                </div>
+                <div class="message-content">Please let me know when the money has been sent</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Saturday, 12 October 2024 10:15:05</span>
+                </div>
+                <div class="message-content">hi</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Saturday, 12 October 2024 10:15:34</span>
+                </div>
+                <div class="message-content">can you tell me when are you going to make payment?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Monday, 14 October 2024 18:36:15</span>
+                </div>
+                <div class="message-content">we are sending a small amount to check it works ok. Can you confirm when you receive it?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Monday, 14 October 2024 18:58:26</span>
+                </div>
+                <div class="message-content">yes send please</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Monday, 14 October 2024 20:46:27</span>
+                </div>
+                <div class="message-content">I received 0.0001 btc. you can send the full amount now</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Tuesday, 15 October 2024 14:53:17</span>
+                </div>
+                <div class="message-content">we are arranging the bitcoin for the full amount and will let you know when we are making the payment</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Tuesday, 15 October 2024 15:03:10</span>
+                </div>
+                <div class="message-content">waiting, thanks</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Tuesday, 15 October 2024 17:27:42</span>
+                </div>
+                <div class="message-content">we've sent the payment</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Admin 18:20:08</span>
+                </div>
+                <div class="message-content">[provides the decryptor in a 7zip compressed file]
+Windows
+unlocker.exe -nomutex -console -target \\SERVER\C$
+unlocker.exe -nomutex -console -target C:\
+Esxi \ LINUX
+chmod +x unlocker_key
+./unlocker_key --id [redacted] --log --target "/vmfs/volumes/"</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Monday, 21 October 2024 09:51:08</span>
+                </div>
+                <div class="message-content">Hi, we are working through recovering our systems but we cannot access our domain controller as you have changed the administrator password. Please could you tell us what the password for the domain administrator account was changed to?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Monday, 21 October 2024 09:56:03</span>
+                </div>
+                <div class="message-content">all domain admins passwords "gotochatplease"</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Wednesday, 30 October 2024 09:17:47</span>
+                </div>
+                <div class="message-content">Can you still provide us a report on how you got access into our network?  Also can you confirm you have deleted all our data now?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Wednesday, 30 October 2024 10:07:59</span>
+                </div>
+                <div class="message-content">I will tell you soon</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">September 27, 2024 at Monday, 04 November 2024 09:10:19</span>
+                </div>
+                <div class="message-content">Do you have any update please?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">September 27, 2024 at Monday, 04 November 2024 10:14:29</span>
+                </div>
+                <div class="message-content">You data has been deleted. Access to your network was gained through a phishing mail. Your staff should be more vigilant when downloading and opening unfamiliar files. We recommend that you implement the following measures to protect your corporate network:
+1) Enforce passwords on local and domain admins. Complicate group policy on passwords for all users;
+2) Using the group "Protected users";
+3) Use centralised management of antivirus protection;
+4) Inform users not to open suspicious emails and files;
+5) Updating software and OS to current versions;
+6) Set up permission delegations in the Active Directory;
+7) Install an application to monitor activity in the Active Directory;
+8) Use Vmware Esxi ver. 7.0 or more current.
+Our team guarantees that any data taken from your network will not be disclosed, sold or published. Of course, this dialogue will also remain confidential.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

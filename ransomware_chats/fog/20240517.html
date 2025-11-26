@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20240517</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20240517 | Date: May 17, 2024</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 27</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 13</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 14</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Friday, 17 May 2024 08:30:51</span>
+                </div>
+                <div class="message-content">Do you need our help?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Thursday, 23 May 2024 03:55:28</span>
+                </div>
+                <div class="message-content">We would like to know what you are looking for from us. Your note says you copied data so we would like to understand what data you took.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Admin 11:10:55</span>
+                </div>
+                <div class="message-content">[provides a compressed 7zp files list]
+this is what we took</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Admin 11:57:37</span>
+                </div>
+                <div class="message-content">We can decrypt your systems in a couple of hours for only $400,000. Just send us 3 random encrypted files to be sure - we'll decrypt them for free.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Admin 23:45:48</span>
+                </div>
+                <div class="message-content">Okay, we are working on that for you. Can you confirm that list is all of the data that you took?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Friday, 24 May 2024 08:37:03</span>
+                </div>
+                <div class="message-content">Yes this is all we took</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Friday, 24 May 2024 19:43:14</span>
+                </div>
+                <div class="message-content">Thank you. We are working on the files but will probably not have an update until after the weekend</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Monday, 27 May 2024 07:57:09</span>
+                </div>
+                <div class="message-content">Hello. Have you managed to review?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Monday, 27 May 2024 12:30:14</span>
+                </div>
+                <div class="message-content">Sorry we are working through one last item and it's late here. We will respond by tomorrow.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Monday, 27 May 2024 13:45:56</span>
+                </div>
+                <div class="message-content">We need you to speed up.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Tuesday, 28 May 2024 03:25:26</span>
+                </div>
+                <div class="message-content">Are you able to send us the following files from that list?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Tuesday, 28 May 2024 03:25:45</span>
+                </div>
+                <div class="message-content">Directory of E:\[redacted 1st directory]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Tuesday, 28 May 2024 03:25:56</span>
+                </div>
+                <div class="message-content">Directory of E:\[redacted 2nd directory]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Tuesday, 28 May 2024 03:26:02</span>
+                </div>
+                <div class="message-content">Directory of E:\[redacted 3rd directory]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Admin 07:38:02</span>
+                </div>
+                <div class="message-content">[provides provides 3 files]
+these are the files from the directories you that gave</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Wednesday, 29 May 2024 00:23:06</span>
+                </div>
+                <div class="message-content">For the first directory, are you able to provide us this file? [redacted]\[redacted].docx</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Wednesday, 29 May 2024 00:23:28</span>
+                </div>
+                <div class="message-content">It looks like the full file path was originally cutoff when we requested it</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Admin 07:00:33</span>
+                </div>
+                <div class="message-content">[provides provides 1 more file]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Admin 14:39:49</span>
+                </div>
+                <div class="message-content">h</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Admin 14:51:30</span>
+                </div>
+                <div class="message-content">what?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Admin 14:54:02</span>
+                </div>
+                <div class="message-content">lets get closer to a resolution here. Are you ready to make a transaction and get all this resolved?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Thursday, 30 May 2024 05:26:24</span>
+                </div>
+                <div class="message-content">We are going to have a bit more discussion today and over the weekend but should be in a good place to discuss more next week</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">May 17, 2024 at Thursday, 30 May 2024 05:26:34</span>
+                </div>
+                <div class="message-content">Does this work?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Thursday, 30 May 2024 07:54:29</span>
+                </div>
+                <div class="message-content">I will be waiting for numbers from you on Monday.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Thursday, 30 May 2024 11:04:54</span>
+                </div>
+                <div class="message-content">https://privnote.com/[redacted] use the id on the link to access a new chat to discuss the price and payment</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Thursday, 30 May 2024 11:05:19</span>
+                </div>
+                <div class="message-content">I will be waiting for you there on Monday or earlier</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">fog</span>
+                    <span class="timestamp">May 17, 2024 at Thursday, 30 May 2024 11:05:30</span>
+                </div>
+                <div class="message-content">tell me when you access the new chat</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

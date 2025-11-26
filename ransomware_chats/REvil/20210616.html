@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20210616</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20210616 | Date: June 16, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 31</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 12</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 19</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 9 days ago</span>
+                </div>
+                <div class="message-content">Hello,
+We are REvil Group.
+We want to inform that your company local network have been hacked and encrypted. We have all your local network data. The Price to unlock is $500,000. Now we're keeping it a secret, but if you do not reply us within 3 days it will be posted on our news-site. Think about the financial damage to your stock price from this publication. In case of successful negotiations we guarantee that you will get decryptors for all your machines, non recoverable removal of downloaded data and security report on how you were hacked to fix your vulnerabilities. We hope that you can correctly assess the risks for your company.
+You can find more information about REvil group in Google.
+Posting on our blog and further publications in the media will lead to significant losses for your company: court and government fines, data recovery, loss of reputation, abandonment of clients, drop in limits.
+But don't panic! We are in business, not in war.
+We can unblock your data and keep everything secret. All we need is a ransom.
+In this case, you also get: a security report, a complete tree of compromised data files, permanently deleting downloaded data, support with tips on unlocking and protecting.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">Hello 
+We are interested in resolving this situation. Can you provide some sample information on what files were accessed and taken?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">Hello , wait for answer</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">Some sample file for decryption test</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">Extract:[redacted]
+Download:
+[redacted]
+https://privatlab.com/s/v/[redacted]
+https://privatlab.com/s/d/[redacted]#delete</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">Thank you kindly. What can we do about discount of the price? 500 is beyond our capacity to pay.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 7 days ago</span>
+                </div>
+                <div class="message-content">my boss can offer 20% discount for fast payment</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">Hello - Your website was unreachable today. 
+We looked into available on-hand funds but we cannot do 400k. We have $124k available on-hand that we can pay you for this situation. Can I give you my email in case this chat goes down again? how do we talk? How do I know if we pay that your site will not come down and we never get confirmation of data being deleted or the decryptors?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">Our site will not be disabled, you do not need to worry about it.
+But your offer is too low, we are ready to take one more small step forward, but 300k is our last offer.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">Hello - 300k is not possible for us. We do not have that kind of cash on hand even if we maxed our personal credit cards. I need to go back and figure out what we can do.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">The price below is not interesting to us</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">We spoke to a few crypto places and with their fees, we can go up to 280k but in btc only. we are short 20k we cannot make it up sorry. Also, I want to ensure if we reach agreement, that you will come through on your side on the promises you are making. specifically, we need you to give us the decryptors and that they will work and if there are technical support issues, that you will help resolve. Also, that all our data will be deleted and you will provide some confirmation of deletion and I would also like to see the full listing of what you took. This is a lot of money for our company, you have to understand and I do not want to be attacked again, so I want your word that REvil will not attack us again and that you can tell me what I need to do to block whatever way you come in. If you are in agreement tell me what is "Bitcoin Wallet ID to send BTC" as my broker suggested. I need your assurance though.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">okay we agree and confirm</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">btc enabled , price update</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">Hello - ok thank you, we are working with a bitcoins broker to do transfer today</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 5 days ago</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 4 days ago</span>
+                </div>
+                <div class="message-content">Hello - the broker just sent 7.670 bitcoins. Please confirm and provide the decryptor, thanks</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 4 days ago</span>
+                </div>
+                <div class="message-content">Hello - ok, we downloaded the decryptor. Please send the full listing of what you took, how we were breached and the confirmation of deletion of our data. Thank you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 4 days ago</span>
+                </div>
+                <div class="message-content">Wait for answer</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 4 days ago</span>
+                </div>
+                <div class="message-content">To use a decryptor run it as administrator and turn off antivirus before.
+You can use a decryptor as gui application or through cmd.
+CMD commands:
+UniversalDecryptor.exe -full
+UniversalDecryptor.exe -path "C:\folder"
+UniversalDecryptor.exe -file "C:\folder\file.txt.random_ext"
+* decryptor with -full option will decrypt all with default params.
+If you use it as gui application, mI recommend you choose "create backups" option. If you use decryptor without this option, you should not interrupt decryption process, otherwise some files will be irreversibly damaged.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 3 days ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 3 days ago</span>
+                </div>
+                <div class="message-content">file</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">Hello - thanks. Can you also provide the full listing of what you took, and how we were breached, appreciated</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">Full listing was deleted with all your files</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">Spam attack</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">June 16, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">1) A spam campaign with a virus file were sent to employees of your domain
+2) Once user clicked the file, our virus payload was installed on the computer
+3) Using special tools the computer was scanned and all user authorization data
+4) This authorization data was used to access to the [redacted] network remotely
+5) Next we scanned your network and found a vulnerable server with RCE, we used this RCE to execute our payload and gather full access to the server
+6) Next we used special security tools to dump all possible passwords from the server
+7) We used those passwords to gather access to other network elements until we accessed your domain controller
+8) Specially designed keyloggers were installed to the IT stuff machines, which helped us to gain access to the whole IT infra
+9) We modified your antivirus configuration the way, it would not detect our presence on the IT network
+10) After gaining all possible IT access data, we also found the way to connect to the remaining branches of the company
+11) As soon as we gathered access to all the IT network, we used specially crafted tools to collect all valuable data
+12) Upon data fetch completion, we launched our locking software across some on your IT systems, we didn't put much pressure on it, just wanted you to know that your data was leaked.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">Hello - thanks</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">June 16, 2021 at 2 days ago</span>
+                </div>
+                <div class="message-content">We have a technical question - we've decrypted the Domain Controllers DC01 and DC02, but we're having issues with them as they are not functioning as Domain Controllers. Is it possible these were damaged in some way during the breach? Could you tell us know how to fix them? thanks</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

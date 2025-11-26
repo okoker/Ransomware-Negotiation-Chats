@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID:  | Date: </div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 17</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 5</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 12</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 02:52 18.05.2021</span>
+                </div>
+                <div class="message-content">My files are encrypted, I just found this note. What do I do next?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 02:59 18.05.2021</span>
+                </div>
+                <div class="message-content">Hello! You have been infected by the Avaddon
+ ransomware. Price for you is $400,000. To receive a general decryptor, 
+you need to pay the amount indicated to you in the BTC on the landing 
+page. After paying the ransom, you will receive a general decryptor that
+ will decrypt absolutely all PCs and servers on your network. We will 
+also provide you with a list of vulnerabilities in your network so that a
+ similar situation does not happen to you in the future. We also 
+guarantee the anonymity of the and attack no one will recognize this 
+incident. We are ready to talk to you and discuss on this matter.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 17:23 18.05.2021</span>
+                </div>
+                <div class="message-content">What did you take? May I have a list of files to show my boss?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 17:46 18.05.2021</span>
+                </div>
+                <div class="message-content">wait few min</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 17:47 18.05.2021</span>
+                </div>
+                <div class="message-content">We will prepare a small archive for you today and send it to you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 05:25 19.05.2021</span>
+                </div>
+                <div class="message-content">Hello guys</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 05:25 19.05.2021</span>
+                </div>
+                <div class="message-content">Sorry for taking so long.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 05:26 19.05.2021</span>
+                </div>
+                <div class="message-content">https://www.sendspace.com/file/[redacted]</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 05:26 19.05.2021</span>
+                </div>
+                <div class="message-content">Password: [redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 23:06 19.05.2021</span>
+                </div>
+                <div class="message-content">Thank you, we are downloading now and will reach out soon</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 23:18 19.05.2021</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 23:19 19.05.2021</span>
+                </div>
+                <div class="message-content">Specify when you will?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 17:55 22.05.2021</span>
+                </div>
+                <div class="message-content">Any news?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 17:57 25.05.2021</span>
+                </div>
+                <div class="message-content">I understand how serious this is, but my 
+boss does not. Will you send a list of the files you took so I can show 
+them how serious this is?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 18:28 25.05.2021</span>
+                </div>
+                <div class="message-content">We can send you some random files so that 
+you can be sure that we have the files. We will not send the tree. But 
+just know that we have a lot of files and the leak is big, if you do not
+ understand the severity of the situation, go and read our blog.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp"> at 15:07 27.05.2021</span>
+                </div>
+                <div class="message-content">Yes, please send the files.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Avaddon</span>
+                    <span class="timestamp"> at 15:10 27.05.2021</span>
+                </div>
+                <div class="message-content">Didn't you download the old archive? There is data.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

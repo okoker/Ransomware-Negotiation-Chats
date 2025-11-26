@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20201126</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20201126 | Date: November 26, 2020</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 79</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 40</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 39</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">In the ransom note, you stated that you took 500 GB of information, can you provide us examples of this information</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">Hello.
+If you are satisfied with the screenshots of the folders, we will provide them to you within a few minutes.
+Or we can provide you with a link to some of your data for review. But it will take about an hour.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">we will take both</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">Good. 10 minutes and we will provide you with screenshots.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">Thank you. we will wait for file samples as well</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">ok</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">We would like to draw your attention to the fact that we did not delete
+ data from your ESXI servers. The information is also encrypted there. 
+If we make a deal, we will give you a decryptor so that you can restore 
+the servers.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">But we do not guarantee recovery if you carry out any manipulations with these servers.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">Understood</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">Good. This also applies to other files outside of ESXI.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">please send the sample files when ready</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">We have started transferring some of the data to the new server so that
+ you can familiarize yourself with the data. It will take some time. In 5
+ minutes you will be able to get acquainted with what we have already 
+transferred for you.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">We will upload files here for review.
+The link is available through the TOR browser.
+Some of the data is still in the process of being copied.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">Thank You</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">We've finished copying the sample data for you.
+Can you please tell me, are you only interested in data files or are you also interested in the decryptor?
+As we already wrote before, we strongly discourage using third-party solutions.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">3rd party solutions? Is there different pricing for breaking it apart?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">3rd party solutions - Various programs, the descriptions of which say 
+that they can recover data, but this is not the case. Typically, the use
+ of such third-party programs leads to the fact that our decryptor can 
+no longer recover your data.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">If you are ready to move on to the deal in the near future, then we can
+ provide you with a discount. If you do not need a decryptor, then the 
+discount will be slightly higher.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">I understand now on the 3rd party solutions. thank you</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">Thank you for providing the details. I am discussing with the board</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 2 days ago</span>
+                </div>
+                <div class="message-content">Good. We will be in touch.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">Our board is having issues with the quantifying the 500 GB that has 
+been taken. To help them out, is there a certain IP or something I can 
+hunt for to quantify this on the exfil side. Based on this, then the 
+board should be in a position to discuss options.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">Do I understand correctly that you do not need a decryptor?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">That is incorrect. We are still understanding the damage caused to the organization.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">This is just business, it makes no sense for us to lie or not fulfill 
+obligations. If we do business this way, there will be no profit for us.
+In fact, you question is very strange - we think that the provided data 
+is already enough to understand the seriousness of your problem. it's 
+all about your reputation and possible damage to your customers.
+We have been in your network for more than 2 weeks and we think you 
+understand that there was enough time to download even more information.
+You can also read about REvil on the Internet and find out that 500 
+gigabytes is a small leak, since sometimes several terabytes of data are
+ downloaded.
+And also you will find out that if we can't reach the agreemnt, then we will have to publish some of the data in our blog.
+You should also know that in 5 days the amount will be doubled.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">Thank you for this as providing this explanation</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">We have performed the research that you requested. In addition, we have
+ studied ransom payments from various third party sources. The board is 
+asking for you to consider $800K for the package to gain consensus. Can 
+we agree to this amount?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">Do you want us to give you a discount of more than 90%? Of course this is impossible.
+I will give you a small example. The company is close to your profile, 
+the annual turnover was 2.5 times less, as well as we had 2 times less 
+data and we have already published some of the data in the blog - as a 
+result, this company paid 4 million.
+They also did not need a decryptor - they were able to recover from the backups that we missed.
+Next comes simple math.
+What you read is either small companies or information with understated 
+amounts. Most companies do not advertise the fact of hacking and 
+payment.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">Apparently you do not realize the seriousness of the situation and the consequences.
+Loss of reputation
+Loss of clients and possible litigation with them.
+Financial losses due to downtime that can take a very long time.
+Your data will also be seen by your competitors
+The stocks in the market will begin to fall, and this is clearly not to your investors' liking.
+And much more.
+You are a big, serious company - be realistic.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">If you are ready to seriously discuss the deal in the near future, then we will be ready to slightly reduce the amount.
+If your new proposal is again frivolous, we will have to prepare a blog post with the first part of the data.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">We want to seriously discuss this and as you said, this is a business 
+deal so please give me something to work with and I will discuss with 
+the board and come back to you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">if we work together I am sure we can gain consensus</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">here is one article as part of our research 
+https://www.tripwire.com/state-of-security/security-data-protection/increase-in-ransomware-demand-amounts-driven-by-ryuk-sodinokibi</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">again we want to gain consensus</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">I recommend that you do not trust such reports.
+We don't know what information the Coveware report was based on.
+How many companies are using Coveware?
+What is the size of the company and what is their revenue?
+Was there a data leak?
+Or was the company able to recover on its own and the company was interested only in non-disclosure?
+Company profiles?
+And much more.
+We also recommend that you be extremely careful when contacting a company like Coveware.
+As practice shows, the task of such companies is to make money on the client's problem. Most often they use payment per hour.
+Therefore, they usually start to play for time during negotiations and thereby pull money from the client.
+They won't care about your data. And if the deal does not take place, 
+then the data is published and companies like Coveware will do it anyway
+ for this fact - they will still make money.
+They are often too confident that we will agree to any amount and will 
+not publish the data, but you can take a look at our blog and see how 
+many companies they faked in this way.
+It is also a frequent case when we publish the first part of the data - 
+companies immediately go to the deal, understanding how serious 
+everything is.
+Returning to the topic of statistics of payments and amounts - as you 
+understand, the companies that ignite do not want publicity, so you 
+rarely see news that the company paid 5-10-15-20 million. But this 
+happens.
+Here is a public example for you, to which we have nothing to do, but I think the meaning will be clear:
+https://www.wired.com/story/garmin-ransomware-hack-warning/
+This is a public event. The company did not want to pay, after which 
+part of its data was published and as far as I know - after that the 
+company quickly agreed to the deal.
+I could provide private evidence of other multi-million dollar deals, but of course I won't.
+We do business with integrity. All the more would you like it if in the 
+future we would tell other companies about your case? If we come to a 
+deal, no one will know about it, otherwise you will be another example 
+for our other companies.
+As for the amount.
+I think you perfectly understand that you will incur large financial 
+losses. You are already losing money and I don’t think you want it to 
+continue like this. And now we are only talking about easy to work with.
+ But do you understand that there will be other losses?
+Clients will find out about what happened to you and find out that their
+ data has been published, including confidential. Including problems 
+with their projects. I think it is not easy for them not to want to 
+continue working with you, and they will also sue you. And probably it 
+will also go about millions of claims.
+So what happens if competitors take advantage of the data we can publish?
+How will investors react to this?
+Believe me, there is enough data for the company to incur more serious losses and they will exceed the amount requested from us.
+We are not the first day in this business and we can conditionally 
+calculate how much the company can and will be willing to pay. As well 
+as possible losses of the company. Therefore, we offer an adequate 
+amount and it does not include the discount that we can offer if the 
+company conducts a correct and serious conversation, and is also ready 
+to conduct a deal up to double the amount and publish the first part of 
+the data.
+We are still waiting for a serious offer from you. Keep in mind that 
+tomorrow we will be preparing the first publication for our blog 
+regarding your company - we are going to publish it on Friday if we do 
+not come to an agreement. The blog is followed by many media and as soon
+ as a new entry appears there, after a few hours it appears on many news
+ portals.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 1 day ago</span>
+                </div>
+                <div class="message-content">A link to our blog where you can check out the leaks of other companies that didn’t make the deal:
+http://dnpscnbaix6nkwvystl3yxglz7nteicqrou3t75tpcc5532cztc46qyd.onion
+I also recommend that you familiarize yourself with this material in order to avoid mistakes:
+http://dnpscnbaix6nkwvystl3yxglz7nteicqrou3t75tpcc5532cztc46qyd.onion/posts/[redacted]</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 19 hours ago</span>
+                </div>
+                <div class="message-content">Thank you for providing this and I will discuss with the board</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 16 hours ago</span>
+                </div>
+                <div class="message-content">As we are chatting in good faith, we would like to keep our 
+conversations private. Can we setup a private chat as others might be 
+viewing our conversation</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 15 hours ago</span>
+                </div>
+                <div class="message-content">The ransom note was uploaded to VT; therefore, I am concerned someone 
+could download and monitor. I am authorized to negotiate for the 
+company.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 15 hours ago</span>
+                </div>
+                <div class="message-content">[redacted]@gmail.com</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 15 hours ago</span>
+                </div>
+                <div class="message-content">We will not be able to link the gmail account with the your company.
+LinkedIn account or Facebook of an employee or company?
+Phone call?
+After you provide us with a contact for communication, we will remove it from our correspondence so that no one can see it</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 15 hours ago</span>
+                </div>
+                <div class="message-content">We removed from the chat all the message where the name of your company
+ was mentioned, as well as screenshots of the data, by which it was 
+possible to determine which company could be discussed. We are waiting 
+for your contact information to switch to another chat.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 15 hours ago</span>
+                </div>
+                <div class="message-content">I am stepping into a board meeting and will get the information you desire for verification.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">the phone will not work as those are down due to your encryptor</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">Okay. Let us carry out verification via Facebook or LinkedIn.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">We can provide you with a new private chat without verification, but if
+ we are confused by the correspondence in it, we will return to the main
+ chat, where we are currently communicating.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">Let me know as soon as you are ready to receive a password and instructions.
+After that, write to us in a new chat and we will remove the password and instructions from the main chat.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">Here is our proposal to link to the gmail account. we noticed that you 
+used the [redacted] account to pivot in the network. Is this verification 
+enough to send this to the gmail account</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">Yes, that will be enough.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">did you receive instructions and password?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">yes...</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">I entered in the password</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">Please destroy the other chat support</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">and we will do our conversation here</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">please confirm when complete</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">Why do we need this? We have removed all information that could help someone identify your company name.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">the proofs are still in the chat window</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">apologies for the extra steps as we gain consensus</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">Write to me where the evidence is left and I will delete it.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">I see screenshots. I removed them.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">kill the onion link</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">to the directory</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">Ready</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 13 hours ago</span>
+                </div>
+                <div class="message-content">Thank you</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 12 hours ago</span>
+                </div>
+                <div class="message-content">I think we can start discussing the deal.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 12 hours ago</span>
+                </div>
+                <div class="message-content">The board is still reviewing the information you provided and contemplating an offer back</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 12 hours ago</span>
+                </div>
+                <div class="message-content">Good. We are in touch.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 8 hours ago</span>
+                </div>
+                <div class="message-content">How are things going into the negotiation of the deal? Your time is 
+coming to an end. If by tomorrow we do not agree on a deal, we will 
+publish the first post on our blog. And also discounts will cease to be 
+relevant. And we will already be discussing the next discount from the 
+doubled amount, and as you understand, the amount in the end will be 
+more than 9 million.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 8 hours ago</span>
+                </div>
+                <div class="message-content">You ask for a lot in a short period as many people are discussing 
+options. Being your advocate and to gain consensus, you should realize 
+that this takes time and to post early does not help this business deal.
+ As the board is considering options, do you have a new number so I can 
+take to them board.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 7 hours ago</span>
+                </div>
+                <div class="message-content">We all perfectly understand, but there are certain algorithms and 
+deadlines in our work, which have proven their effectiveness more than 
+once.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 7 hours ago</span>
+                </div>
+                <div class="message-content">"As the board is considering options, do you have a new number so I can
+ take to them board." - what number are we talking about?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 7 hours ago</span>
+                </div>
+                <div class="message-content">The amount for the package. You ask for $9M. I trust to gain consensus the discounts to which you speak of can be factored in</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 7 hours ago</span>
+                </div>
+                <div class="message-content">If in the near future we come to an agreement, then I think we will be able to provide a discount of 10-15%.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 7 hours ago</span>
+                </div>
+                <div class="message-content">But we will discuss the discount specifically when we receive an offer 
+from the company. We do not recommend offering understated amounts - you
+ must be realistic. Otherwise, as practice shows, negotiations are 
+delayed, which leads to publications and an increase in the amount.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 7 hours ago</span>
+                </div>
+                <div class="message-content">As your advocate, I understand your position. A few questions from the board 
+1) the data you have taken - how do we receive it back 
+2) do you explain how you took the data and got into our company
+3) what guarantees do you provide that you will not attack us again
+4) what assurance do we receive that the data does not leak in 6 months from now (how do we know that you destroyed it)</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 7 hours ago</span>
+                </div>
+                <div class="message-content">5) what if the decryption key does not work - do you provide some type of support</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 7 hours ago</span>
+                </div>
+                <div class="message-content">1) You can recover this data using the decryptor anyway. But if required, we will provide you with a link to all your data.
+2) Yes, we will provide you with information on how we got into the company's network and how we got access to all the data.
+3) We don't do that kind of thing. This will ruin our reputation. We 
+will give you recommendations on how to avoid repeated intrusion (from 
+other teams).
+4) Why will we not save them - why waste resources on this? As soon as 
+we receive payment, we will delete the data from all backup servers and 
+it will remain on only one server so that you can download it if you 
+need it. Then we will remove them from there.
+This is a business. If we leak, we will ruin our reputation and other companies will not pay us.
+5) Our software is time-tested. This will not happen if you have not tried to restore data using third-party software.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">November 26, 2020 at 7 hours ago</span>
+                </div>
+                <div class="message-content">Thank you for this. I will provide to the board. I do not know what 
+time zone you are in, but i suspect the board will provide me guidance 
+in the AM. I do not know if you take a rest in your business</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">REvil</span>
+                    <span class="timestamp">November 26, 2020 at 7 hours ago</span>
+                </div>
+                <div class="message-content">Good. We will be in touch.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 20211005</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 20211005 | Date: October 05, 2021</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 19</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 11</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 8</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 12:18</span>
+                </div>
+                <div class="message-content">Hello and welcome to Hive.
+How may I help you?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 12:18</span>
+                </div>
+                <div class="message-content">yo son of bitches</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 12:19</span>
+                </div>
+                <div class="message-content">pivot a lot of machines for you to make the ransom first that I</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 12:19</span>
+                </div>
+                <div class="message-content">can u suck my dick ?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 18:03</span>
+                </div>
+                <div class="message-content">We have 1.8 TB of exfiltrated files.
+Stop talking shit otherwise I'll disclose them</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 18:42</span>
+                </div>
+                <div class="message-content">I am not sure who sent that message prior</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 18:43</span>
+                </div>
+                <div class="message-content">How much do you want for the decryption?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 18:52</span>
+                </div>
+                <div class="message-content">The individual who sent the prior message, I believe was a user, following the guide on how to chat. They do not represent or speak for the company.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 21:50</span>
+                </div>
+                <div class="message-content">To decrypt your files and prevent them to be disclosed you will need to pay $1,200,000.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 21:50</span>
+                </div>
+                <div class="message-content">The price is not a subject to discuss.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 22:15</span>
+                </div>
+                <div class="message-content">Unfortunately Supreme lacks anywhere near that we will have to go out of business.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 23:01</span>
+                </div>
+                <div class="message-content">Is the price at all negotiable? It would take us a long time to get that much</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 23:12</span>
+                </div>
+                <div class="message-content">The price isn't negotiable. I'll wait, there is no hurry</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 23:14</span>
+                </div>
+                <div class="message-content">Okay we will have to talk to the bank, do I reconnect to this console?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 23:14</span>
+                </div>
+                <div class="message-content">reconnect for what?</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 23:19</span>
+                </div>
+                <div class="message-content">Same link to come to this portal here</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-05 23:21</span>
+                </div>
+                <div class="message-content">yes</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-08 02:43</span>
+                </div>
+                <div class="message-content">We need more time for this amount of money, we have a meeting Monday with the Board of Directors. Please give us time.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">Hive</span>
+                    <span class="timestamp">October 05, 2021 at 2021-10-08 02:54</span>
+                </div>
+                <div class="message-content">Okay</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>

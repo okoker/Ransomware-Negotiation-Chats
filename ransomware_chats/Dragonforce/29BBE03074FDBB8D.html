@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Session - 29BBE03074FDBB8D</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #ffffff;
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f8f9fa;
+            color: #333;
+            padding: 24px;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #212529;
+        }
+
+        .header .subtitle {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #495057;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .chat-container {
+            padding: 24px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #ffffff;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .message:last-child {
+            border-bottom: none;
+        }
+
+        .message-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .party {
+            font-weight: 900;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .party.victim {
+            color: #0066cc;
+        }
+
+        .party.attacker {
+            color: #dc3545;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #868e96;
+        }
+
+        .message-content {
+            padding: 4px 0;
+            margin-left: 24px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #495057;
+        }
+
+        .message.victim .message-content {
+            color: #004085;
+        }
+
+        .message.attacker .message-content {
+            color: #721c24;
+        }
+
+        .footer {
+            padding: 12px 24px;
+            background: #f8f9fa;
+            text-align: center;
+            font-size: 11px;
+            color: #868e96;
+            border-top: 1px solid #dee2e6;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ransomware Negotiation Chat</h1>
+            <div class="subtitle">Session ID: 29BBE03074FDBB8D | Date: 29BBE03074FDBB8D</div>
+            <div class="stats">
+                <div class="stat">
+                    <span>Total Messages: 10</span>
+                </div>
+                <div class="stat">
+                    <span>Victim: 4</span>
+                </div>
+                <div class="stat">
+                    <span>Attacker: 6</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">Victim</span>
+                    <span class="timestamp">29BBE03074FDBB8D at 2024-08-01T22:33:55.198424Z</span>
+                </div>
+                <div class="message-content">We are attempting to do step 1 by downloading the file tree, however it will not download. Can you send it to me?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">dragonforce</span>
+                    <span class="timestamp">29BBE03074FDBB8D at 2024-08-01T22:39:40.79313Z</span>
+                </div>
+                <div class="message-content">yes.</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">dragonforce</span>
+                    <span class="timestamp">29BBE03074FDBB8D at 2024-08-01T22:46:59.132678Z</span>
+                </div>
+                <div class="message-content">tree.zip filesize:889780</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">29BBE03074FDBB8D at 2024-08-02T00:34:24.006357Z</span>
+                </div>
+                <div class="message-content">Is this everything you have stolen? How much data did you take from our network?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">dragonforce</span>
+                    <span class="timestamp">29BBE03074FDBB8D at 2024-08-02T00:37:20.701612Z</span>
+                </div>
+                <div class="message-content">102 GB. The list has been provided to you.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">29BBE03074FDBB8D at 2024-08-03T00:37:45.986826Z</span>
+                </div>
+                <div class="message-content">Okay thank you. How do we know you have these files? Can we select a few file names from that list and then you will provide them?</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">dragonforce</span>
+                    <span class="timestamp">29BBE03074FDBB8D at 2024-08-03T00:40:52.838507Z</span>
+                </div>
+                <div class="message-content">What specific files do you want to see? The size should be small and the contents of the files should not be critical.</div>
+            </div>
+            <div class="message victim">
+                <div class="message-header">
+                    <span class="party victim">victim</span>
+                    <span class="timestamp">29BBE03074FDBB8D at 2024-08-03T15:05:48.992011Z</span>
+                </div>
+                <div class="message-content">Ok that is a large dataset. I am waiting on selection from my boss</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">dragonforce</span>
+                    <span class="timestamp">29BBE03074FDBB8D at 2024-08-03T15:08:46.692687Z</span>
+                </div>
+                <div class="message-content">Ok</div>
+            </div>
+            <div class="message attacker">
+                <div class="message-header">
+                    <span class="party attacker">dragonforce</span>
+                    <span class="timestamp">29BBE03074FDBB8D at 2024-08-07T16:31:29.716114Z</span>
+                </div>
+                <div class="message-content">You're delaying time. The announcement of the publication of the files is posted on the blog. If the payment is not made before the end of the timer, the data will be published.</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            Generated from JSON chat log
+        </div>
+    </div>
+</body>
+</html>
