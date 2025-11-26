@@ -434,7 +434,7 @@ def generate_html(chat_data):
     html += f"""        </div>
 
         <div class="footer">
-            Generated from JSON chat log
+            Original source: Casualtek/Ransomchats
         </div>
     </div>
 </body>
@@ -579,7 +579,17 @@ def generate_index_html(group_stats):
     <div class="container">
         <div class="header">
             <h1>Ransomware Negotiation Chats</h1>
-            <div class="subtitle">Archive of ransomware negotiations organized by threat actor groups</div>
+            <div class="subtitle"><B>Archive of ransomware negotiations organized by threat actor groups.</B>
+
+<BR><BR> Below are transcripts of ransomware negotiations with various groups.  They may be educational in understanding what works and what
+doesnt with the various different groups, it might also shed some light into their mindset or origins.
+
+<P><BR>Original corpus was/is collected by <b>valery@proton.me (Casualtek)</B> in a json format at
+https://github.com/Casualtek/Ransomchats/.
+
+<P><BR>This repo aims to make it easier for manual human consumption.
+
+</div>
         </div>
 
         <div class="content">
@@ -602,7 +612,7 @@ def generate_index_html(group_stats):
         </div>
 
         <div class="footer">
-            Generated from DarkWebInformer/Ransomchats repository
+            Original source: Casualtek/Ransomchats
         </div>
     </div>
 </body>
@@ -751,7 +761,7 @@ def generate_group_index_html(group_name, json_files):
         </div>
 
         <div class="footer">
-            Generated from DarkWebInformer/Ransomchats repository
+            Original source: Casualtek/Ransomchats
         </div>
     </div>
 </body>
@@ -830,7 +840,7 @@ def process_repository(repo_url, output_base, limit=None):
 
             # Process each JSON file
             for json_file in json_files:
-                json_url = f"https://github.com/DarkWebInformer/Ransomchats/blob/main/{group_name}/{json_file}"
+                json_url = f"https://github.com/Casualtek/Ransomchats/blob/main/{group_name}/{json_file}"
                 raw_url = convert_github_url_to_raw(json_url)
 
                 try:
@@ -894,8 +904,8 @@ def process_repository(repo_url, output_base, limit=None):
 def main():
     if len(sys.argv) < 2:
         print("Usage: python group_format_chat.py <github_repo_url> [--limit N]")
-        print("Example: python group_format_chat.py https://github.com/DarkWebInformer/Ransomchats/tree/main")
-        print("         python group_format_chat.py https://github.com/DarkWebInformer/Ransomchats/tree/main --limit 2")
+        print("Example: python group_format_chat.py https://github.com/Casualtek/Ransomchats/tree/main")
+        print("         python group_format_chat.py https://github.com/Casualtek/Ransomchats/tree/main --limit 2")
         sys.exit(1)
 
     repo_url = sys.argv[1].rstrip('/')

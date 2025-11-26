@@ -259,7 +259,7 @@ def generate_html(chat_data):
     html += f"""        </div>
 
         <div class="footer">
-            Generated from JSON chat log
+            Original source: Casualtek/Ransomchats
         </div>
     </div>
 </body>
@@ -272,7 +272,7 @@ def generate_html(chat_data):
 def main():
     if len(sys.argv) < 2:
         print("Usage: python format_chat.py <url_to_json>")
-        print("Example: python format_chat.py https://github.com/DarkWebInformer/Ransomchats/blob/main/BlackBasta/20221011.json")
+        print("Example: python format_chat.py https://github.com/Casualtek/Ransomchats/blob/main/BlackBasta/20221011.json")
         sys.exit(1)
 
     url = sys.argv[1]
