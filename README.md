@@ -10,15 +10,9 @@ https://okoker.github.io/Ransomware-Negotiation-Chats/ransomware_chats/
 
 ## Features
 
-- 🎨 **Clean, professional design** - White background, easy-to-read layout
-- ⏰ **Smart date handling** - Parses dates from filenames (handles `20221011`, `20250425b`, `20210518_3` formats)
-- 👥 **Color-coded messages** - Victim (blue) vs Attacker (red) for easy identification
-- 💬 **Formatted content** - Bold party labels, indented messages, cleaned spacing
-- 📊 **Statistics** - Message counts in header for quick overview
-- 🔗 **GitHub integration** - Works directly with GitHub URLs, handles spaces in paths
-- 📱 **Responsive design** - Clean rendering in any modern browser
-- 📂 **Bulk processing** - Process entire repositories with hierarchical output structure
-- ⚡ **Quality verified** - Tested with 595 messages across 10 random chats
+Clean, easy to navigate and consume output to html. Uses git api unauthenticated, taking care not to hit any rate 
+limits. Link above is adequate to understand.
+
 
 ## Scripts
 
