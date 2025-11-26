@@ -2,7 +2,7 @@
 
 Converts JSON chat logs (like those from ransomware negotiations) into polished, human-readable HTML pages.
 
-Originally developed to process the [DarkWebInformer/Ransomchats](https://github.com/DarkWebInformer/Ransomchats) repository containing real-world ransomware negotiations normalized as JSON files.
+Originally developed to process the [Casualtek/Ransomchats](https://github.com/Casualtek/Ransomchats) repository containing real-world ransomware negotiations normalized as JSON files.
 
 ## Features
 
@@ -23,11 +23,13 @@ Originally developed to process the [DarkWebInformer/Ransomchats](https://github
 Process a single JSON chat file and convert it to HTML.
 
 **Usage:**
-```% python format_chat.py <url_to_json>
+```bash
+python format_chat.py <url_to_json>
 ```
 
 **Examples:**
-```% python format_chat.py https://raw.githubusercontent.com/DarkWebInformer/Ransomchats/main/BlackBasta/20221011.json
+```bash
+python format_chat.py https://raw.githubusercontent.com/Casualtek/Ransomchats/main/BlackBasta/20221011.json
 ```
 
 **Output:** Generates `chat_<chat_id>.html` in the current directory (e.g., `chat_20221011.html`)
@@ -39,11 +41,13 @@ Process a single JSON chat file and convert it to HTML.
 Process an entire GitHub repository of ransomware chats at once.
 
 **Usage:**
-```python group_format_chat.py <github_repo_url>
+```bash
+python group_format_chat.py <github_repo_url>
 ```
 
 **Example:**
-```python group_format_chat.py https://github.com/DarkWebInformer/Ransomchats/tree/main
+```bash
+python group_format_chat.py https://github.com/Casualtek/Ransomchats/tree/main
 ```
 
 **Output:** Creates `ransomware_chats/` directory with:
@@ -72,7 +76,7 @@ Edit these variables at the top of `group_format_chat.py`:
 
 ## Output Structure
 
-### Example: Processing DarkWebInformer/Ransomchats
+### Example: Processing Casualtek/Ransomchats
 
 When you run `group_format_chat.py` on the full repository, you get:
 
